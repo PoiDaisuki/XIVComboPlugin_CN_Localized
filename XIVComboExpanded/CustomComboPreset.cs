@@ -76,7 +76,7 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 3308
 
         [OrderedEnum]
-        [CustomComboInfo("Astral/Umbral Draw on Play I", "Play I turns into Astral/Umbral Draw when no card is drawn, as well as the usual Play I behavior.", AST.JobID, AST.Play1)]
+        [CustomComboInfo("出卡I => 星极/灵极抽卡", "在没有被抽出的奥秘卡时，将出卡I替换为星极/灵极抽卡。", AST.JobID, AST.Play1)]
         AstrologianCardsOnDrawFeature = 3301,
 
         /*[OrderedEnum]
@@ -84,19 +84,19 @@ namespace XIVComboExpandedestPlugin
         AstrologianAstrodynePlayFeature = 3304,*/
 
         [OrderedEnum]
-        [CustomComboInfo("Astral/Umbral Draw Lockout", "Prevents you from using Astral/Umbral Draw while any cards are drawn by replacing it with Malefic.", AST.JobID, AST.AstralDraw)]
+        [CustomComboInfo("抽卡锁定（防呆）功能", "通过将抽卡替换为凶星，防止在持有未使用的奥秘卡的情况下重复抽卡。（只要用出去一张就可以继续抽）", AST.JobID, AST.AstralDraw)]
         AstrologianDrawLockoutFeature = 3306,
 
         [OrderedEnum]
-        [CustomComboInfo("Benefic 2 to Benefic Level Sync", "Changes Benefic 2 to Benefic when below level 26 in synced content.", AST.JobID, AST.Benefic2)]
+        [CustomComboInfo("福星 -> 吉星 等级同步", "在等级同步至26级以下时，将福星替换为吉星。", AST.JobID, AST.Benefic2)]
         AstrologianBeneficFeature = 3303,
 
         [OrderedEnum]
-        [CustomComboInfo("Divination Lockout Feature", "Locks out Divination while it is available and more than 3s remain on its buff, to prevent overwriting raid buffs.", AST.JobID, AST.Divination)]
+        [CustomComboInfo("占卜锁定功能", "如果身上的占卜Buff剩余时间超过3秒，则锁定占卜。（防止副本中Buff被覆盖）", AST.JobID, AST.Divination)]
         AstrologianDivinationLockoutFeature = 3308,
 
         [OrderedEnum]
-        [CustomComboInfo("Astrologian Lucid Dreaming Reminder", "All your non-role action cooldowns (that don't have charges) become Lucid Dreaming if they aren't up and Lucid Dreaming is, and you have less-than-or-equal-to a set amount of MP.", AST.JobID, AST.CelestialOpposition, AST.CollectiveUnconscious, AST.Divination, AST.EarthlyStar, AST.Exaltation, AST.Macrocosmos, AST.NeutralSect, AST.Synastry, AST.Horoscope)]
+        [CustomComboInfo("醒梦提醒（占星）", "当你的MP不多于以下设置值、且醒梦不在冷却时，你所有正在冷却的、非职能且没有层数的能力技变成醒梦。", AST.JobID, AST.CelestialOpposition, AST.CollectiveUnconscious, AST.Divination, AST.EarthlyStar, AST.Exaltation, AST.Macrocosmos, AST.NeutralSect, AST.Synastry, AST.Horoscope)]
         AstrologianLucidReminderFeature = 3305,
 
         #endregion
