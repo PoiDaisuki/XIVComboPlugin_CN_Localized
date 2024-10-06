@@ -76,7 +76,7 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 3308
 
         [OrderedEnum]
-        [CustomComboInfo("出卡I => 星极/灵极抽卡", "在没有被抽出的奥秘卡时，将出卡I替换为星极/灵极抽卡。", AST.JobID, AST.Play1)]
+        [CustomComboInfo("出卡I => 星极/灵极抽卡", "如果当前没有已经抽出的奥秘卡，将出卡I替换为星极/灵极抽卡。", AST.JobID, AST.Play1)]
         AstrologianCardsOnDrawFeature = 3301,
 
         /*[OrderedEnum]
@@ -84,7 +84,7 @@ namespace XIVComboExpandedestPlugin
         AstrologianAstrodynePlayFeature = 3304,*/
 
         [OrderedEnum]
-        [CustomComboInfo("抽卡锁定（防呆）功能", "通过将抽卡替换为凶星，防止在持有未使用的奥秘卡的情况下重复抽卡。（只要用出去一张就可以继续抽）", AST.JobID, AST.AstralDraw)]
+        [CustomComboInfo("抽卡锁定（防呆）功能", "在持有未使用的奥秘卡的情况下，将抽卡替换为凶星，以防止重复抽卡。（只要用出去一张就可以继续抽）", AST.JobID, AST.AstralDraw)]
         AstrologianDrawLockoutFeature = 3306,
 
         [OrderedEnum]
@@ -96,7 +96,7 @@ namespace XIVComboExpandedestPlugin
         AstrologianDivinationLockoutFeature = 3308,
 
         [OrderedEnum]
-        [CustomComboInfo("醒梦提醒（占星）", "当你的MP不多于以下设置值、且醒梦不在冷却时，你所有正在冷却的、非职能且没有层数的能力技变成醒梦。", AST.JobID, AST.CelestialOpposition, AST.CollectiveUnconscious, AST.Divination, AST.EarthlyStar, AST.Exaltation, AST.Macrocosmos, AST.NeutralSect, AST.Synastry, AST.Horoscope)]
+        [CustomComboInfo("醒梦提醒（占星）", "当你的MP小于等于以下设置值、且醒梦不在冷却时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", AST.JobID, AST.CelestialOpposition, AST.CollectiveUnconscious, AST.Divination, AST.EarthlyStar, AST.Exaltation, AST.Macrocosmos, AST.NeutralSect, AST.Synastry, AST.Horoscope)]
         AstrologianLucidReminderFeature = 3305,
 
         #endregion
@@ -106,112 +106,112 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 2530
 
         [OrderedEnum]
-        [CustomComboInfo("Blizzard 4/Fire 4 Switcher", "Change Fire 4 or Blizzard 4 to whichever action you can currently use.\nWill also swap them for Blizzard 1/Fire 1 when one is not available while synced.", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
+        [CustomComboInfo("冰澈 <> 炽炎 切换功能", "将冰澈或炽炎替换为你当能够使用的技能。\n如果被同步至无法使用他们的等级，则替换为冰结或火炎。", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
         BlackEnochianFeature = 2501,
 
         [OrderedEnum]
         [ParentCombo(BlackEnochianFeature)]
-        [CustomComboInfo("Blizzard 4/Fire 4 to Xenoglossy Movement Feature", "Change Fire 4 or Blizzard 4 to Xenoglossy while moving, if available and Triplecast/Swiftcast are not up.", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
+        [CustomComboInfo("冰澈/炽炎 => 异言 移动功能", "如果在没有三连/即刻咏唱时移动，则将炽炎和冰澈替换为异言。", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
         BlackEnochianXenoglossyFeature = 2520,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(BlackEnochianFeature)]
-        [CustomComboInfo("Enochian Despair Feature", "Change Fire 4 or Blizzard 4 to Despair when in Astral Fire with less than 2400 mana.", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
+        [CustomComboInfo("绝望（防呆）功能", "如果处在星极火且MP小于2400时，将炽炎和冰澈替换为绝望。（防止绝望的发现打不出去绝望）", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
         BlackEnochianDespairFeature = 2510,
 
         [OrderedEnum]
-        [CustomComboInfo("Blizzard/Fire Switcher", "Change Fire or Blizzard to whichever element you are currently aspected to.", BLM.JobID, BLM.Blizzard, BLM.Fire)]
+        [CustomComboInfo("冰结 <> 火炎 切换功能", "根据当前的元素状态，将冰结或火炎替换为你正在使用的那个。", BLM.JobID, BLM.Blizzard, BLM.Fire)]
         BlackEnochianButNotFeature = 2524,
 
         [OrderedEnum]
-        [CustomComboInfo("Flare to Despair", "Change Flare to Despair when you are not using AoE spells and have it available.", BLM.JobID, BLM.Flare, BLM.Freeze, BLM.Fire2, BLM.HighFire2)]
+        [CustomComboInfo("核爆 => 绝望", "当你不在使用AOE时，将核爆替换为绝望。（当绝望可用时）", BLM.JobID, BLM.Flare, BLM.Freeze, BLM.Fire2, BLM.HighFire2)]
         BlackFlareDespairFeature = 2511,
 
         [OrderedEnum]
-        [CustomComboInfo("Flare to Flare Star", "Change Flare to Flare Star when available.", BLM.JobID, BLM.Flare)]
+        [CustomComboInfo("核爆 => 耀星", "在耀星可用时，将核爆替换为耀星。", BLM.JobID, BLM.Flare)]
         BlackFlareStarFeature = 2527,
 
         [OrderedEnum]
-        [CustomComboInfo("Despair to Flare Star", "Change Despair to Flare Star when at 0 MP or >= 2400 MP.", BLM.JobID, BLM.Despair)]
+        [CustomComboInfo("绝望 => 耀星", "在耀星可用、且MP=0或>=2400时，将绝望替换为耀星。", BLM.JobID, BLM.Despair)]
         BlackDespairStarFeature = 2530,
 
         [OrderedEnum]
-        [CustomComboInfo("Blizzard 3 & 2 to Flare Star", "Change Blizzard 3 and High Blizzard 2 to Flare Star when available.", BLM.JobID, BLM.Blizzard, BLM.Blizzard2, BLM.Blizzard3, BLM.HighBlizzard2)]
+        [CustomComboInfo("冰冻/冰封 => 耀星", "在耀星可用时，将冰封和（高）冰冻替换为耀星。", BLM.JobID, BLM.Blizzard, BLM.Blizzard2, BLM.Blizzard3, BLM.HighBlizzard2)]
         BlackBlizzardStarFeature = 2529,
 
         [OrderedEnum]
-        [CustomComboInfo("High Thunder to High Thunder 2 Feature", "Change High Thunder to High Thunder 2 when you are using AoE spells and have it available.", BLM.JobID, BLM.Thunder, BLM.Thunder3, BLM.HighThunder)]
+        [CustomComboInfo("高闪雷 => 高震雷 功能", "当你使用AOE技能、且技能可用时，将高闪雷替换为高震雷。", BLM.JobID, BLM.Thunder, BLM.Thunder3, BLM.HighThunder)]
         BlackThunder2Feature = 2526,
 
         [OrderedEnum]
-        [CustomComboInfo("Freeze/Flare Switcher", "Change Freeze or Flare to whichever action you can currently use.", BLM.JobID, BLM.Freeze, BLM.Flare)]
+        [CustomComboInfo("玄冰 <> 核爆 切换功能", "将玄冰或核爆替换为你当前能够使用的技能。", BLM.JobID, BLM.Freeze, BLM.Flare)]
         BlackFreezeFlareFeature = 2502,
 
         [OrderedEnum]
         [ParentCombo(BlackFreezeFlareFeature)]
-        [CustomComboInfo("Freeze/Flare to Foul Movement Feature", "Change Freeze or Flare to Foul while moving, if instant cast foul is unlocked, it is available, and Triplecast/Swiftcast are not up.", BLM.JobID, BLM.Freeze, BLM.Flare)]
+        [CustomComboInfo("玄冰/核爆 => 秽浊 移动功能", "如果在没有三连/即刻咏唱、已获得秽浊效果提高特性（瞬发秽浊）、且秽浊可用时移动，则将玄冰和核爆替换为秽浊。", BLM.JobID, BLM.Freeze, BLM.Flare)]
         BlackFreezeFlareFoulFeature = 2521,
 
         [OrderedEnum]
-        [CustomComboInfo("Umbral Soul Feature", "When you have no target, your ice spells become Umbral Soul while in Umbral Ice.", BLM.JobID, BLM.Freeze, BLM.Blizzard4, BLM.Blizzard, BLM.Blizzard2, BLM.Blizzard3, BLM.HighBlizzard2, BLM.Fire4, BLM.Flare)]
+        [CustomComboInfo("灵极魂功能", "当你没有选中的目标、且处于灵极冰状态时，将你所有的冰系魔法替换为灵极魂。", BLM.JobID, BLM.Freeze, BLM.Blizzard4, BLM.Blizzard, BLM.Blizzard2, BLM.Blizzard3, BLM.HighBlizzard2, BLM.Fire4, BLM.Flare)]
         BlackUmbralSoulFeature = 2503,
 
         [OrderedEnum]
-        [CustomComboInfo("Transpose Feature", "When you have no target, spells of the opposite element (if you are in UI/AF) become Transpose.", BLM.JobID, BLM.Freeze, BLM.Blizzard4, BLM.Blizzard, BLM.Blizzard2, BLM.Blizzard3, BLM.HighBlizzard2, BLM.Fire4, BLM.Flare, BLM.Despair, BLM.Fire, BLM.Fire2, BLM.Fire3, BLM.HighFire2)]
+        [CustomComboInfo("星灵移位功能", "当你没有选中的目标、且处于星极火/灵极冰状态时，将所有非同系魔法替换为星灵移位。", BLM.JobID, BLM.Freeze, BLM.Blizzard4, BLM.Blizzard, BLM.Blizzard2, BLM.Blizzard3, BLM.HighBlizzard2, BLM.Fire4, BLM.Flare, BLM.Despair, BLM.Fire, BLM.Fire2, BLM.Fire3, BLM.HighFire2)]
         BlackTransposeFeature = 2516,
 
         [OrderedEnum]
-        [CustomComboInfo("Umbral Soul to Transpose", "When you are outside of Umbral Ice, Umbral Soul becomes Transpose.", BLM.JobID, BLM.UmbralSoul)]
+        [CustomComboInfo("灵极魂 => 星灵移位", "当你不处于灵极冰状态时，将灵极魂替换为星灵移位。", BLM.JobID, BLM.UmbralSoul)]
         BlackUmbralSoulTransposeFeature = 2518,
 
         [OrderedEnum]
-        [CustomComboInfo("Fire 2 Feature", "(High) Fire 2 becomes Flare in Astral Fire.", BLM.JobID, BLM.Fire2, BLM.HighFire2)]
+        [CustomComboInfo("烈炎功能", "在星极火状态时，将（高）烈炎替换为核爆。", BLM.JobID, BLM.Fire2, BLM.HighFire2)]
         BlackFire2Feature = 2508,
 
         [OrderedEnum]
-        [CustomComboInfo("Ice 2 Feature", "(High) Blizzard 2 becomes Freeze in Umbral Ice.", BLM.JobID, BLM.Blizzard2, BLM.HighBlizzard2)]
+        [CustomComboInfo("冰冻功能", "在灵极冰状态时，将（高）冰冻替换为玄冰。", BLM.JobID, BLM.Blizzard2, BLM.HighBlizzard2)]
         BlackBlizzard2Feature = 2509,
 
         [OrderedEnum]
-        [CustomComboInfo("Fire 2/Ice 2 Option", "Fire 2 and Blizzard 2 will not change unless you're at max AF/UI with this option.", BLM.JobID, BLM.Blizzard2)]
+        [CustomComboInfo("烈炎/冰冻功能选项", "烈炎和冰冻只在你有满档星极火/灵极冰的状态下，才会替换为核爆或玄冰。", BLM.JobID, BLM.Blizzard2)]
         BlackFireBlizzard2Option = 2514,
 
         [OrderedEnum]
-        [CustomComboInfo("(Between the) Ley Lines", "Change Ley Lines into Between the Lines when Ley Lines is active.\nMake sure to disable the vanilla Ley Lines to Retrace feature before applying this!", BLM.JobID, BLM.LeyLines)]
+        [CustomComboInfo("黑魔纹 => 魔纹步", "在黑魔纹发动时，将黑魔纹替换为魔纹步。\n！！！在使用这个功能前先关闭原版游戏的技能变换功能！！！", BLM.JobID, BLM.LeyLines)]
         BlackLeyLinesFeature = 2504,
 
         [OrderedEnum]
-        [CustomComboInfo("Fire 1/3 Feature", "Fire 1 becomes Fire 3 outside of Astral Fire, and when Firestarter proc is up, and also becomes Paradox when available.", BLM.JobID, BLM.Fire)]
+        [CustomComboInfo("火炎 => 爆炎 功能", "在不处于星极火状态、或触发火苗Buff时，将火炎替换为爆炎。如果悖论可用，也会替换为悖论。", BLM.JobID, BLM.Fire)]
         BlackFireFeature = 2505,
 
         [OrderedEnum]
         [ParentCombo(BlackFireFeature)]
-        [CustomComboInfo("Fire 1/3 Option", "Fire will stay Fire 3 if you're not at max AF with this option.", BLM.JobID, BLM.Fire)]
+        [CustomComboInfo("火炎 => 爆炎 功能选项", "如果星极火状态的档数不满，火炎也会成为爆炎。", BLM.JobID, BLM.Fire)]
         BlackFireOption = 2515,
 
         [OrderedEnum]
-        [CustomComboInfo("Blizzard 1/3 Feature", "Blizzard 1 becomes Blizzard 3 after you have unlocked it and are not in Umbral Ice 3.", BLM.JobID, BLM.Blizzard)]
+        [CustomComboInfo("冰结 => 冰封", "在冰封解锁后、且不处于三档灵极冰状态时，将冰结替换为冰封。", BLM.JobID, BLM.Blizzard)]
         BlackBlizzardFeature = 2506,
 
         [OrderedEnum]
-        [CustomComboInfo("Scathe/Xenoglossy Feature", "Scathe becomes Xenoglossy when available.", BLM.JobID, BLM.Scathe)]
+        [CustomComboInfo("崩溃 => 异言", "当异言可用时，将崩溃替换为异言。", BLM.JobID, BLM.Scathe)]
         BlackScatheFeature = 2507,
 
         [OrderedEnum]
-        [CustomComboInfo("Xenoglossy/Foul to Amplifier", "Xenoglossy/Foul become Amplifier when it's available, you have just used an action, and you have less than two Polyglot stacks, or if you have no target or have no Polyglot.", BLM.JobID, BLM.Xenoglossy, BLM.Foul)]
+        [CustomComboInfo("秽浊/异言 => 详述", "当详述可用且满足下述条件时，将秽浊和异言替换为详述：刚刚使用了一个技能（GCD正在冷却）且详述的层数不满2层、当前没有目标、或详述的层数为0。", BLM.JobID, BLM.Xenoglossy, BLM.Foul)]
         BlackXenoAmpFeature = 2512,
 
         [OrderedEnum]
-        [CustomComboInfo("Xenoglossy to Foul", "Xenoglossy becomes Foul if you are using AoE spells or if you do not have Xenoglossy.", BLM.JobID, BLM.Xenoglossy)]
+        [CustomComboInfo("异言 => 秽浊", "当你使用AOE技能、或异言尚未解锁时，将异言替换为秽浊。", BLM.JobID, BLM.Xenoglossy)]
         BlackXenoFoulFeature = 2522,
 
         [OrderedEnum]
-        [CustomComboInfo("Triplecast to Swiftcast", "Triplecast becomes Swiftcast if you aren't capped out on charges and Swiftcast is ready, or if Triplecast is not unlocked.", BLM.JobID, BLM.Triplecast)]
+        [CustomComboInfo("三连咏唱 => 即刻咏唱", "当三连咏唱的积蓄次数不满、且即刻咏唱可用，或三连咏唱尚未解锁时，将三连咏唱替换为即刻咏唱。", BLM.JobID, BLM.Triplecast)]
         BlackTripleswiftFeature = 2523,
 
         [OrderedEnum]
-        [CustomComboInfo("Flare Star to Manafont", "Flare Star becomes Manafont when it is not available.", BLM.JobID, BLM.FlareStar)]
+        [CustomComboInfo("耀星 => 魔泉", "当耀星不可用时，将耀星替换为魔泉。", BLM.JobID, BLM.FlareStar)]
         BlackFlareFontFeature = 2525,
 
         #endregion

@@ -1,10 +1,8 @@
 {
   "Author": "attick, daemitus, alymphocyte, grammernatzi",
-  "Name": "XIV Combo Expandedest",
+  "Name": "XIV Combo Expandedest CN_Localized",
   "Punchline": "Condenses combos and mutually exclusive abilities onto a single button. Plus extras.",
   "Description": "This is an enhanced version of XIVCombo with a variety of new added features.\nThis is mutually exclusive with other XIVCombo versions, so make sure they do not conflict!",
-  "RepoUrl": "https://github.com/Grammernatzi/XIVComboPluginExpandedest",
-  "IconUrl": "https://raw.githubusercontent.com/grammernatzi/XIVComboPluginExpandedest/master/res/icon.png",
   "ImageUrls": [],
   "Changelog": "1.5.0.70:
     * Added Comet Overwrite Prevention feature. Or did I?
