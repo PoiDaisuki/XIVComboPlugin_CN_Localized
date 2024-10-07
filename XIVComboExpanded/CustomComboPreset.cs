@@ -62,11 +62,11 @@ namespace XIVComboExpandedestPlugin
         DolCastLightElectricCurrentFeature = 9009,
 
         [OrderedEnum]
-        [CustomComboInfo("直钓提钩", "当技能可用、且当前不在“提钩成功率降低”（耐心）状态时，将精准/强力提钩替换为普通提钩。\n原标题为 Hooking Hooksets 但我实在想不出来怎么翻比较好。", All.JobID, All.PrecisionHookset, All.PowerfulHookset)]
+        [CustomComboInfo("直钓提钩", "当技能可用、且当前不在“提钩成功率降低”（耐心）状态时，将精准/强力提钩替换为普通提钩。\n（原标题为 Hooking Hooksets，但我实在想不出来怎么翻比较好）", All.JobID, All.PrecisionHookset, All.PowerfulHookset)]
         DolHookingHooksetsFeature = 9012,
 
         [OrderedEnum]
-        [CustomComboInfo("撒饵 => 抛竿", "在你已经有撒饵Buff，或GP少于100（在“提钩成功率降低”（耐心）状态下则为150）的情况下，将撒饵替换为抛竿。\n同上，原标题为 Chummy Casts 。", All.JobID, All.Chum)]
+        [CustomComboInfo("撒饵 => 抛竿", "在你已经有撒饵Buff，或GP少于100（在“提钩成功率降低”（耐心）状态下则为150）的情况下，将撒饵替换为抛竿。\n（同上，原标题为 Chummy Casts）", All.JobID, All.Chum)]
         DolChummyCastFeature = 9013,
 
         #endregion
@@ -221,62 +221,62 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 2315
 
         [OrderedEnum]
-        [CustomComboInfo("Burst Shot into Refulgent Arrow", "Replaces Heavy Shot/Burst Shot with Straight Shot/Refulgent Arrow when procced.", BRD.JobID, BRD.HeavyShot, BRD.BurstShot)]
+        [CustomComboInfo("爆发射击 => 辉煌箭", "当被触发时，将强力/爆发射击替换为直线射击/辉煌箭。", BRD.JobID, BRD.HeavyShot, BRD.BurstShot)]
         BardStraightShotUpgradeFeature = 2302,
 
         [OrderedEnum]
-        [CustomComboInfo("Biting Jaws", "Iron Jaws is replaced with Stormbite/Windbite if it is not up, or you do not have Iron Jaws yet.", BRD.JobID, BRD.IronJaws)]
+        [CustomComboInfo("伶牙俐齿功能", "如果目标身上没有风Dot，或伶牙俐齿尚未解锁，则将伶牙俐齿替换为（狂）风蚀箭。", BRD.JobID, BRD.IronJaws)]
         BardIronJawsFeature = 2311,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Biting Jaws Plus", "Iron Jaws is replaced with Caustic Bite/Stormbite if one or both are not up.\nAlternates between the two if Iron Jaws isn't available.\nThis is a separate feature from Biting Jaws, and will overwrite it if both are enabled.", BRD.JobID, BRD.IronJaws)]
+        [CustomComboInfo("伶牙俐齿 Plus", "如果目标身上没有对应的Dot，则将伶牙俐齿替换为对应的Dot技能。\n如果伶牙俐齿不可用，则会在这两个Dot技能之间切换。\n这是伶牙俐齿功能的一个独立功能。如果同时启用，则会覆盖它的效果。", BRD.JobID, BRD.IronJaws)]
         BardIronJawsFeaturePlus = 2303,
 
         [OrderedEnum]
-        [CustomComboInfo("Ladonsbite into Apex Arrow", "Replaces Quick Nock/Ladonsbite with Apex Arrow when gauge is 80 or above.", BRD.JobID, BRD.QuickNock, BRD.Ladonsbite)]
+        [CustomComboInfo("百首龙牙箭 => 绝峰箭", "当灵魂之声量谱到达80点时，将连珠箭/百首龙牙箭替换为绝峰箭。", BRD.JobID, BRD.QuickNock, BRD.Ladonsbite)]
         BardApexFeature = 2304,
 
         [OrderedEnum]
-        [CustomComboInfo("Ladonsbite into Shadowbite", "Replaces Quick Nock/Ladonsbite with Wide Volley/Shadowbite when it is ready.", BRD.JobID, BRD.QuickNock, BRD.Ladonsbite)]
+        [CustomComboInfo("百首龙牙箭 => 影噬箭", "当被触发时，将连珠箭/百首龙牙箭替换为广域群射/影噬箭。", BRD.JobID, BRD.QuickNock, BRD.Ladonsbite)]
         BardShadowbiteFeature = 2305,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Empyreal Arrow to Sidewinder", "Replaces Empyreal Arrow with Sidewinder if the latter is off-cooldown and the former is on-cooldown.", BRD.JobID, BRD.EmpyrealArrow)]
+        [CustomComboInfo("九天连箭 => 侧风诱导箭", "将九天连箭替换为侧风诱导箭，如果前者正在冷却而后者已经完成冷却。", BRD.JobID, BRD.EmpyrealArrow)]
         BardSidewinderFeature = 2306,
 
         [OrderedEnum]
-        [CustomComboInfo("Sidewinder to Pitch Perfect", "Replaces Sidewinder with Pitch Perfect during Wanderer's Minuet if Repertoire is maxed out or Sidewinder is on cooldown.", BRD.JobID, BRD.Sidewinder)]
+        [CustomComboInfo("侧风诱导箭 => 完美音调", "在放浪神的小步舞曲时，将侧风诱导箭替换为完美音调，如果诗心已满、或侧风诱导箭正在冷却中。", BRD.JobID, BRD.Sidewinder)]
         BardPerfectSidesFeature = 2314,
 
         [OrderedEnum]
-        [CustomComboInfo("Radiant Voice", "Replaces Radiant Finale with Battle Voice if Battle Voice is off-cooldown.", BRD.JobID, BRD.RadiantFinale)]
+        [CustomComboInfo("战斗的最终乐章", "如果战斗之声已经完成冷却，则将光明神的最终乐章替换为战斗之声。\n（其实原标题是 Radiant Voice，但是为了和下面对应所以反过来了）", BRD.JobID, BRD.RadiantFinale)]
         BardRadiantFeature = 2307,
 
         [OrderedEnum]
         [ParentCombo(BardRadiantFeature)]
-        [CustomComboInfo("Radiant Voice Evil Option", "Replaces Radiant Finale with Battle Voice after Radiant Finale is used, instead.", BRD.JobID, BRD.RadiantFinale)]
+        [CustomComboInfo("光明神之声", "使用光明神的最终乐章之后，再将光明神的最终乐章替换为战斗之声。", BRD.JobID, BRD.RadiantFinale)]
         BardRadiantVoiceOption = 2315,
 
         [OrderedEnum]
-        [CustomComboInfo("Radiant Strikes", "Replaces Radiant Finale with Raging Strikes if Raging Strikes is off-cooldown and Radiant Finale is not.\nBattle Voice takes priority if Radiant Voice is enabled.", BRD.JobID, BRD.RadiantFinale)]
+        [CustomComboInfo("光明神强击", "如果猛者强击已经完成冷却而光明神的最终乐章没有，则光明神的最终乐章替换为猛者强击。\n如果上面“战斗的最终乐章”也被启用，则战斗之声的优先级更高。", BRD.JobID, BRD.RadiantFinale)]
         BardRadiantStrikesFeature = 2309,
 
         [OrderedEnum]
-        [CustomComboInfo("Battle Voice Lockout", "Locks out Battle Voice while it is available and more than 3s remain on its buff, to prevent overwriting raid buffs.", BRD.JobID, BRD.BattleVoice)]
+        [CustomComboInfo("战斗之声锁定功能", "如果身上的战斗之声Buff剩余时间超过3秒，则锁定战斗之声。（防止副本中Buff被覆盖）", BRD.JobID, BRD.BattleVoice)]
         BardBattleVoiceLockoutFeature = 2312,
 
         [OrderedEnum]
-        [CustomComboInfo("Radiant Finale Lockout", "Locks out Radiant Finale while it is available and more than 3s remain on its buff, to prevent overwriting raid buffs.", BRD.JobID, BRD.RadiantFinale)]
+        [CustomComboInfo("光明神的最终乐章锁定功能", "如果身上的光明神的最终乐章Buff剩余时间超过3秒，则锁定战斗之声。（防止副本中Buff被覆盖）", BRD.JobID, BRD.RadiantFinale)]
         BardRadiantLockoutFeature = 2313,
 
         [OrderedEnum]
-        [CustomComboInfo("Barraging Arrow", "Replaces Barrage with Refulgent Arrow/Straight Shot if you have Hawkeye.", BRD.JobID, BRD.Barrage)]
+        [CustomComboInfo("纷乱箭 => 辉煌箭", "在已经触发鹰眼状态时，将纷乱箭替换为直线射击/辉煌箭。", BRD.JobID, BRD.Barrage)]
         BardBarrageFeature = 2308,
 
         [OrderedEnum]
-        [CustomComboInfo("Heartbreak Shot to Rain of Death", "Replaces Heartbreak Shot/Bloodletter with Rain of Death if your last GCD was either Quick Nock/Ladonsbite or Shadowbite.", BRD.JobID, BRD.HeartbreakShot, BRD.Bloodletter)]
+        [CustomComboInfo("碎心箭 => 死亡箭雨", "如果你最近的GCD使用的是AOE技能（连珠箭/百首龙牙箭/广域群射/影噬箭），则将失血箭/碎心箭替换为死亡箭雨。", BRD.JobID, BRD.HeartbreakShot, BRD.Bloodletter)]
         BardRainFeature = 2310,
 
         #endregion
@@ -1703,31 +1703,31 @@ namespace XIVComboExpandedestPlugin
         #region WHITE MAGE
 
         [OrderedEnum]
-        [CustomComboInfo("Solace into Misery", "Replaces Afflatus Solace with Afflatus Misery when Misery is ready to be used.", WHM.JobID, WHM.AfflatusSolace)]
+        [CustomComboInfo("安慰之心 => 苦难之心", "如果苦难之心可用，则将安慰之心替换为苦难之心。", WHM.JobID, WHM.AfflatusSolace)]
         WhiteMageSolaceMiseryFeature = 2401,
 
         [OrderedEnum]
-        [CustomComboInfo("Rapture into Misery", "Replaces Afflatus Rapture with Afflatus Misery when Misery is ready to be used and you have a target.", WHM.JobID, WHM.AfflatusRapture)]
+        [CustomComboInfo("狂喜之心 => 苦难之心", "如果苦难之心可用、且当前有选定的目标，则将狂喜之心替换为苦难之心。", WHM.JobID, WHM.AfflatusRapture)]
         WhiteMageRaptureMiseryFeature = 2402,
 
         [OrderedEnum]
-        [CustomComboInfo("Holy into Misery", "Replaces Holy/Holy III with Afflatus Misery when Misery is ready to be used and you have a target.", WHM.JobID, WHM.Holy, WHM.Holyga)]
+        [CustomComboInfo("神圣 => 苦难之心", "如果苦难之心可用、且当前有选定的目标，则将神圣/豪圣替换为苦难之心。", WHM.JobID, WHM.Holy, WHM.Holyga)]
         WhiteMageHolyMiseryFeature = 2405,
 
         [OrderedEnum]
-        [CustomComboInfo("Holy into Glare IV", "Replaces Holy/Holy III with Glare IV when it is ready to be used and you have a target.\nHas lesser priority than Afflatus Misery if that feature is also enabled.", WHM.JobID, WHM.Holy, WHM.Holyga)]
+        [CustomComboInfo("神圣 => 闪飒", "如果闪飒可用、且当前有选定的目标，则将神圣/豪圣替换为闪飒。\n如果上面的苦难之心功能也被启用，则苦难之心的优先级更高。", WHM.JobID, WHM.Holy, WHM.Holyga)]
         WhiteMageHolyGlareFeature = 2407,
 
         [OrderedEnum]
-        [CustomComboInfo("Cure 2 to Cure Level Sync", "Changes Cure II to Cure when below level 30 in synced content.", WHM.JobID, WHM.Cure2)]
+        [CustomComboInfo("救疗 -> 治疗 等级同步", "在等级同步至30级以下时，将救疗替换为治疗。", WHM.JobID, WHM.Cure2)]
         WhiteMageCureFeature = 2403,
 
         [OrderedEnum]
-        [CustomComboInfo("Afflatus Feature", "Changes Cure II into Afflatus Solace, and Medica into Afflatus Rapture, when lilies are up.", WHM.JobID, WHM.Cure2, WHM.Medica)]
+        [CustomComboInfo("治疗百合功能", "当治疗百合开放时，将救疗替换为安慰之心、将医治替换为狂喜之心。", WHM.JobID, WHM.Cure2, WHM.Medica)]
         WhiteMageAfflatusFeature = 2404,
 
         [OrderedEnum]
-        [CustomComboInfo("White Mage Lucid Dreaming Reminder", "All your non-role action cooldowns (that don't have charges) become Lucid Dreaming if they aren't up and Lucid Dreaming is, and you have less-than-or-equal-to a set amount of MP.", WHM.JobID, WHM.PresenceOfMind, WHM.Assize, WHM.Temperance, WHM.PlenaryIndulgence, WHM.Tetragrammaton, WHM.Asylum, WHM.Aquaveil, WHM.LiturgyOfTheBell, WHM.Benediction)]
+        [CustomComboInfo("醒梦提醒（白魔）", "当你的MP小于等于以下设置值、且醒梦不在冷却时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", WHM.JobID, WHM.PresenceOfMind, WHM.Assize, WHM.Temperance, WHM.PlenaryIndulgence, WHM.Tetragrammaton, WHM.Asylum, WHM.Aquaveil, WHM.LiturgyOfTheBell, WHM.Benediction)]
         WhiteMageLucidReminderFeature = 2406,
 
         #endregion
