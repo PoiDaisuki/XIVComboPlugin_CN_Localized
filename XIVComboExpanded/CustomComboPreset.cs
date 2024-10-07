@@ -395,7 +395,7 @@ namespace XIVComboExpandedestPlugin
         [ConflictingCombos(DancerDanceStepCombo)]
         [CustomComboInfo(
             "舞步替换功能",
-            "将跳舞时会变为舞步的技能指定为以下设置的四个" +
+            "将跳舞时会变为舞步的技能指定为以下设置的四个。" +
             "\n这个功能的意义是，确保你在开启上面的连击功能、但不使用自动跳舞功能时，仍然可以正确的跳出四个舞步。" +
             "\n你可以通过在下面为每个舞步技能指定一个不同的技能ID来将其绑定到另一个技能上。" +
             "\n默认的选项是，瀑泄、百花争艳、扇舞·序、和扇舞·破。如果被设置为0，它们会被重置为这些技能。" +
@@ -405,7 +405,7 @@ namespace XIVComboExpandedestPlugin
         DancerDanceComboCompatibility = 3807,
 
         [OrderedEnum]
-        [CustomComboInfo("扇舞·破 => 绿叶小踢腿", "的原因，在跳舞期间将扇舞·破替换为绿叶小踢腿。（因为“hotbar shenanigans”，大概是作者懒得解决的冲突）", DNC.JobID, DNC.FanDance2)]
+        [CustomComboInfo("扇舞·破 => 绿叶小踢腿", "在跳舞期间将扇舞·破替换为绿叶小踢腿。（因为“hotbar shenanigans”，大概是作者懒得解决的冲突）", DNC.JobID, DNC.FanDance2)]
         DancerJeteShenanigans = 3827,
 
         #endregion
@@ -415,63 +415,63 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 2220
 
         [OrderedEnum]
-        [CustomComboInfo("Heavens' Thrust Combo", "Replace Heavens'/Full Thrust with its combo chain.", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
+        [CustomComboInfo("苍穹刺连击", "将直刺/苍穹刺替换为它的整个连击链：\n精准刺/龙眼雷电 - 贯通刺/前冲刺 - 直刺/苍穹刺 - 龙牙龙爪 - 云蒸龙变", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
         DragoonFullThrustCombo = 2204,
 
         [OrderedEnum]
         [ParentCombo(DragoonFullThrustCombo)]
-        [CustomComboInfo("Heavens' Thrust Combo Lance Barrage Option", "Heavens'/Full Thrust's combo chain is instead replaced by Lance Barrage/Vorpal Thrust, not True Thrust, while you have no combo ongoing.", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
+        [CustomComboInfo("苍穹刺连击 - 从贯通刺/前冲刺开始", "当没有进行连击的时候，将苍穹刺替换为贯通刺/前冲刺，而不是精准刺。\n从结果上来说，即是删去了苍穹刺连击的第一个技能，以便与樱花连击相区分，但是需要从其他地方找一个精准刺来开始这条连击链。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
         DragoonFullThrustComboOption = 2210,
 
         [OrderedEnum]
         [ParentCombo(DragoonFullThrustCombo)]
-        [CustomComboInfo("Heavens' Thrust to Piercing Talon", "Heavens'/Full Thrust's combo is replaced with Piercing Talon when you are out of melee range.", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
+        [CustomComboInfo("苍穹刺连击 => 贯穿尖", "当你在近战攻击技能的范围之外时，将苍穹刺连击替换为贯穿尖。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
         DragoonFullThrustTalonFeature = 2211,
 
         [OrderedEnum]
-        [CustomComboInfo("Chaotic Spring Combo", "Replace Chaotic Spring/Chaos Thrust with its combo chain.", DRG.JobID, DRG.ChaosThrust, DRG.ChaoticSpring)]
+        [CustomComboInfo("樱花连击", "将樱花怒放/樱花缭乱替换为它的整个连击链：\n精准刺/龙眼雷电 - 开膛枪/螺旋击 - 樱花怒放/樱花缭乱 - 龙尾大回旋 - 云蒸龙变", DRG.JobID, DRG.ChaosThrust, DRG.ChaoticSpring)]
         DragoonChaosThrustCombo = 2203,
 
         [OrderedEnum]
         [ParentCombo(DragoonChaosThrustCombo)]
-        [CustomComboInfo("Chaotic Spring Combo Spiral Blow Option", "Chaotic Spring/Chaos Thrust's combo chain is instead replaced by Spiral Blow/Disembowel, not True Thrust, while you have no combo ongoing.", DRG.JobID, DRG.ChaosThrust, DRG.ChaoticSpring)]
+        [CustomComboInfo("樱花连击 - 从开膛枪/螺旋击开始", "当没有进行连击的时候，将樱花怒放/樱花缭乱替换为开膛枪/螺旋击，而不是精准刺。\n从结果上来说，即是删去了樱花连击的第一个技能，以便与直刺连击相区分，但是需要从其他地方找一个精准刺来开始这条连击链。", DRG.JobID, DRG.ChaosThrust, DRG.ChaoticSpring)]
         DragoonChaosThrustComboOption = 2209,
 
         [OrderedEnum]
-        [CustomComboInfo("Heavens' Thrust to Chaotic Spring", "Heavens'/Full Thrust becomes Chaotic Spring/Chaos Thrust after using Spiral Blow/Disembowel.\nWith combos, the Heavens' Thrust combo becomes the Chaotic Spring combo.", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
+        [CustomComboInfo("苍穹刺连击 => 樱花缭乱", "在使用开膛枪/螺旋击后，将苍穹刺替换为樱花怒放/樱花缭乱，及后续的连击。\n与上面的苍穹刺连击一起用的话，相当于把苍穹刺连击替换为樱花连击。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
         DragoonFullChaosFeature = 2215,
 
         [OrderedEnum]
-        [CustomComboInfo("Chaotic Glide", "Spiral Blow/Disembowel and Chaotic Spring/Chaos Thrust (plus their combos) become Winged Glide when out of melee range.", DRG.JobID, DRG.Disembowel, DRG.SpiralBlow, DRG.ChaosThrust, DRG.ChaoticSpring)]
+        [CustomComboInfo("樱花连击 => 龙翼滑翔", "当你在近战攻击技能的范围之外时，将樱花连击替换为龙翼滑翔。（似乎只会替换开膛枪和樱花怒放）", DRG.JobID, DRG.Disembowel, DRG.SpiralBlow, DRG.ChaosThrust, DRG.ChaoticSpring)]
         DragoonChaoticGlideFeature = 2220,
 
         [OrderedEnum]
-        [CustomComboInfo("True/Raiden Thrust to Wyrmwind", "Replace True/Raiden Thrust with Wyrmwind Thrust when available.", DRG.JobID, DRG.FullThrust, DRG.ChaosThrust, DRG.TrueThrust)]
+        [CustomComboInfo("精准刺/龙眼雷电 => 天龙点睛", "将精准刺/龙眼雷电替换为天龙点睛，如果后者可用。", DRG.JobID, DRG.FullThrust, DRG.ChaosThrust, DRG.TrueThrust)]
         DragoonRaidenWyrmwindFeature = 2213,
 
         [OrderedEnum]
-        [CustomComboInfo("Coerthan Torment Combo", "Replace Coerthan Torment with its combo chain.", DRG.JobID, DRG.CoerthanTorment)]
+        [CustomComboInfo("山境酷刑连击", "将山境酷刑替换为它的整个连击链：死天枪 - 音速刺 - 山境酷刑", DRG.JobID, DRG.CoerthanTorment)]
         DragoonCoerthanTormentCombo = 2202,
 
         [OrderedEnum]
         [ParentCombo(DragoonCoerthanTormentCombo)]
-        [CustomComboInfo("Coerthan Torment Combo to Wyrmwind", "Coerthan Torment combo becomes Wyrmwind Thrust when you have two Firstminds' Focus.", DRG.JobID, DRG.CoerthanTorment)]
+        [CustomComboInfo("山境酷刑连击 => 天龙点睛", "将山境酷刑连击替换为天龙点睛，如果后者可用。", DRG.JobID, DRG.CoerthanTorment)]
         DragoonWyrmwindFeature = 2207,
 
         [OrderedEnum]
-        [CustomComboInfo("Jump to Mirage Dive", "Replace (High) Jump with Mirage Dive when Dive Ready.", DRG.JobID, DRG.Jump, DRG.HighJump)]
+        [CustomComboInfo("跳跃 => 幻象冲", "将跳跃替换为幻象冲，如果后者可用。\n！！！译注：原版游戏有这个技能变换功能，不需要用这里的！！！", DRG.JobID, DRG.Jump, DRG.HighJump)]
         DragoonJumpFeature = 2201,
 
         [OrderedEnum]
-        [CustomComboInfo("Stardiver to Dragonfire Dive", "Stardiver becomes Dragonfire Dive when the latter is off-cooldown, or outside of Life of the Dragon.", DRG.JobID, DRG.Stardiver)]
+        [CustomComboInfo("坠星冲 => 龙炎冲", "在龙炎冲冷却完毕、或不在红莲龙血状态时，将坠星冲替换为龙炎冲。", DRG.JobID, DRG.Stardiver)]
         DragoonStarfireDiveFeature = 2208,
 
         [OrderedEnum]
-        [CustomComboInfo("Lance Charge to Battle Litany", "Lance Charge becomes Battle Litany while on cooldown.", DRG.JobID, DRG.LanceCharge)]
+        [CustomComboInfo("猛枪 => 战斗连祷", "在猛枪冷却时，将猛枪替换为战斗连祷。", DRG.JobID, DRG.LanceCharge)]
         DragoonLancetanyFeature = 2218,
 
         [OrderedEnum]
-        [CustomComboInfo("Battle Litany Lockout Feature", "Locks out Battle Litany while it is available and more than 3s remain on its buff, to prevent overwriting raid buffs.", DRG.JobID, DRG.BattleLitany)]
+        [CustomComboInfo("战斗连祷锁定功能", "如果身上的战斗连祷Buff剩余时间超过3秒，则锁定战斗连祷。（防止副本中Buff被覆盖）", DRG.JobID, DRG.BattleLitany)]
         DragoonLitanyLockoutFeature = 2219,
 
         #endregion
