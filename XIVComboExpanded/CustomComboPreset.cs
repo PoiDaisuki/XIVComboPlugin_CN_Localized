@@ -62,11 +62,11 @@ namespace XIVComboExpandedestPlugin
         DolCastLightElectricCurrentFeature = 9009,
 
         [OrderedEnum]
-        [CustomComboInfo("直钓提钩", "当技能可用、且当前不在“提钩成功率降低”（耐心）状态时，将精准/强力提钩替换为普通提钩。\n（原标题为 Hooking Hooksets，但我实在想不出来怎么翻比较好）", All.JobID, All.PrecisionHookset, All.PowerfulHookset)]
+        [CustomComboInfo("直钓提钩", "当技能可用、且当前不在提钩成功率降低（耐心）状态时，将精准/强力提钩替换为普通提钩。\n（原标题为 Hooking Hooksets，但我实在想不出来怎么翻比较好）", All.JobID, All.PrecisionHookset, All.PowerfulHookset)]
         DolHookingHooksetsFeature = 9012,
 
         [OrderedEnum]
-        [CustomComboInfo("撒饵 => 抛竿", "在你已经有撒饵Buff，或GP少于100（在“提钩成功率降低”（耐心）状态下则为150）的情况下，将撒饵替换为抛竿。\n（同上，原标题为 Chummy Casts）", All.JobID, All.Chum)]
+        [CustomComboInfo("撒饵 => 抛竿", "在你已经有撒饵Buff，或GP少于100（在提钩成功率降低（耐心）状态下则为150）的情况下，将撒饵替换为抛竿。\n（同上，原标题为 Chummy Casts）", All.JobID, All.Chum)]
         DolChummyCastFeature = 9013,
 
         #endregion
@@ -84,7 +84,7 @@ namespace XIVComboExpandedestPlugin
         AstrologianAstrodynePlayFeature = 3304,*/
 
         [OrderedEnum]
-        [CustomComboInfo("抽卡锁定（防呆）功能", "在持有未使用的奥秘卡的情况下，将抽卡替换为凶星，以防止重复抽卡。（只要用出去一张就可以继续抽）", AST.JobID, AST.AstralDraw)]
+        [CustomComboInfo("抽卡锁定功能", "在持有未使用的奥秘卡的情况下，将抽卡替换为凶星，以防止重复抽卡。（只要用出去一张就可以继续抽）", AST.JobID, AST.AstralDraw)]
         AstrologianDrawLockoutFeature = 3306,
 
         [OrderedEnum]
@@ -260,7 +260,7 @@ namespace XIVComboExpandedestPlugin
         BardRadiantVoiceOption = 2315,
 
         [OrderedEnum]
-        [CustomComboInfo("光明神强击", "如果猛者强击已经完成冷却而光明神的最终乐章没有，则光明神的最终乐章替换为猛者强击。\n如果上面“战斗的最终乐章”也被启用，则战斗之声的优先级更高。", BRD.JobID, BRD.RadiantFinale)]
+        [CustomComboInfo("光明神强击", "如果猛者强击已经完成冷却而光明神的最终乐章没有，则光明神的最终乐章替换为猛者强击。\n如果上面“战斗的最终乐章”功能也被启用，则战斗之声的优先级更高。", BRD.JobID, BRD.RadiantFinale)]
         BardRadiantStrikesFeature = 2309,
 
         [OrderedEnum]
@@ -288,123 +288,124 @@ namespace XIVComboExpandedestPlugin
         [OrderedEnum]
         [SecretCustomCombo]
         [ConflictingCombos(DancerDanceComboCompatibility)]
-        [CustomComboInfo("Dance Step Combo", "Change Standard Step and Technical Step into each dance step while dancing.", DNC.JobID, DNC.StandardStep, DNC.TechnicalStep)]
+        [CustomComboInfo("（半）自动跳舞", "在跳舞时，将标准舞步和技巧舞步替换为对应的舞步技能。", DNC.JobID, DNC.StandardStep, DNC.TechnicalStep)]
         DancerDanceStepCombo = 3802,
 
         [OrderedEnum]
         [ConflictingCombos(DancerSingleTargetProcs)]
-        [CustomComboInfo("Cascade Combo", "Change Cascade into procs and combos as available.", DNC.JobID, DNC.Cascade)]
+        [CustomComboInfo("瀑泄连击", "将瀑泄替换为连击（喷泉）或触发（逆瀑泄、坠喷泉）中可用的那个。", DNC.JobID, DNC.Cascade)]
         DancerSingleTargetMultibutton = 3804,
 
         [OrderedEnum]
         [ParentCombo(DancerSingleTargetMultibutton)]
-        [CustomComboInfo("No Cascade Combo Procs", "Don't change Cascade combo into procs.", DNC.JobID)]
+        [CustomComboInfo("瀑泄连击 - 仅连击", "不要将瀑泄连击替换为他们的触发技能。（仅瀑泄 - 喷泉连击）", DNC.JobID)]
         DancerSingleTargetMultibuttonNoProcs = 3814,
 
         [OrderedEnum]
         [ParentCombo(DancerSingleTargetMultibutton)]
-        [CustomComboInfo("Cascading Saber Dance", "Change Cascade combo into Saber Dance during Devilment while you have more than 50 Esprit.", DNC.JobID)]
+        [CustomComboInfo("瀑泄 => 剑舞", "当处于进攻之探戈状态、且你有超过50点伶俐时，将瀑泄连击替换为剑舞。", DNC.JobID)]
         DancerSingleTargetMultibuttonSaber = 3823,
 
         [OrderedEnum]
-        [CustomComboInfo("Reverse Cascade Combo", "Change Reverse Cascade into Fountainfall if available.", DNC.JobID, DNC.ReverseCascade)]
+        [CustomComboInfo("逆瀑泄连击", "将逆瀑泄替换为坠喷泉，如果后者可用。", DNC.JobID, DNC.ReverseCascade)]
         DancerReverseCascadeCombo = 3818,
 
         [OrderedEnum]
         [ParentCombo(DancerReverseCascadeCombo)]
-        [CustomComboInfo("Change on AoE", "Become Rising Windmill Combo if you're using AoE actions.", DNC.JobID)]
+        [CustomComboInfo("逆瀑泄连击 - 也变为AOE触发", "如果你正在使用AOE技能，则替换为升风车或落血雨。（如果触发可用）", DNC.JobID)]
         DancerReverseCascadeComboAoE = 3819,
 
         [OrderedEnum]
         [ConflictingCombos(DancerSingleTargetMultibutton)]
-        [CustomComboInfo("Single Target to Procs", "Change Single-Target actions into Procs when available.", DNC.JobID, DNC.Cascade, DNC.Fountain)]
+        [CustomComboInfo("单体技能 触发替换功能", "如果触发可用，则将单体技能替换为对应的触发技能。（瀑泄 => 逆瀑泄、喷泉 => 坠喷泉）", DNC.JobID, DNC.Cascade, DNC.Fountain)]
         DancerSingleTargetProcs = 3811,
 
         [OrderedEnum]
         [ConflictingCombos(DancerAoeProcs)]
-        [CustomComboInfo("Windmill Combo", "Change Windmill into procs and combos as available.", DNC.JobID, DNC.Windmill)]
+        [CustomComboInfo("风车连击", "将风车替换为连击（落刃雨）或触发（升风车、落血雨）中可用的那个。", DNC.JobID, DNC.Windmill)]
         DancerAoeMultibutton = 3805,
 
         [OrderedEnum]
         [ParentCombo(DancerAoeMultibutton)]
-        [CustomComboInfo("No Windmill Combo Procs", "Don't change Windmill combo into procs.", DNC.JobID)]
+        [CustomComboInfo("风车连击 - 仅连击", "不要将风车连击替换为他们的触发技能。（仅风车 - 落刃雨连击）", DNC.JobID)]
         DancerAoeMultibuttonNoProcs = 3816,
 
         [OrderedEnum]
         [ParentCombo(DancerSingleTargetMultibutton)]
-        [CustomComboInfo("Windmilling Saber Dance", "Change Windmill combo into Saber Dance during Devilment while you have more than 50 Esprit.", DNC.JobID)]
+        [CustomComboInfo("风车 => 剑舞", "当处于进攻之探戈状态、且你有超过50点伶俐时，将风车连击替换为剑舞。", DNC.JobID)]
         DancerAoeMultibuttonSaber = 3824,
 
         [OrderedEnum]
-        [CustomComboInfo("Rising Windmill Combo", "Change Rising Windmill into Bloodshower if available.", DNC.JobID, DNC.RisingWindmill)]
+        [CustomComboInfo("升风车连击", "将升风车替换为落血雨，如果后者可用。", DNC.JobID, DNC.RisingWindmill)]
         DancerRisingWindmillCombo = 3817,
 
         [OrderedEnum]
         [ConflictingCombos(DancerAoeMultibutton)]
-        [CustomComboInfo("AoE to Procs", "Change AoE actions into procs when available.", DNC.JobID, DNC.Windmill, DNC.Bladeshower)]
+        [CustomComboInfo("AOE技能 触发替换功能", "如果触发可用，则将AOE技能替换为对应的触发技能。（风车 => 升风车、落刃雨 => 落血雨）", DNC.JobID, DNC.Windmill, DNC.Bladeshower)]
         DancerAoeProcs = 3812,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Saber Dance Overcap Prevention", "Change Cascade/Windmill combo into Saber Dance if you have 85+ Esprit.", DNC.JobID, DNC.Cascade, DNC.Windmill)]
+        [CustomComboInfo("剑舞防溢出", "如果你的伶俐值超过85点，则将瀑泄/风车连击替换为剑舞。", DNC.JobID, DNC.Cascade, DNC.Windmill)]
         DancerCombosToSaberDanceOvercap = 3826,
 
         [OrderedEnum]
-        [CustomComboInfo("Fan Dance I to II", "Change Fan Dance I to II if you are currently using your AoE combo.", DNC.JobID, DNC.FanDance1)]
+        [CustomComboInfo("扇舞·序 => 扇舞·破", "如果你正在使用AOE连击，则将扇舞·序替换为扇舞·破。", DNC.JobID, DNC.FanDance1)]
         DancerFanDance1to2 = 3820,
 
         [OrderedEnum]
-        [CustomComboInfo("Fan Dance I/II to III", "Change Fan Dance and Fan Dance 2 into Fan Dance 3 while under Threefold Fan Dance.", DNC.JobID, DNC.FanDance1, DNC.FanDance2)]
+        [CustomComboInfo("扇舞·序/破 => 扇舞·急", "当处于扇舞·急预备状态时，将扇舞·序和扇舞·破替换为扇舞·急。", DNC.JobID, DNC.FanDance1, DNC.FanDance2)]
         DancerFanDanceCombo = 3801,
 
         [OrderedEnum]
         [ParentCombo(DancerFanDanceCombo)]
-        [CustomComboInfo("Fan Dance I/II to IV", "Additionally change Fan Dance and Fan Dance 2 into Fan Dance 4 while under Fourfold Fan Dance.", DNC.JobID, DNC.FanDance1, DNC.FanDance2)]
+        [CustomComboInfo("扇舞·序/破 => 扇舞·终", "如果也处于扇舞·终预备状态时，也将扇舞·序和扇舞·破替换为扇舞·终。", DNC.JobID, DNC.FanDance1, DNC.FanDance2)]
         DancerFanDance4Combo = 3809,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Fan Dance Overcap Prevention", "Change your Cascade/Windmill combos into Fan Dance I/II while the GCD is rolling and you have four feathers.", DNC.JobID, DNC.Cascade, DNC.Windmill)]
+        [CustomComboInfo("扇舞防溢出", "如果你有四档幻扇、且GCD正在转圈，则将瀑泄/风车连击分别替换为扇舞·序或扇舞·破。", DNC.JobID, DNC.Cascade, DNC.Windmill)]
         DancerCombosToFanDance = 3825,
 
         [OrderedEnum]
-        [CustomComboInfo("Flourish to Fan Dance IV", "Change Flourish into Fan Dance IV when it is ready.", DNC.JobID, DNC.Flourish)]
+        [CustomComboInfo("百花争艳 => 扇舞·终", "将百花争艳替换为扇舞·终，当后者可用的时候。", DNC.JobID, DNC.Flourish)]
         DancerFlourishFanDance4Feature = 3808,
 
         [OrderedEnum]
-        [CustomComboInfo("Flourish to Fan Dance III", "Change Flourish into Fan Dance III when it is ready.\nTakes priority over Fan Dance IV if Flourish to Fan Dance IV is active.", DNC.JobID, DNC.Flourish)]
+        [CustomComboInfo("百花争艳 => 扇舞·急", "将百花争艳替换为扇舞·急，当后者可用的时候。\n如果上面的扇舞·终替换功能也被启用，那么这里的优先级会更高。", DNC.JobID, DNC.Flourish)]
         DancerFlourishFanDance3Feature = 3810,
 
         [OrderedEnum]
-        [CustomComboInfo("Devilment Feature", "Change Devilment into Starfall Dance after use.", DNC.JobID, DNC.Devilment)]
+        [CustomComboInfo("进攻之探戈 => 流星舞", "在使用进攻之探戈之后，将其替换为流星舞。", DNC.JobID, DNC.Devilment)]
         DancerDevilmentFeature = 3806,
 
         [OrderedEnum]
-        [CustomComboInfo("Standard Step into Last Dance", "Change Standard Step into Last Dance when available.", DNC.JobID, DNC.StandardStep)]
+        [CustomComboInfo("标准舞步 => 落幕舞", "当落幕舞可用时，将标准舞步替换为落幕舞。", DNC.JobID, DNC.StandardStep)]
         DancerLastDanceFeature = 3821,
 
         [OrderedEnum]
-        [CustomComboInfo("Standard Step into Technical Step", "Change Standard Step into Technical Step when Standard Step is on cooldown.", DNC.JobID, DNC.StandardStep)]
+        [CustomComboInfo("标准舞步 => 技巧舞步", "当标准舞步正在冷却时，将标准舞步替换为技巧舞步。", DNC.JobID, DNC.StandardStep)]
         DancerStandardechnicalStepFeature = 3822,
 
         [OrderedEnum]
-        [CustomComboInfo("Technical Step Lockout Feature", "Locks out Technical Step while it is available and more than 8s remain on its raid buff, to prevent overwriting raid buffs.", DNC.JobID, DNC.TechnicalStep)]
+        [CustomComboInfo("技巧舞步锁定功能", "如果身上的技巧舞步结束Buff剩余时间超过8秒，则锁定技巧舞步。（防止副本中Buff被覆盖）", DNC.JobID, DNC.TechnicalStep)]
         DancerTechnicalLockoutFeature = 3813,
 
         [OrderedEnum]
         [ConflictingCombos(DancerDanceStepCombo)]
         [CustomComboInfo(
-            "Dance Step Feature",
-            "Change actions into dance steps while dancing." +
-            "\nThis helps ensure you can still dance with combos on, without using auto dance." +
-            "\nYou can change the respective actions by inputting action IDs below for each dance step." +
-            "\nThe defaults are Cascade, Flourish, Fan Dance and Fan Dance II. If set to 0, they will reset to these actions." +
-            "\nYou can get Action IDs with Garland Tools by searching for the action and clicking the cog.",
+            "舞步替换功能",
+            "将跳舞时会变为舞步的技能指定为以下设置的四个" +
+            "\n这个功能的意义是，确保你在开启上面的连击功能、但不使用自动跳舞功能时，仍然可以正确的跳出四个舞步。" +
+            "\n你可以通过在下面为每个舞步技能指定一个不同的技能ID来将其绑定到另一个技能上。" +
+            "\n默认的选项是，瀑泄、百花争艳、扇舞·序、和扇舞·破。如果被设置为0，它们会被重置为这些技能。" +
+            "\n技能ID可以通过在Garland Tools上搜索技能名并点击右上角的小齿轮图标获取。" +
+            "\n（译注：SimpleTweaks可以直接在游戏内显示技能的ID、以及自动跳舞不会坑你的，这个功能真没卵用）",
             DNC.JobID)]
         DancerDanceComboCompatibility = 3807,
 
         [OrderedEnum]
-        [CustomComboInfo("Fan Dance II to Jete", "Fan Dance II becomes Jete while dancing because hotbar shenanigans.", DNC.JobID, DNC.FanDance2)]
+        [CustomComboInfo("扇舞·破 => 绿叶小踢腿", "的原因，在跳舞期间将扇舞·破替换为绿叶小踢腿。（因为“hotbar shenanigans”，大概是作者懒得解决的冲突）", DNC.JobID, DNC.FanDance2)]
         DancerJeteShenanigans = 3827,
 
         #endregion
@@ -1715,7 +1716,7 @@ namespace XIVComboExpandedestPlugin
         WhiteMageHolyMiseryFeature = 2405,
 
         [OrderedEnum]
-        [CustomComboInfo("神圣 => 闪飒", "如果闪飒可用、且当前有选定的目标，则将神圣/豪圣替换为闪飒。\n如果上面的苦难之心功能也被启用，则苦难之心的优先级更高。", WHM.JobID, WHM.Holy, WHM.Holyga)]
+        [CustomComboInfo("神圣 => 闪飒", "如果闪飒可用、且当前有选定的目标，则将神圣/豪圣替换为闪飒。\n如果上面的苦难之心替换功能也被启用，则苦难之心的优先级更高。", WHM.JobID, WHM.Holy, WHM.Holyga)]
         WhiteMageHolyGlareFeature = 2407,
 
         [OrderedEnum]
