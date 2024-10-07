@@ -14,59 +14,59 @@ namespace XIVComboExpandedestPlugin
         // Latest enum: 9014
 
         [OrderedEnum]
-        [CustomComboInfo("Raise to Swiftcast Feature", "Replaces the respective raise on RDM/SMN/SCH/WHM/AST/SGE/BLU with Swiftcast when it is off cooldown (and Dualcast isn't up).", All.JobID, All.Raise, All.Resurrection, All.Ascend, All.Verraise, All.Egeiro, All.AngelWhisper)]
+        [CustomComboInfo("复活 => 即刻咏唱 功能", "当即刻咏唱不在冷却时，将有复活技能的职业各自的复活技能替换为即刻咏唱。（有连续咏唱Buff的时候也不会替换）\n以防万一以下是有复活技能的职业：四个治疗职业、召唤师、赤魔法师、和青魔法师。", All.JobID, All.Raise, All.Resurrection, All.Ascend, All.Verraise, All.Egeiro, All.AngelWhisper)]
         AllSwiftcastFeature = 9001,
 
         [OrderedEnum]
-        [CustomComboInfo("Isle Sprint", "Replaces Sprint with Isle Sprint while you're in your Island Sanctuary.\nBecause apparently this hasn't been updated in SimpleTweaks after two months.", All.JobID, All.Sprint)]
+        [CustomComboInfo("海岛冲刺", "在无人岛时，将冲刺替换为海岛冲刺。\n这本来是一个SimpleTweaks提供的功能。（但是似乎坏了没修所以作者做了这么一个替换）", All.JobID, All.Sprint)]
         AllIsleSprintFeature = 9014,
 
         [OrderedEnum]
-        [CustomComboInfo("Eureka Feature", "Replaces Solid Reason/Ageless Words with Wise to the World when you have Eureka Moment up.", All.JobID, All.SolidReason, All.AgelessWords)]
+        [CustomComboInfo("理智同兴替换", "当理智同兴被触发时，将石工之理或农夫之智替换为理智同兴。", All.JobID, All.SolidReason, All.AgelessWords)]
         AllEurekaFeature = 9002,
 
         [OrderedEnum]
-        [CustomComboInfo("Tank Interrupt Feature", "Low Blow becomes Interject if the opponent can be interrupted and Interject is off-cooldown.", All.JobID, All.LowBlow)]
+        [CustomComboInfo("防护职业插言功能", "如果目标可以被插言、且插言当前不在冷却，则将下踢替换为插言。", All.JobID, All.LowBlow)]
         AllTankInterruptFeature = 9003,
 
         [OrderedEnum]
-        [CustomComboInfo("Reprisal/Addle/Feint Lockout Feature", "Locks out Reprisal, Addle and Feint while they are available, but currently in use and more than 3s remain on their debuff, to prevent overwriting it.", All.JobID, All.Reprisal, All.Addle, All.Feint)]
+        [CustomComboInfo("雪仇/牵制/昏乱锁定功能", "在雪仇/牵制/昏乱不在冷却、但目标已有剩余时间超过3s的对应Debuff的情况下，锁定相应技能以防止Buff被覆盖。", All.JobID, All.Reprisal, All.Addle, All.Feint)]
         AllReprisalLockoutFeature = 9010,
 
         [OrderedEnum]
-        [CustomComboInfo("Physical Ranged DPS Defense Cooldown Lockout Feature", "Locks out your Physical Ranged DPS defense cooldown (ex: Troubadour) while it is available, but one is currently in use and more than 3s remain on its buff, to prevent overwriting it.", All.JobID, All.Tactician, All.Troubadour, All.ShieldSamba)]
+        [CustomComboInfo("远敏团减锁定功能", "在你远敏职业的团减（如行吟）不在冷却、但身上仍有（其他玩家提供的）剩余时间超过3s的对应Buff的情况，锁定相应技能以防止Buff被覆盖。", All.JobID, All.Tactician, All.Troubadour, All.ShieldSamba)]
         AllRangedDefenseCooldownLockoutFeature = 9011,
 
         [OrderedEnum]
-        [CustomComboInfo("Cast / Hook Feature", "Replace Cast with Hook when fishing.", All.JobID, All.Cast)]
+        [CustomComboInfo("抛竿 => 提钩", "在钓鱼时，将抛竿替换为提钩。", All.JobID, All.Cast)]
         DolCastHookFeature = 9004,
 
         [OrderedEnum]
-        [CustomComboInfo("Cast / Gig Feature", "Replace Cast with Gig when underwater.", All.JobID, All.Cast)]
+        [CustomComboInfo("抛竿 => 刺鱼", "在水下时，将抛竿替换为刺鱼。", All.JobID, All.Cast)]
         DolCastGigFeature = 9005,
 
         [OrderedEnum]
-        [CustomComboInfo("Surface Slap / Veteran Trade Feature", "Replace Surface Slap with Veteran Trade when underwater.", All.JobID, All.SurfaceSlap)]
+        [CustomComboInfo("拍击水面 => 熟练技巧", "在水下时，将拍击水面替换为熟练技巧。", All.JobID, All.SurfaceSlap)]
         DolSurfaceTradeFeature = 9006,
 
         [OrderedEnum]
-        [CustomComboInfo("Prize Catch / Nature's Bounty Feature", "Replace Prize Catch with Nature's Bounty when underwater.", All.JobID, All.PrizeCatch)]
+        [CustomComboInfo("大鱼猎手 => 嘉慧", "在水下时，将大鱼猎手替换为嘉慧。", All.JobID, All.PrizeCatch)]
         DolPrizeBountyFeature = 9007,
 
         [OrderedEnum]
-        [CustomComboInfo("Snagging / Salvage Feature", "Replace Snagging with Salvage when underwater.", All.JobID, All.Snagging)]
+        [CustomComboInfo("钓组 => 打捞", "在水下时，将钓组替换为打捞。", All.JobID, All.Snagging)]
         DolSnaggingSalvageFeature = 9008,
 
         [OrderedEnum]
-        [CustomComboInfo("Cast Light / Electric Current Feature", "Replace Cast Light with Electric Current when underwater.", All.JobID, All.CastLight)]
+        [CustomComboInfo("垂钓之光 => 电水流", "在水下时，将垂钓之光替换为电水流。", All.JobID, All.CastLight)]
         DolCastLightElectricCurrentFeature = 9009,
 
         [OrderedEnum]
-        [CustomComboInfo("Hooking Hooksets", "Replace Precision/Powerful Hookset with Hook when it is available and you do not have Inefficient Hooking.", All.JobID, All.PrecisionHookset, All.PowerfulHookset)]
+        [CustomComboInfo("直钓提钩", "当技能可用、且当前不在“提钩成功率降低”（耐心）状态时，将精准/强力提钩替换为普通提钩。\n原标题为 Hooking Hooksets 但我实在想不出来怎么翻比较好。", All.JobID, All.PrecisionHookset, All.PowerfulHookset)]
         DolHookingHooksetsFeature = 9012,
 
         [OrderedEnum]
-        [CustomComboInfo("Chummy Cast", "Replace Chum with Cast if Chum has already been used or you have less than 100 GP (less than 150 if you have Inefficient Hooking).", All.JobID, All.Chum)]
+        [CustomComboInfo("撒饵 => 抛竿", "在你已经有撒饵Buff，或GP少于100（在“提钩成功率降低”（耐心）状态下则为150）的情况下，将撒饵替换为抛竿。\n同上，原标题为 Chummy Casts 。", All.JobID, All.Chum)]
         DolChummyCastFeature = 9013,
 
         #endregion
@@ -106,7 +106,7 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 2530
 
         [OrderedEnum]
-        [CustomComboInfo("冰澈 <> 炽炎 切换功能", "将冰澈或炽炎替换为你当能够使用的技能。\n如果被同步至无法使用他们的等级，则替换为冰结或火炎。", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
+        [CustomComboInfo("冰澈 <=> 炽炎 切换功能", "将冰澈或炽炎替换为你当能够使用的技能。\n如果被同步至无法使用他们的等级，则替换为冰结或火炎。", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
         BlackEnochianFeature = 2501,
 
         [OrderedEnum]
@@ -121,7 +121,7 @@ namespace XIVComboExpandedestPlugin
         BlackEnochianDespairFeature = 2510,
 
         [OrderedEnum]
-        [CustomComboInfo("冰结 <> 火炎 切换功能", "根据当前的元素状态，将冰结或火炎替换为你正在使用的那个。", BLM.JobID, BLM.Blizzard, BLM.Fire)]
+        [CustomComboInfo("冰结 <=> 火炎 切换功能", "根据当前的元素状态，将冰结或火炎替换为你正在使用的那个。", BLM.JobID, BLM.Blizzard, BLM.Fire)]
         BlackEnochianButNotFeature = 2524,
 
         [OrderedEnum]
@@ -145,7 +145,7 @@ namespace XIVComboExpandedestPlugin
         BlackThunder2Feature = 2526,
 
         [OrderedEnum]
-        [CustomComboInfo("玄冰 <> 核爆 切换功能", "将玄冰或核爆替换为你当前能够使用的技能。", BLM.JobID, BLM.Freeze, BLM.Flare)]
+        [CustomComboInfo("玄冰 <=> 核爆 切换功能", "将玄冰或核爆替换为你当前能够使用的技能。", BLM.JobID, BLM.Freeze, BLM.Flare)]
         BlackFreezeFlareFeature = 2502,
 
         [OrderedEnum]
