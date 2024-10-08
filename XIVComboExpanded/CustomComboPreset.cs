@@ -199,7 +199,7 @@ namespace XIVComboExpandedestPlugin
         BlackScatheFeature = 2507,
 
         [OrderedEnum]
-        [CustomComboInfo("秽浊/异言 => 详述", "当详述可用且满足下述条件时，将秽浊和异言替换为详述：刚刚使用了一个技能（GCD正在冷却）且详述的层数不满2层、当前没有目标、或详述的层数为0。", BLM.JobID, BLM.Xenoglossy, BLM.Foul)]
+        [CustomComboInfo("秽浊/异言 => 详述", "当详述可用且满足下述条件时，将秽浊和异言替换为详述：刚刚使用了一个技能（GCD正在旋转）、详述的层数不满2层、且当前没有目标，或详述的层数为0。", BLM.JobID, BLM.Xenoglossy, BLM.Foul)]
         BlackXenoAmpFeature = 2512,
 
         [OrderedEnum]
@@ -312,7 +312,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(DancerReverseCascadeCombo)]
-        [CustomComboInfo("逆瀑泄连击 - 也变为AOE触发", "如果你正在使用AOE技能，则替换为升风车或落血雨。（如果触发可用）", DNC.JobID)]
+        [CustomComboInfo("逆瀑泄连击 - 也变为AOE触发", "如果你正在使用AOE连击，则替换为升风车或落血雨。（如果触发可用）", DNC.JobID)]
         DancerReverseCascadeComboAoE = 3819,
 
         [OrderedEnum]
@@ -364,7 +364,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("扇舞防溢出", "如果你有四档幻扇、且GCD正在转圈，则将瀑泄/风车连击分别替换为扇舞·序或扇舞·破。", DNC.JobID, DNC.Cascade, DNC.Windmill)]
+        [CustomComboInfo("扇舞防溢出", "如果你有四档幻扇、且GCD正在旋转，则将瀑泄/风车连击分别替换为扇舞·序或扇舞·破。", DNC.JobID, DNC.Cascade, DNC.Windmill)]
         DancerCombosToFanDance = 3825,
 
         [OrderedEnum]
@@ -425,7 +425,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(DragoonFullThrustCombo)]
-        [CustomComboInfo("苍穹刺连击 => 贯穿尖", "当你在近战攻击技能的范围之外时，将苍穹刺连击替换为贯穿尖。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
+        [CustomComboInfo("苍穹刺连击 => 贯穿尖", "当你在近战攻击的范围之外时，将苍穹刺连击替换为贯穿尖。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
         DragoonFullThrustTalonFeature = 2211,
 
         [OrderedEnum]
@@ -442,7 +442,7 @@ namespace XIVComboExpandedestPlugin
         DragoonFullChaosFeature = 2215,
 
         [OrderedEnum]
-        [CustomComboInfo("樱花连击 => 龙翼滑翔", "当你在近战攻击技能的范围之外时，将樱花连击替换为龙翼滑翔。（似乎只会替换开膛枪和樱花怒放）", DRG.JobID, DRG.Disembowel, DRG.SpiralBlow, DRG.ChaosThrust, DRG.ChaoticSpring)]
+        [CustomComboInfo("樱花连击 => 龙翼滑翔", "当你在近战攻击的范围之外时，将樱花连击替换为龙翼滑翔。（似乎只会替换开膛枪和樱花怒放）", DRG.JobID, DRG.Disembowel, DRG.SpiralBlow, DRG.ChaosThrust, DRG.ChaoticSpring)]
         DragoonChaoticGlideFeature = 2220,
 
         [OrderedEnum]
@@ -482,51 +482,51 @@ namespace XIVComboExpandedestPlugin
         // last used enum: 3213
 
         [OrderedEnum]
-        [CustomComboInfo("Souleater Combo", "Replace Souleater with its combo chain.", DRK.JobID, DRK.Souleater)]
+        [CustomComboInfo("噬魂斩连击", "将噬魂斩替换为它的连击链：重斩 - 吸收斩 - 噬魂斩", DRK.JobID, DRK.Souleater)]
         DarkSouleaterCombo = 3201,
 
         [OrderedEnum]
         [ParentCombo(DarkSouleaterCombo)]
-        [CustomComboInfo("Souleater to Unmend", "Replace Souleater's combo with Unmend while out of melee range.", DRK.JobID, DRK.Souleater)]
+        [CustomComboInfo("噬魂斩 => 伤残", "当你在近战攻击的范围之外时，将噬魂斩连击替换为伤残。", DRK.JobID, DRK.Souleater)]
         DarkSoulmendFeature = 3208,
 
         [OrderedEnum]
-        [CustomComboInfo("Stalwart Soul Combo", "Replace Stalwart Soul with its combo chain.", DRK.JobID, DRK.StalwartSoul, DRK.Unleash)]
+        [CustomComboInfo("刚魂连击", "将刚魂替换为它的连击链：释放 - 刚魂", DRK.JobID, DRK.StalwartSoul, DRK.Unleash)]
         DarkStalwartSoulCombo = 3202,
 
         [OrderedEnum]
         [ParentCombo(DarkStalwartSoulCombo)]
-        [CustomComboInfo("Stalwart Soul to Disesteem", "Replace Stalwart Soul's combo with Disesteem while it is available.", DRK.JobID, DRK.StalwartSoul, DRK.Unleash)]
+        [CustomComboInfo("刚魂 => 掠影的蔑视", "将刚魂替换为掠影的蔑视，如果后者可用。", DRK.JobID, DRK.StalwartSoul, DRK.Unleash)]
         DarkStalsteemFeature = 3213,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(DarkStalwartSoulCombo)]
-        [CustomComboInfo("Evil Stalwart Soul Combo", "Replace Unleash with its combo chain, instead.", DRK.JobID, DRK.StalwartSoul, DRK.Unleash)]
+        [CustomComboInfo("刚魂连击 - 绑定至释放", "将释放替换为它的连击链，而非刚魂。", DRK.JobID, DRK.StalwartSoul, DRK.Unleash)]
         DarkEvilStalwartSoulCombo = 3205,
 
         [OrderedEnum]
-        [CustomComboInfo("Dark Knight Gauge Overcap Feature", "Replace AoE combo with gauge spender if you are about to overcap.", DRK.JobID, DRK.StalwartSoul)]
+        [CustomComboInfo("刚魂连击 => 寂灭", "如果暗血即将溢出，则将刚魂连击替换为寂灭。（以防止暗血溢出）", DRK.JobID, DRK.StalwartSoul)]
         DRKOvercapFeature = 3203,
 
         [OrderedEnum]
-        [CustomComboInfo("Delirium Feature", "Replaces Carve and Spit with Delirium if its cooldown is up .", DRK.JobID, DRK.CarveAndSpit)]
+        [CustomComboInfo("精雕怒斩 => 血乱", "将精雕怒斩替换为血乱，如果后者已完成冷却。", DRK.JobID, DRK.CarveAndSpit)]
         DarkDeliriumFeature = 3206,
 
         [OrderedEnum]
-        [CustomComboInfo("Edge to Flood Feature", "Replaces Edge of Darkness/Shadow with Flood of Darkness/Shadow if currently using your AoE combo (as well as synced content before you unlock Edge).", DRK.JobID, DRK.EdgeOfDarkness, DRK.EdgeOfShadow)]
+        [CustomComboInfo("暗影锋 => 暗影波动", "如果你正在使用AOE连击、或尚未解锁暗黑锋，则将暗影锋替换为暗影波动，或它们的低级（暗黑）版本。", DRK.JobID, DRK.EdgeOfDarkness, DRK.EdgeOfShadow)]
         DarkEdgeToFloodFeature = 3209,
 
         [OrderedEnum]
-        [CustomComboInfo("Bloodspiller to Quietus Feature", "Replaces Bloodspiller with Quietus if currently using your AoE combo.", DRK.JobID, DRK.Bloodspiller)]
+        [CustomComboInfo("血溅 => 寂灭", "如果你正在使用AOE连击，则将血溅替换为寂灭。", DRK.JobID, DRK.Bloodspiller)]
         DarkBloodspillerToQuietusFeature = 3210,
 
         [OrderedEnum]
-        [CustomComboInfo("Carve and Spit to Abyssal Drain", "Replaces Carve and Spit with Abyssal Drain if currently using your AoE combo.", DRK.JobID, DRK.CarveAndSpit)]
+        [CustomComboInfo("精雕怒斩 => 吸血深渊", "如果你正在使用AOE连击，则将精雕怒斩替换为吸血深渊。", DRK.JobID, DRK.CarveAndSpit)]
         DarkCarveToDrainFeature = 3211,
 
         [OrderedEnum]
-        [CustomComboInfo("The Blackest Night to Oblation", "Replaces The Blackest Night with Oblation if The Blackest Night is on cooldown, Oblation is usable, and you currently do not have it applied to yourself.", DRK.JobID, DRK.TheBlackestNight)]
+        [CustomComboInfo("至黑之夜 => 献奉", "当至黑之夜正在冷却、献奉可用、且你自己没有献奉Buff时，将至黑之夜替换为献奉。", DRK.JobID, DRK.TheBlackestNight)]
         DarkTBNToOblationFeature = 3212,
 
         #endregion
@@ -536,73 +536,73 @@ namespace XIVComboExpandedestPlugin
         // last used enum: 3718
 
         [OrderedEnum]
-        [CustomComboInfo("Solid Barrel Combo", "Replace Solid Barrel with its combo chain.", GNB.JobID, GNB.SolidBarrel)]
+        [CustomComboInfo("迅连斩连击", "将迅连斩替换为它的连击链：利刃斩 - 残暴弹 - 迅连斩", GNB.JobID, GNB.SolidBarrel)]
         GunbreakerSolidBarrelCombo = 3701,
 
         [OrderedEnum]
         [ParentCombo(GunbreakerSolidBarrelCombo)]
-        [CustomComboInfo("Solid Barrel to Lightning Shot", "Replace Solid Barrel's combo with Lightning Shot while out of melee range.", GNB.JobID, GNB.SolidBarrel)]
+        [CustomComboInfo("迅连斩 => 闪雷弹", "当你在近战攻击的范围之外时，将迅连斩连击替换为闪雷弹。", GNB.JobID, GNB.SolidBarrel)]
         GunbreakerSolidShotFeature = 3714,
 
         [OrderedEnum]
         [ParentCombo(GunbreakerSolidBarrelCombo)]
-        [CustomComboInfo("Solid Barrel Combo to Burst Strike", "In addition to the Solid Barrel Combo, add Burst Strike when charges are full.", GNB.JobID, GNB.SolidBarrel)]
+        [CustomComboInfo("迅连斩连击 => 爆发击", "如果晶壤已满，则将爆发击也添加进迅连斩连击中。（以防止晶壤溢出）", GNB.JobID, GNB.SolidBarrel)]
         GunbreakerBurstStrikeFeature = 3710,
 
         [OrderedEnum]
-        [CustomComboInfo("Gnashing Fang Continuation", "Replace Gnashing Fang with Continuation when appropriate.", GNB.JobID, GNB.GnashingFang)]
+        [CustomComboInfo("烈牙续剑", "如果可以的话，将烈牙（及后续连击）替换为续剑。", GNB.JobID, GNB.GnashingFang)]
         GunbreakerGnashingFangContinuation = 3702,
 
         [OrderedEnum]
-        [CustomComboInfo("Burst Strike Continuation", "Replace Burst Strike with Continuation when appropriate.", GNB.JobID, GNB.BurstStrike)]
+        [CustomComboInfo("爆发击续剑", "如果可以的话，将爆发击替换为续剑。", GNB.JobID, GNB.BurstStrike)]
         GunbreakerBurstStrikeCont = 3703,
 
         [OrderedEnum]
-        [CustomComboInfo("Fated Circle Continuation", "Replace Fated Circle with Continuation when appropriate.", GNB.JobID, GNB.FatedCircle)]
+        [CustomComboInfo("命运之环续剑", "如果可以的话，将命运之环替换为续剑。", GNB.JobID, GNB.FatedCircle)]
         GunbreakerFatedCircleContinuation = 3716,
 
         [OrderedEnum]
-        [CustomComboInfo("Demon Slaughter Combo", "Replace Demon Slaughter with its combo chain.", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
+        [CustomComboInfo("恶魔杀连击", "将恶魔杀替换为它的连击链：恶魔切 - 恶魔杀", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
         GunbreakerDemonSlaughterCombo = 3705,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(GunbreakerDemonSlaughterCombo)]
-        [CustomComboInfo("Evil Demon Slaughter Combo", "Replace Demon Slice with its combo chain, instead.", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
+        [CustomComboInfo("恶魔杀连击 - 绑定至恶魔切", "将恶魔切替换为它的连击链，而非恶魔杀。", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
         GunbreakerEvilDemonSlaughterCombo = 3709,
 
         [OrderedEnum]
         [ParentCombo(GunbreakerDemonSlaughterCombo)]
-        [CustomComboInfo("Demon Slaughter Combo to Fated Circle", "In addition to the Demon Slaughter combo, add Fated Circle when charges are full.", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
+        [CustomComboInfo("恶魔杀连击 => 命运之环", "如果晶壤即将溢出，则将恶魔杀连击替换为命运之环。（以防止晶壤溢出）", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
         GunbreakerFatedCircleFeature = 3706,
 
         [OrderedEnum]
         [ParentCombo(GunbreakerDemonSlaughterCombo)]
-        [CustomComboInfo("Demon Slaughter Combo to Lion Heart Combo", "Replace the Demon Slaughter combo with the Lion Heart (Reign of Beasts) combo when available.", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
+        [CustomComboInfo("恶魔杀连击 => 终结之心连击", "如果后者可用，则将恶魔杀连击替换为终结之心连击。（崛起之心 - 支配之心 - 终结之心）", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
         GunbreakerDemonHeartFeature = 3718,
 
         [OrderedEnum]
-        [CustomComboInfo("Burst Strike to Fated Circle", "Replace Burst Strike with Fated Circle if you are currently using your AoE combo.", GNB.JobID, GNB.BurstStrike)]
+        [CustomComboInfo("爆发击 => 命运之环", "如果你正在使用AOE连击，则将爆发击替换为命运之环。", GNB.JobID, GNB.BurstStrike)]
         GunbreakerBurstStrikeToFatedCircleFeature = 3715,
 
         [OrderedEnum]
-        [CustomComboInfo("Burst Strike/Fated Circle to Bloodfest", "Replace Burst Strike and Fated Circle with Bloodfest if you have no powder gauge.", GNB.JobID, GNB.BurstStrike, GNB.FatedCircle)]
+        [CustomComboInfo("爆发击/命运之环 => 血壤", "如果你没有晶壤，则将爆发击和命运之环替换为血壤。", GNB.JobID, GNB.BurstStrike, GNB.FatedCircle)]
         GunbreakerBloodfestOvercapFeature = 3707,
 
         [OrderedEnum]
-        [CustomComboInfo("Burst Strike/Fated Circle to Double Down", "Replace Burst Strike and Fated Circle with Double Down when it is available.", GNB.JobID, GNB.BurstStrike, GNB.FatedCircle)]
+        [CustomComboInfo("爆发击/命运之环 => 倍攻", "如果倍攻可用，则将爆发击和命运之环替换为倍攻。", GNB.JobID, GNB.BurstStrike, GNB.FatedCircle)]
         GunbreakerDoubleDownFeature = 3711,
 
         [OrderedEnum]
-        [CustomComboInfo("Burst Strike/Fated Circle to Lion Heart Combo", "Replace Burst Strike and Fated Circle with the Lion Heart combo when it is available.", GNB.JobID, GNB.BurstStrike, GNB.FatedCircle)]
+        [CustomComboInfo("爆发击/命运之环 => 终结之心连击", "如果后者可用，则将爆发击和命运之环替换为终结之心连击。（崛起之心 - 支配之心 - 终结之心）", GNB.JobID, GNB.BurstStrike, GNB.FatedCircle)]
         GunbreakerBurstHeartFeature = 3717,
 
         [OrderedEnum]
-        [CustomComboInfo("No Mercy to Bow Shock", "Replace No Mercy with Bow Shock while No Mercy is active.\nIf No Mercy is currently Sonic Break, it will only take effect while the GCD is rolling.", GNB.JobID, GNB.NoMercy)]
+        [CustomComboInfo("无情 => 弓形冲波", "在无情的生效期间，将无情替换为弓形冲波。\n如果无情当前是音速破，则只有在GCD正在旋转时才会进行替换。（不会卡GCD）", GNB.JobID, GNB.NoMercy)]
         GunbreakerNoMercyFeature = 3708,
 
         [OrderedEnum]
-        [CustomComboInfo("No Mercy to Double Down", "Replace No Mercy with Double Down while No Mercy is active and it is off-cooldown.\nThis takes priority over Bow Shock/Sonic Break if the No Mercy feature is enabled.", GNB.JobID, GNB.NoMercy)]
+        [CustomComboInfo("无情 => 倍攻", "当无情生效、且倍攻已经完成冷却时，将无情替换为倍攻。\n如果其他无情替换功能也被启用，则倍攻的优先级高于它们。", GNB.JobID, GNB.NoMercy)]
         GunbreakerNoMercyDoubleDownFeature = 3712,
 
         #endregion
@@ -1619,84 +1619,84 @@ namespace XIVComboExpandedestPlugin
         // last used enum: 2118
 
         [OrderedEnum]
-        [CustomComboInfo("Storm's Path Combo", "Replace Storm's Path with its combo chain.", WAR.JobID, WAR.StormsPath)]
+        [CustomComboInfo("暴风斩连击", "将暴风斩替换为它的连击链：重劈 - 凶残裂 - 暴风斩", WAR.JobID, WAR.StormsPath)]
         WarriorStormsPathCombo = 2101,
 
         [OrderedEnum]
         [ParentCombo(WarriorStormsPathCombo)]
-        [CustomComboInfo("Storm's Path to Storm's Eye", "Replace Storm's Path in its combo with Storm's Eye if Surging Tempest is not up.\nSince you still want to reapply it before the buff runs out, this is not a button replacement, nor is it an auto-upkeep feature.", WAR.JobID, WAR.StormsPath)]
+        [CustomComboInfo("暴风斩 => 暴风碎", "如果身上没有战场风暴Buff，则将连击中的暴风斩替换为暴风碎。\n因为你仍然需要在战场风暴Buff结束之前手动补上它，这既不是一个按钮替换功能，也不是Buff自动保持功能。", WAR.JobID, WAR.StormsPath)]
         WarriorStormsPathEyeFeature = 2116,
 
         [OrderedEnum]
         [ParentCombo(WarriorStormsPathCombo)]
-        [CustomComboInfo("Storm's Path to Tomahawk", "Replace Storm's Path's combo with Tomahawk when out of melee range.", WAR.JobID, WAR.StormsPath)]
+        [CustomComboInfo("暴风斩连击 => 飞斧", "当你在近战攻击的范围之外时，将暴风斩连击替换为飞斧。", WAR.JobID, WAR.StormsPath)]
         WarriorStormsPathahawkFeature = 2110,
 
         [OrderedEnum]
-        [CustomComboInfo("Storm's Eye Combo", "Replace Storm's Eye with its combo chain.", WAR.JobID, WAR.StormsEye)]
+        [CustomComboInfo("暴风碎连击", "将暴风碎替换为它的连击链：重劈 - 凶残裂 - 暴风碎", WAR.JobID, WAR.StormsEye)]
         WarriorStormsEyeCombo = 2102,
 
         [OrderedEnum]
         [ParentCombo(WarriorStormsEyeCombo)]
         [ConflictingCombos(WarriorStormsEyeslaughtFeature)]
-        [CustomComboInfo("Storm's Eye to Tomahawk", "Replace Storm's Eye's combo with Tomahawk when out of melee range.", WAR.JobID, WAR.StormsEye)]
+        [CustomComboInfo("暴风碎连击 => 飞斧", "当你在近战攻击的范围之外时，将暴风碎连击替换为飞斧。", WAR.JobID, WAR.StormsEye)]
         WarriorStormsEyeahawkFeature = 2112,
 
         [OrderedEnum]
         [ParentCombo(WarriorStormsEyeCombo)]
         [ConflictingCombos(WarriorStormsEyeslaughtFeature)]
-        [CustomComboInfo("Storm's Eye Tomahawk Replacement", "Replace Storm's Eye with Tomahawk while Storm's Eye is not available for use in combo.", WAR.JobID, WAR.StormsEye)]
+        [CustomComboInfo("暴风碎连击 - 飞斧替代功能", "如果连击还没到暴风碎，则将暴风碎替换为飞斧。", WAR.JobID, WAR.StormsEye)]
         WarriorStormsEyeHawkReplacementFeature = 2113,
 
         [OrderedEnum]
         [ParentCombo(WarriorStormsEyeCombo)]
         [ConflictingCombos(WarriorStormsEyeHawkReplacementFeature, WarriorStormsEyeahawkFeature)]
-        [CustomComboInfo("Storm's Eye Onslaught Replacement", "Replace Storm's Eye with Onslaught while Storm's Eye is not available for use in combo, or you are out of melee range.", WAR.JobID, WAR.StormsEye)]
+        [CustomComboInfo("暴风碎连击 => 猛攻", "如果连击还没到暴风碎、或者你在近战攻击的范围之外，则将暴风碎替换为猛攻。", WAR.JobID, WAR.StormsEye)]
         WarriorStormsEyeslaughtFeature = 2117,
 
         [OrderedEnum]
-        [CustomComboInfo("Mythril Tempest Combo", "Replace Mythril Tempest with its combo chain.", WAR.JobID, WAR.MythrilTempest)]
+        [CustomComboInfo("秘银暴风连击", "将秘银暴风替换为它的连击链：超压斧 - 秘银暴风", WAR.JobID, WAR.MythrilTempest)]
         WarriorMythrilTempestCombo = 2103,
 
         [OrderedEnum]
-        [CustomComboInfo("Overpower Combo", "Replace Overpower with its combo chain.", WAR.JobID, WAR.Overpower)]
+        [CustomComboInfo("超压斧连击", "将超压斧替换为它的连击链：超压斧 - 秘银暴风", WAR.JobID, WAR.Overpower)]
         WarriorOverpowerCombo = 2104,
 
         [OrderedEnum]
-        [CustomComboInfo("Warrior Gauge Overcap Feature", "Replace AoE combo with gauge spender if you are about to overcap.", WAR.JobID, WAR.MythrilTempest, WAR.StormsEye, WAR.StormsPath)]
+        [CustomComboInfo("秘银暴风连击 => 地毁人亡", "如果兽魂即将溢出，则将秘银暴风连击替换为地毁人亡。（以防止兽魂溢出）", WAR.JobID, WAR.MythrilTempest, WAR.StormsEye, WAR.StormsPath)]
         WarriorGaugeOvercapFeature = 2105,
 
         [OrderedEnum]
-        [CustomComboInfo("Inner Release AoE to Decimate Feature", "Replace AoE combo with Decimate during Inner Release.", WAR.JobID, WAR.MythrilTempest)]
+        [CustomComboInfo("原初的解放 AOE连击 => 地毁人亡", "在原初的解放生效期间，将秘银暴风连击替换为地毁人亡。", WAR.JobID, WAR.MythrilTempest)]
         WarriorInnerReleaseFeature = 2106,
 
         [OrderedEnum]
         [ParentCombo(WarriorInnerReleaseFeature)]
-        [CustomComboInfo("Inner Release Feature Tomahawk Option", "Replace Storm's Eye with Tomahawk during Inner Release.", WAR.JobID, WAR.MythrilTempest, WAR.StormsPath)]
+        [CustomComboInfo("原初的解放 飞斧选项", "在原初的解放生效期间，将暴风碎替换为飞斧。", WAR.JobID, WAR.MythrilTempest, WAR.StormsPath)]
         WarriorInnerReleaseahawkOption = 2111,
 
         [OrderedEnum]
-        [CustomComboInfo("Nascent Flash Feature", "Replace Nascent Flash with Raw intuition when level synced below 76", WAR.JobID, WAR.NascentFlash)]
+        [CustomComboInfo("原初的勇猛 -> 原初的直觉", "当等级同步至76级以下时，将原初的勇猛替换为原初的直觉。", WAR.JobID, WAR.NascentFlash)]
         WarriorNascentFlashFeature = 2107,
 
         [OrderedEnum]
-        [CustomComboInfo("Primal Rend Feature", "Replace Inner Release with Primal Rend when available.", WAR.JobID, WAR.Berserk, WAR.InnerRelease)]
+        [CustomComboInfo("原初的解放 => 蛮荒崩裂", "如果蛮荒崩裂可用，则将原初的解放替换为蛮荒崩裂。", WAR.JobID, WAR.Berserk, WAR.InnerRelease)]
         WarriorPrimalRendFeature = 2108,
 
         [OrderedEnum]
-        [CustomComboInfo("Mythril Rend Feature", "Replace your AoE combos of choice with Primal Rend when available.", WAR.JobID, WAR.MythrilTempest)]
+        [CustomComboInfo("秘银暴风连击 => 蛮荒崩裂", "如果蛮荒崩裂可用，则将秘银暴风连击替换为蛮荒崩裂。", WAR.JobID, WAR.MythrilTempest)]
         WarriorMythrilRendFeature = 2109,
 
         [OrderedEnum]
-        [CustomComboInfo("Fell Cleave to Decimate Feature", "Replaces Fell Cleave/Inner Beast with Decimate/Steel Cyclone if you are in the midst of your AoE combo.", WAR.JobID, WAR.FellCleave, WAR.InnerBeast)]
+        [CustomComboInfo("裂石飞环 => 地毁人亡", "如果你正在使用AOE连击，则将原初之魂/裂石飞环替换为钢铁旋风/地毁人亡。", WAR.JobID, WAR.FellCleave, WAR.InnerBeast)]
         WarriorFellCleaveToDecimateFeature = 2115,
 
         [OrderedEnum]
-        [CustomComboInfo("Upheaval to Orogeny", "Replace your Upheaval with Orogeny while you are in the midst of your AoE combo.", WAR.JobID, WAR.Upheaval)]
+        [CustomComboInfo("动乱 => 群山隆起", "如果你正在使用AOE连击，则将动乱替换为群山隆起。", WAR.JobID, WAR.Upheaval)]
         WarriorUporgyFeature = 2114,
 
         [OrderedEnum]
-        [CustomComboInfo("Primal Upheaval", "Replace Upheaval/Orogeny with Primal Wrath while available.", WAR.JobID, WAR.Upheaval, WAR.Orogeny)]
+        [CustomComboInfo("动乱/群山隆起 => 原初的震怒", "如果原初的震怒可用，则将动乱和群山隆起替换为原初的震怒。", WAR.JobID, WAR.Upheaval, WAR.Orogeny)]
         WarriorPrimalUpheavalFeature = 2118,
 
         #endregion
