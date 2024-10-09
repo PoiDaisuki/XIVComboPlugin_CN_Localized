@@ -137,7 +137,7 @@ namespace XIVComboExpandedestPlugin
         BlackDespairStarFeature = 2530,
 
         [OrderedEnum]
-        [CustomComboInfo("冰冻/冰封 => 耀星", "在耀星可用时，将冰封和（高）冰冻替换为耀星。", BLM.JobID, BLM.Blizzard, BLM.Blizzard2, BLM.Blizzard3, BLM.HighBlizzard2)]
+        [CustomComboInfo("冰冻/冰封 => 耀星", "在耀星可用时，将冰封和(高)冰冻替换为耀星。", BLM.JobID, BLM.Blizzard, BLM.Blizzard2, BLM.Blizzard3, BLM.HighBlizzard2)]
         BlackBlizzardStarFeature = 2529,
 
         [OrderedEnum]
@@ -166,11 +166,11 @@ namespace XIVComboExpandedestPlugin
         BlackUmbralSoulTransposeFeature = 2518,
 
         [OrderedEnum]
-        [CustomComboInfo("烈炎功能", "在星极火状态时，将（高）烈炎替换为核爆。", BLM.JobID, BLM.Fire2, BLM.HighFire2)]
+        [CustomComboInfo("烈炎功能", "在星极火状态时，将(高)烈炎替换为核爆。", BLM.JobID, BLM.Fire2, BLM.HighFire2)]
         BlackFire2Feature = 2508,
 
         [OrderedEnum]
-        [CustomComboInfo("冰冻功能", "在灵极冰状态时，将（高）冰冻替换为玄冰。", BLM.JobID, BLM.Blizzard2, BLM.HighBlizzard2)]
+        [CustomComboInfo("冰冻功能", "在灵极冰状态时，将(高)冰冻替换为玄冰。", BLM.JobID, BLM.Blizzard2, BLM.HighBlizzard2)]
         BlackBlizzard2Feature = 2509,
 
         [OrderedEnum]
@@ -546,7 +546,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(GunbreakerSolidBarrelCombo)]
-        [CustomComboInfo("迅连斩连击 => 爆发击", "如果晶壤已满，则将迅连斩连击替换为爆发击。（以防止晶壤溢出）", GNB.JobID, GNB.SolidBarrel)]
+        [CustomComboInfo("迅连斩连击 => 爆发击", "如果晶壤已满，则将迅连斩替换为爆发击。（以防止晶壤溢出）", GNB.JobID, GNB.SolidBarrel)]
         GunbreakerBurstStrikeFeature = 3710,
 
         [OrderedEnum]
@@ -573,7 +573,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(GunbreakerDemonSlaughterCombo)]
-        [CustomComboInfo("恶魔杀连击 => 命运之环", "如果晶壤即将溢出，则将恶魔杀连击替换为命运之环。（以防止晶壤溢出）", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
+        [CustomComboInfo("恶魔杀连击 => 命运之环", "如果晶壤即将溢出，则将恶魔杀替换为命运之环。（以防止晶壤溢出）", GNB.JobID, GNB.DemonSlaughter, GNB.DemonSlice)]
         GunbreakerFatedCircleFeature = 3706,
 
         [OrderedEnum]
@@ -613,7 +613,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ConflictingCombos(MachinistHypercomboOption)]
-        [CustomComboInfo("（热）狙击弹连击", "将（热）狙击弹替换为它的连击链：（热）分裂弹 - （热）独头弹 - （热）狙击弹", MCH.JobID, MCH.CleanShot, MCH.HeatedCleanShot)]
+        [CustomComboInfo("(热)狙击弹连击", "将(热)狙击弹替换为它的连击链：(热)分裂弹 - (热)独头弹 - (热)狙击弹", MCH.JobID, MCH.CleanShot, MCH.HeatedCleanShot)]
         MachinistMainCombo = 3101,
 
         [OrderedEnum]
@@ -675,7 +675,7 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 2034
 
         [OrderedEnum]
-        [CustomComboInfo("（猿舞）连击 连击", "将（猿舞）连击依次替换为：（猿舞）连击 - （龙颚）正拳 - （豹袭）崩拳\n武僧的第一个技能就叫连击...", MNK.JobID, MNK.LeapingOpo, MNK.Bootshine)]
+        [CustomComboInfo("(猿舞)连击 连击", "将(猿舞)连击依次替换为：(猿舞)连击 - (龙颚)正拳 - (豹袭)崩拳\n武僧的第一个技能就叫连击...", MNK.JobID, MNK.LeapingOpo, MNK.Bootshine)]
         MonkOpoCombo = 2019,
 
         [OrderedEnum]
@@ -723,15 +723,15 @@ namespace XIVComboExpandedestPlugin
         // MonkAoEBalanceFeature = 2006,
 
         [OrderedEnum]
-        [CustomComboInfo("（猿舞）连击 <=> 双龙脚 自动切换", "根据当前的功力状态，自动选择正确的魔猿身形技能。\n如果当前拥有魔猿功力，则将双龙脚替换为（猿舞）连击。反之，则将（猿舞）连击替换为双龙脚。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
+        [CustomComboInfo("双龙脚 => (猿舞)连击 自动切换", "根据当前的功力状态，自动选择正确的魔猿身形技能。\n如果当前拥有魔猿功力，则将双龙脚替换为(猿舞)连击。反之，则将(猿舞)连击替换为双龙脚。\n但是测试下来似乎是单向替换。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
         MonkDragonKickBootshineFeature = 2002,
 
         [OrderedEnum]
-        [CustomComboInfo("（龙颚）正拳 <=> 双掌打 自动切换", "根据当前的功力状态，自动选择正确的盗龙身形技能。\n如果当前拥有盗龙功力，则将双掌打替换为（龙颚）正拳。反之，则将（龙颚）正拳替换为双掌打。", MNK.JobID, MNK.TwinSnakes)]
+        [CustomComboInfo("双掌打 => (龙颚)正拳 自动切换", "根据当前的功力状态，自动选择正确的盗龙身形技能。\n如果当前拥有盗龙功力，则将双掌打替换为(龙颚)正拳。反之，则将(龙颚)正拳替换为双掌打。\n但是测试下来似乎是单向替换。", MNK.JobID, MNK.TwinSnakes)]
         MonkTwinRaptorsFeature = 2030,
 
         [OrderedEnum]
-        [CustomComboInfo("（豹袭）崩拳 <=> 破碎拳 自动切换", "根据当前的功力状态，自动选择正确的猛豹身形技能。\n如果当前拥有猛豹功力，则将破碎拳替换为（豹袭）崩拳。反之，则将（豹袭）崩拳替换为破碎拳。", MNK.JobID, MNK.Demolish)]
+        [CustomComboInfo("破碎拳 => (豹袭)崩拳 自动切换", "根据当前的功力状态，自动选择正确的猛豹身形技能。\n如果当前拥有猛豹功力，则将破碎拳替换为(豹袭)崩拳。反之，则将(豹袭)崩拳替换为破碎拳。\n但是测试下来似乎是单向替换。", MNK.JobID, MNK.Demolish)]
         MonkDemolishingPounceFeature = 2031,
 
         [OrderedEnum]
@@ -739,15 +739,15 @@ namespace XIVComboExpandedestPlugin
         MonkPerfectBalanceFuryOption = 2033,
 
         [OrderedEnum]
-        [CustomComboInfo("（猿舞）连击/双龙脚 => 必杀技", "如果已经获得三个轮脉，则将（猿舞）连击和双龙脚替换为必杀技。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
+        [CustomComboInfo("(猿舞)连击/双龙脚 => 必杀技", "如果已经获得三个轮脉，则将(猿舞)连击和双龙脚替换为必杀技。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
         MonkDragonKickBalanceFeature = 2005,
 
         [OrderedEnum]
-        [CustomComboInfo("（猿舞）连击/双龙脚 => 轻身步法", "当你在近战攻击的范围之外、或选中其他玩家时，将（猿舞）连击和双龙脚替换为轻身步法。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
+        [CustomComboInfo("(猿舞)连击/双龙脚 => 轻身步法", "当你在近战攻击的范围之外、或选中其他玩家时，将(猿舞)连击和双龙脚替换为轻身步法。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
         MonkDragonClapFeature = 2022,
 
         [OrderedEnum]
-        [CustomComboInfo("（猿舞）连击/双龙脚 => 阴阳斗气斩", "如果达到五档斗气、且GCD正在旋转，则将（猿舞）连击和双龙脚替换为铁山靠/阴阳斗气斩。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
+        [CustomComboInfo("(猿舞)连击/双龙脚 => 阴阳斗气斩", "如果达到五档斗气、且GCD正在旋转，则将(猿舞)连击和双龙脚替换为铁山靠/阴阳斗气斩。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
         MonkChakraKickFeature = 2034,
 
         [OrderedEnum]
@@ -810,15 +810,15 @@ namespace XIVComboExpandedestPlugin
         NinjaEvilHakkeMujinsatsuCombo = 3014,
 
         [OrderedEnum]
-        [CustomComboInfo("生杀予夺 => 百雷铳", "当处于水遁状态且生杀予夺正在冷却、或处于隐遁状态时，将生杀予夺替换为背刺/百雷铳。", NIN.JobID, NIN.Kassatsu)]
+        [CustomComboInfo("生杀予夺 => 百雷铳", "当处于水遁状态且生杀予夺正在冷却、或处于隐遁状态时，将生杀予夺替换为攻其不备/百雷铳。", NIN.JobID, NIN.Kassatsu)]
         NinjaKassatsuTrickFeature = 3004,
 
         [OrderedEnum]
-        [CustomComboInfo("生杀予夺 => 梦幻三段", "当生杀予夺正在冷却而梦幻三段已经完成冷却时，将生杀予夺替换为断绝/梦幻三段。\n如果上面的生杀予夺 => 百雷铳被同时启用，那么背刺/百雷铳将具有更高优先级。", NIN.JobID, NIN.Kassatsu)]
+        [CustomComboInfo("生杀予夺 => 梦幻三段", "当生杀予夺正在冷却而梦幻三段已经完成冷却时，将生杀予夺替换为断绝/梦幻三段。\n如果上面的生杀予夺 => 百雷铳被同时启用，那么攻其不备/百雷铳将具有更高优先级。", NIN.JobID, NIN.Kassatsu)]
         NinjaKassatsuDWaDFeature = 3015,
 
         [OrderedEnum]
-        [CustomComboInfo("梦幻三段 => 百雷铳", "当处于水遁、或隐遁状态时，将断绝/梦幻三段替换为背刺/百雷铳。", NIN.JobID, NIN.DreamWithinADream)]
+        [CustomComboInfo("梦幻三段 => 百雷铳", "当处于水遁、或隐遁状态时，将断绝/梦幻三段替换为攻其不备/百雷铳。", NIN.JobID, NIN.DreamWithinADream)]
         NinjaDWaDTrickFeature = 3019,
 
         [OrderedEnum]
@@ -875,29 +875,29 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 1922
 
         [OrderedEnum]
-        [CustomComboInfo("Royal Authority Combo", "Replace Royal Authority/Rage of Halone with its combo chain.", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
+        [CustomComboInfo("王权剑连击", "将战女神之怒/王权剑替换为它的连击链：先锋剑 - 暴乱剑 - 战女神之怒/王权剑", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
         PaladinRoyalAuthorityCombo = 1902,
 
         [OrderedEnum]
         [ParentCombo(PaladinRoyalAuthorityCombo)]
-        [CustomComboInfo("Royal Authority to Shield Lob", "Replace Royal Authority/Rage of Halone's combo with Shield Lob when out of melee range.", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
+        [CustomComboInfo("王权剑 => 投盾", "当你在近战攻击的范围之外时，将战女神之怒/王权剑替换为投盾。", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
         PaladinRoyalLobFeature = 1912,
 
         [OrderedEnum]
-        [CustomComboInfo("Royal Authority to Holy Spirit", "Replace Royal Authority with Holy Spirit while Divine Might is active", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
+        [CustomComboInfo("王权剑 => 圣灵", "如果已经有神圣魔法效果提高效果，则将王权剑替换为圣灵。（会在王权剑前插入一个圣灵保证Buff不会被覆盖）", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
         PaladinRoyalAuthorityNotBurstStrikeFeature = 1919,
 
         [OrderedEnum]
-        [CustomComboInfo("Royal Authority Atonement Feature", "Replace Royal Authority with Atonement when under the effect of Sword Oath.", PLD.JobID, PLD.RageOfHalone, PLD.RoyalAuthority)]
+        [CustomComboInfo("王权剑 => 赎罪剑", "当处于忠义之剑状态时，将王权剑替换为赎罪剑。（现在没有忠义之剑，变成赎罪剑三个触发连击了）", PLD.JobID, PLD.RageOfHalone, PLD.RoyalAuthority)]
         PaladinRoyalAuthorityAtonementFeature = 1903,
 
         [OrderedEnum]
-        [CustomComboInfo("Shield Lob to Holy Spirit", "Replace Shield Lob with Holy Spirit while Divine Might is active.", PLD.JobID, PLD.ShieldLob)]
+        [CustomComboInfo("投盾 => 圣灵", "当处于神圣魔法效果提高效果时，将投盾替换为圣灵。", PLD.JobID, PLD.ShieldLob)]
         PaladinShieldLobToNotBurstStrikeFeature = 1921,
 
         [OrderedEnum]
         [ParentCombo(PaladinShieldLobToNotBurstStrikeFeature)]
-        [CustomComboInfo("Shield Lob to Holy Spirit Movement Option", "Also replace Shield Lob with Holy Spirit while not moving, even if Divine Might is not active.", PLD.JobID, PLD.ShieldLob)]
+        [CustomComboInfo("投盾 => 圣灵 不动功能", "如果当前没有移动，那么即使不处于神圣魔法效果提高，也将投盾替换为圣灵。", PLD.JobID, PLD.ShieldLob)]
         PaladinShieldLobToNotBurstStrikeOption = 1922,
 
         /*[OrderedEnum]
@@ -905,43 +905,43 @@ namespace XIVComboExpandedestPlugin
         PaladinNotBurstStrikeToAtonement = 1916,*/
 
         [OrderedEnum]
-        [CustomComboInfo("Prominence Combo", "Replace Prominence with its combo chain.", PLD.JobID, PLD.Prominence, PLD.TotalEclipse)]
+        [CustomComboInfo("日珥斩连击", "将日珥斩替换为它的连击链：全蚀斩 - 日珥斩", PLD.JobID, PLD.Prominence, PLD.TotalEclipse)]
         PaladinProminenceCombo = 1904,
 
         [OrderedEnum]
         [ParentCombo(PaladinProminenceCombo)]
-        [CustomComboInfo("AoE Combo to Holy Circle", "Add Holy Circle before Prominence in your combo if Divine Might is active.", PLD.JobID)]
+        [CustomComboInfo("日珥斩连击 => 圣环", "如果已经有神圣魔法效果提高效果，则将日珥斩替换为圣环。（会在日珥斩前插入一个圣环保证Buff不会被覆盖）", PLD.JobID)]
         PaladinNotFatedCircleOvercapFeature = 1918,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(PaladinProminenceCombo)]
-        [CustomComboInfo("Evil Prominence Combo", "Replace Total Eclipse with its combo chain, instead.", PLD.JobID, PLD.Prominence, PLD.TotalEclipse)]
+        [CustomComboInfo("日珥斩连击 - 绑定至全蚀斩", "将全蚀斩替换为它的连击链，而非日珥斩。", PLD.JobID, PLD.Prominence, PLD.TotalEclipse)]
         PaladinEvilProminenceCombo = 1907,
 
         [OrderedEnum]
-        [CustomComboInfo("Imperator Confiteor", "Replace Imperator/Requiescat with Confiteor while active. Includes Confiteor combo.", PLD.JobID, PLD.Requiescat, PLD.Imperator)]
+        [CustomComboInfo("安魂祈祷/绝对统治 => 悔罪", "当激活时，将安魂祈祷/绝对统治替换为悔罪，包括整个悔罪连击。", PLD.JobID, PLD.Requiescat, PLD.Imperator)]
         PaladinRequiescatCombo = 1905,
 
         [OrderedEnum]
         [ParentCombo(PaladinRequiescatCombo)]
-        [CustomComboInfo("Requiescat Confiteor Level-sync Feature", "Replace Requiescat with Holy Spirit if Confiteor is not available, or already used and its combo is not unlocked.", PLD.JobID, PLD.Requiescat, PLD.Imperator)]
+        [CustomComboInfo("安魂祈祷 等级同步", "如果悔罪尚不可用、或已经使用但后续连击尚未解锁，则将安魂祈祷替换为圣灵。", PLD.JobID, PLD.Requiescat, PLD.Imperator)]
         PaladinRequiescatComboSpirit = 1917,
 
         [OrderedEnum]
-        [CustomComboInfo("Confiteor Feature", "Replace Holy Spirit/Circle with Confiteor and its combo when it is available, as well as Blade of Honor.", PLD.JobID, PLD.NotBurstStrike, PLD.NotFatedCircle)]
+        [CustomComboInfo("圣灵/圣环 => 悔罪", "当悔罪可用时，将圣灵和圣环替换为悔罪。（也会变为荣耀之剑）", PLD.JobID, PLD.NotBurstStrike, PLD.NotFatedCircle)]
         PaladinConfiteorFeature = 1906,
 
         [OrderedEnum]
-        [CustomComboInfo("AoE Combo to Imperator Spells", "Replace your AoE combo actions with applicable spells while you have Imperator is active.", PLD.JobID, PLD.TotalEclipse, PLD.Prominence)]
+        [CustomComboInfo("AOE连击 => 悔罪", "当安魂祈祷/绝对统治激活时，将AOE连击技能替换为悔罪，及其后续连击。", PLD.JobID, PLD.TotalEclipse, PLD.Prominence)]
         PaladinNotFatedCircleFeature = 1910,
 
         [OrderedEnum]
-        [CustomComboInfo("Holy Spirit to Holy Circle", "Replace Holy Spirit with Holy Circle if your last combo action was Total Eclipse or Prominence.", PLD.JobID, PLD.NotBurstStrike)]
+        [CustomComboInfo("圣灵 => 圣环", "如果你正在使用AOE连击，则将圣灵替换为圣环。", PLD.JobID, PLD.NotBurstStrike)]
         PaladinHolySpiritToHolyCircleFeature = 1914,
 
         [OrderedEnum]
-        [CustomComboInfo("Fight or Flight to Imperator", "Replace Fight or Flight with Imperator/Requiescat while the effect is active, as well as Blade of Honor.\nIf Fight or Flight is currently Goring Blade, this only will take effect during the global cooldown.", PLD.JobID, PLD.NotNoMercy)]
+        [CustomComboInfo("战逃反应 => 安魂祈祷/绝对统治", "当战逃反应生效时，将战逃反应替换为安魂祈祷/绝对统治。（也会变为荣耀之剑）\n如果战逃反应现在是沥血剑的话，替换只会在GCD转圈期间启用。（不会卡GCD）", PLD.JobID, PLD.NotNoMercy)]
         PaladinNotNoMercyToRequiescat = 1920,
 
 /*        [OrderedEnum]
@@ -949,12 +949,12 @@ namespace XIVComboExpandedestPlugin
         PaladinNotNoMercyToNotSonicBreak = 1915,*/
 
         [OrderedEnum]
-        [CustomComboInfo("Shield Blash to Low Blow", "Replace Shield Bash to Low Blow when it is on cooldown.\nAlso works with Tank Interrupt feature.", PLD.JobID, PLD.ShieldBash)]
+        [CustomComboInfo("盾牌猛击 => 下踢", "当下踢冷却完毕时，将盾牌猛击替换为下踢。\n可以和防护职业插言功能一起使用。", PLD.JobID, PLD.ShieldBash)]
         PaladinLowBashFeature = 1911,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Scornful Spirits Feature", "Replace Spirits Within and Circle of Scorn with whichever is available soonest.", PLD.JobID, PLD.SpiritsWithin, PLD.Expiacion, PLD.CircleOfScorn)]
+        [CustomComboInfo("深奥之灵/偿赎剑 <=> 厄运流转 自动切换", "将深奥之灵/偿赎剑和厄运流转替换为你当前能够使用的那个。（或者CD最快的那个）", PLD.JobID, PLD.SpiritsWithin, PLD.Expiacion, PLD.CircleOfScorn)]
         PaladinScornfulSpiritsFeature = 1908,
 
         #endregion
