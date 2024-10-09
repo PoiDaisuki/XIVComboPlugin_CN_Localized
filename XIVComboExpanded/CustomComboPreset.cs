@@ -14,7 +14,7 @@ namespace XIVComboExpandedestPlugin
         // Latest enum: 9014
 
         [OrderedEnum]
-        [CustomComboInfo("复活 => 即刻咏唱 功能", "当即刻咏唱不在冷却时，将有复活技能的职业各自的复活技能替换为即刻咏唱。（有连续咏唱Buff的时候也不会替换）\n以防万一以下是有复活技能的职业：四个治疗职业、召唤师、赤魔法师、和青魔法师。", All.JobID, All.Raise, All.Resurrection, All.Ascend, All.Verraise, All.Egeiro, All.AngelWhisper)]
+        [CustomComboInfo("复活 => 即刻咏唱 功能", "当即刻咏唱不在冷却时，将有复活技能的职业各自的复活技能替换为即刻咏唱。（有连续咏唱效果的时候也不会替换）\n以防万一以下是有复活技能的职业：四个治疗职业、召唤师、赤魔法师、和青魔法师。", All.JobID, All.Raise, All.Resurrection, All.Ascend, All.Verraise, All.Egeiro, All.AngelWhisper)]
         AllSwiftcastFeature = 9001,
 
         [OrderedEnum]
@@ -26,15 +26,15 @@ namespace XIVComboExpandedestPlugin
         AllEurekaFeature = 9002,
 
         [OrderedEnum]
-        [CustomComboInfo("防护职业插言功能", "如果目标可以被插言、且插言当前不在冷却，则将下踢替换为插言。", All.JobID, All.LowBlow)]
+        [CustomComboInfo("防护职业插言功能", "如果目标可以被插言、且插言当前已经完成冷却，则将下踢替换为插言。", All.JobID, All.LowBlow)]
         AllTankInterruptFeature = 9003,
 
         [OrderedEnum]
-        [CustomComboInfo("雪仇/牵制/昏乱锁定功能", "在雪仇/牵制/昏乱不在冷却、但目标已有剩余时间超过3s的对应Debuff的情况下，锁定相应技能以防止Buff被覆盖。", All.JobID, All.Reprisal, All.Addle, All.Feint)]
+        [CustomComboInfo("雪仇/牵制/昏乱锁定功能", "如果你的雪仇/牵制/昏乱已经完成冷却、但目标身上的相同技能效果剩余时间超过3s的话，锁定相应技能，以防止Buff被覆盖。", All.JobID, All.Reprisal, All.Addle, All.Feint)]
         AllReprisalLockoutFeature = 9010,
 
         [OrderedEnum]
-        [CustomComboInfo("远敏团减锁定功能", "在你远敏职业的团减（如行吟）不在冷却、但身上仍有（其他玩家提供的）剩余时间超过3s的对应Buff的情况，锁定相应技能以防止Buff被覆盖。", All.JobID, All.Tactician, All.Troubadour, All.ShieldSamba)]
+        [CustomComboInfo("远敏团减锁定功能", "在你远敏职业的团减（如行吟）已经完成冷却、但身上仍有（其他玩家提供的）剩余时间超过3s的对应Buff的情况下，锁定相应技能以防止Buff被覆盖。", All.JobID, All.Tactician, All.Troubadour, All.ShieldSamba)]
         AllRangedDefenseCooldownLockoutFeature = 9011,
 
         [OrderedEnum]
@@ -92,11 +92,11 @@ namespace XIVComboExpandedestPlugin
         AstrologianBeneficFeature = 3303,
 
         [OrderedEnum]
-        [CustomComboInfo("占卜锁定功能", "如果身上的占卜Buff剩余时间超过3秒，则锁定占卜。（防止副本中Buff被覆盖）", AST.JobID, AST.Divination)]
+        [CustomComboInfo("占卜锁定功能", "如果身上的占卜效果剩余时间超过3秒，则锁定占卜，以防止Buff被覆盖。", AST.JobID, AST.Divination)]
         AstrologianDivinationLockoutFeature = 3308,
 
         [OrderedEnum]
-        [CustomComboInfo("醒梦提醒（占星）", "当你的MP小于等于以下设置值、且醒梦不在冷却时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", AST.JobID, AST.CelestialOpposition, AST.CollectiveUnconscious, AST.Divination, AST.EarthlyStar, AST.Exaltation, AST.Macrocosmos, AST.NeutralSect, AST.Synastry, AST.Horoscope)]
+        [CustomComboInfo("醒梦提醒（占星）", "当你的MP小于等于以下设置值、且醒梦已经完成冷却时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", AST.JobID, AST.CelestialOpposition, AST.CollectiveUnconscious, AST.Divination, AST.EarthlyStar, AST.Exaltation, AST.Macrocosmos, AST.NeutralSect, AST.Synastry, AST.Horoscope)]
         AstrologianLucidReminderFeature = 3305,
 
         #endregion
@@ -264,11 +264,11 @@ namespace XIVComboExpandedestPlugin
         BardRadiantStrikesFeature = 2309,
 
         [OrderedEnum]
-        [CustomComboInfo("战斗之声锁定功能", "如果身上的战斗之声Buff剩余时间超过3秒，则锁定战斗之声。（防止副本中Buff被覆盖）", BRD.JobID, BRD.BattleVoice)]
+        [CustomComboInfo("战斗之声锁定功能", "如果身上的战斗之声效果剩余时间超过3秒，则锁定战斗之声，以防止Buff被覆盖。", BRD.JobID, BRD.BattleVoice)]
         BardBattleVoiceLockoutFeature = 2312,
 
         [OrderedEnum]
-        [CustomComboInfo("光明神的最终乐章锁定功能", "如果身上的光明神的最终乐章Buff剩余时间超过3秒，则锁定战斗之声。（防止副本中Buff被覆盖）", BRD.JobID, BRD.RadiantFinale)]
+        [CustomComboInfo("光明神的最终乐章锁定功能", "如果身上的光明神的最终乐章效果剩余时间超过3秒，则锁定战斗之声，以防止Buff被覆盖。", BRD.JobID, BRD.RadiantFinale)]
         BardRadiantLockoutFeature = 2313,
 
         [OrderedEnum]
@@ -388,19 +388,19 @@ namespace XIVComboExpandedestPlugin
         DancerStandardechnicalStepFeature = 3822,
 
         [OrderedEnum]
-        [CustomComboInfo("技巧舞步锁定功能", "如果身上的技巧舞步结束Buff剩余时间超过8秒，则锁定技巧舞步。（防止副本中Buff被覆盖）", DNC.JobID, DNC.TechnicalStep)]
+        [CustomComboInfo("技巧舞步锁定功能", "如果身上的技巧舞步结束效果剩余时间超过8秒，则锁定技巧舞步，以防止Buff被覆盖。", DNC.JobID, DNC.TechnicalStep)]
         DancerTechnicalLockoutFeature = 3813,
 
         [OrderedEnum]
         [ConflictingCombos(DancerDanceStepCombo)]
         [CustomComboInfo(
             "舞步替换功能",
-            "将跳舞时会变为舞步的技能指定为以下设置的四个。" +
-            "\n这个功能的意义是，确保你在开启上面的连击功能、但不使用自动跳舞功能时，仍然可以正确的跳出四个舞步。" +
-            "\n你可以通过在下面为每个舞步技能指定一个不同的技能ID来将其绑定到另一个技能上。" +
-            "\n默认的选项是，瀑泄、百花争艳、扇舞·序、和扇舞·破。如果被设置为0，它们会被重置为这些技能。" +
-            "\n技能ID可以通过在Garland Tools上搜索技能名并点击右上角的小齿轮图标获取。" +
-            "\n（译注：SimpleTweaks可以直接在游戏内显示技能的ID、以及自动跳舞不会坑你的，这个功能真没卵用）",
+            "将跳舞时会变为舞步的技能指定为以下设置的四个。\n" +
+            "这个功能的意义是，确保你在开启上面的连击功能、但不使用自动跳舞功能时，仍然可以正确的跳出四个舞步。\n" +
+            "你可以通过在下面为每个舞步技能指定一个不同的技能ID来将其绑定到另一个技能上。\n" +
+            "默认的选项是，瀑泄、百花争艳、扇舞·序、和扇舞·破。如果被设置为0，它们会被重置为这些技能。\n" +
+            "技能ID可以通过在Garland Tools上搜索技能名并点击右上角的小齿轮图标获取。\n" +
+            "（译注：SimpleTweaks可以直接在游戏内显示技能的ID、以及自动跳舞不会坑你的，这个功能真没卵用）",
             DNC.JobID)]
         DancerDanceComboCompatibility = 3807,
 
@@ -471,7 +471,7 @@ namespace XIVComboExpandedestPlugin
         DragoonLancetanyFeature = 2218,
 
         [OrderedEnum]
-        [CustomComboInfo("战斗连祷锁定功能", "如果身上的战斗连祷Buff剩余时间超过3秒，则锁定战斗连祷。（防止副本中Buff被覆盖）", DRG.JobID, DRG.BattleLitany)]
+        [CustomComboInfo("战斗连祷锁定功能", "如果身上的战斗连祷效果剩余时间超过3秒，则锁定战斗连祷，以防止Buff被覆盖。", DRG.JobID, DRG.BattleLitany)]
         DragoonLitanyLockoutFeature = 2219,
 
         #endregion
@@ -526,7 +526,7 @@ namespace XIVComboExpandedestPlugin
         DarkCarveToDrainFeature = 3211,
 
         [OrderedEnum]
-        [CustomComboInfo("至黑之夜 => 献奉", "当至黑之夜正在冷却、献奉可用、且你自己没有献奉Buff时，将至黑之夜替换为献奉。", DRK.JobID, DRK.TheBlackestNight)]
+        [CustomComboInfo("至黑之夜 => 献奉", "当至黑之夜正在冷却、献奉可用、且你自己身上没有献奉效果时，将至黑之夜替换为献奉。", DRK.JobID, DRK.TheBlackestNight)]
         DarkTBNToOblationFeature = 3212,
 
         #endregion
@@ -546,7 +546,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(GunbreakerSolidBarrelCombo)]
-        [CustomComboInfo("迅连斩连击 => 爆发击", "如果晶壤已满，则将爆发击也添加进迅连斩连击中。（以防止晶壤溢出）", GNB.JobID, GNB.SolidBarrel)]
+        [CustomComboInfo("迅连斩连击 => 爆发击", "如果晶壤已满，则将迅连斩连击替换为爆发击。（以防止晶壤溢出）", GNB.JobID, GNB.SolidBarrel)]
         GunbreakerBurstStrikeFeature = 3710,
 
         [OrderedEnum]
@@ -613,59 +613,59 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ConflictingCombos(MachinistHypercomboOption)]
-        [CustomComboInfo("(Heated) Shot Combo", "Replace either form of Clean Shot with its combo chain.", MCH.JobID, MCH.CleanShot, MCH.HeatedCleanShot)]
+        [CustomComboInfo("（热）狙击弹连击", "将（热）狙击弹替换为它的连击链：（热）分裂弹 - （热）独头弹 - （热）狙击弹", MCH.JobID, MCH.CleanShot, MCH.HeatedCleanShot)]
         MachinistMainCombo = 3101,
 
         [OrderedEnum]
-        [CustomComboInfo("Spread Shot Heat", "Replace Spread Shot with Auto Crossbow when overheated.", MCH.JobID, MCH.SpreadShot, MCH.Scattergun)]
+        [CustomComboInfo("散射 => 自动弩", "当处于过热状态时，将散射/霰弹枪替换为自动弩。", MCH.JobID, MCH.SpreadShot, MCH.Scattergun)]
         MachinistSpreadShotFeature = 3102,
 
         [OrderedEnum]
-        [CustomComboInfo("Hypercharge Feature", "Replace Heat Blast and Auto Crossbow with Hypercharge when not overheated.", MCH.JobID, MCH.HeatBlast, MCH.BlazingShot, MCH.AutoCrossbow)]
+        [CustomComboInfo("热冲击/自动弩 => 超荷", "当不处于过热状态时，将热冲击和自动弩替换为超荷。", MCH.JobID, MCH.HeatBlast, MCH.BlazingShot, MCH.AutoCrossbow)]
         MachinistOverheatFeature = 3103,
 
         [OrderedEnum]
-        [CustomComboInfo("Hypercharge Combo Feature", "Replace your main combo actions with Heat Blast while overheated.", MCH.JobID, MCH.SplitShot, MCH.HeatedSplitShot, MCH.SlugShot, MCH.HeatedSlugShot, MCH.CleanShot, MCH.HeatedCleanShot)]
+        [CustomComboInfo("超荷连击功能", "当处于过热状态时，将你的主要连击替换为热冲击/烈焰弹。", MCH.JobID, MCH.SplitShot, MCH.HeatedSplitShot, MCH.SlugShot, MCH.HeatedSlugShot, MCH.CleanShot, MCH.HeatedCleanShot)]
         MachinistHypercomboFeature = 3108,
 
         [OrderedEnum]
         [ParentCombo(MachinistHypercomboFeature)]
         [ConflictingCombos(MachinistMainCombo)]
-        [CustomComboInfo("Hypercharge Combo Option", "Only replace your current combo action with Heat Blast.", MCH.JobID, MCH.SplitShot, MCH.HeatedSplitShot, MCH.SlugShot, MCH.HeatedSlugShot, MCH.CleanShot, MCH.HeatedCleanShot)]
+        [CustomComboInfo("超荷连击功能 - 仅替换当前连击技能", "仅替换当前的连击技能为热冲击/烈焰弹，而非整个连击链。", MCH.JobID, MCH.SplitShot, MCH.HeatedSplitShot, MCH.SlugShot, MCH.HeatedSlugShot, MCH.CleanShot, MCH.HeatedCleanShot)]
         MachinistHypercomboOption = 3110,
 
         [OrderedEnum]
-        [CustomComboInfo("Overdrive Feature", "Replace Rook Autoturret and Automaton Queen with Overdrive while active.", MCH.JobID, MCH.RookAutoturret, MCH.AutomatonQueen)]
+        [CustomComboInfo("超档替换功能", "当前者激活时，将车式浮空炮塔/后式自走人偶替换为超档车式浮空炮塔/超档后式自走人偶。", MCH.JobID, MCH.RookAutoturret, MCH.AutomatonQueen)]
         MachinistOverdriveFeature = 3104,
 
         [OrderedEnum]
-        [CustomComboInfo("Hypercharge to Wildfire", "Hypercharge becomes Wildfire if Wildfire is off-cooldown and you have a target.", MCH.JobID, MCH.Hypercharge)]
+        [CustomComboInfo("超荷 => 野火", "如果野火已经完成冷却、且你有选中的目标，则将超荷替换为野火。", MCH.JobID, MCH.Hypercharge)]
         MachinistHyperfireFeature = 3107,
 
         [OrderedEnum]
-        [CustomComboInfo("Drill to Bioblaster", "Drill becomes Bioblaster if Reassemble is not active and your last combo action was Spread Shot/Scattergun.", MCH.JobID, MCH.Drill)]
+        [CustomComboInfo("钻头 => 毒菌冲击", "如果没有使用整备、且你的上一个连击技能为散射/霰弹枪，则将钻头替换为毒菌冲击。", MCH.JobID, MCH.Drill)]
         MachinistBioDrillFeature = 3114,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Gauss Round / Ricochet Feature", "Replace Gauss Round and Ricochet with one or the other depending on which has more charges.", MCH.JobID, MCH.GaussRound, MCH.Ricochet)]
+        [CustomComboInfo("虹吸弹 <=> 弹射 切换功能", "将虹吸弹和弹射切换为他们两个中具有更高积蓄次数的那一个。", MCH.JobID, MCH.GaussRound, MCH.Ricochet)]
         MachinistGaussRoundRicochetFeature = 3105,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(MachinistGaussRoundRicochetFeature)]
-        [CustomComboInfo("Gauss Round / Ricochet Overheat Option", "Gauss Round/Ricochet will only replace each other while Overheated.", MCH.JobID, MCH.GaussRound, MCH.Ricochet)]
+        [CustomComboInfo("仅在过热时切换", "虹吸弹和弹射只会在过热期间互相切换。", MCH.JobID, MCH.GaussRound, MCH.Ricochet)]
         MachinistGaussRoundRicochetFeatureOption = 3109,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Chainsaw Cycling Feature", "Replace Chainsaw with Air Anchor and Drill, based on the priority of each cooldown. Does not replace any other actions, so you can easily watch their cooldowns.", MCH.JobID, MCH.Chainsaw)]
+        [CustomComboInfo("回转飞锯 => 钻头/空气锚", "根据冷却的优先级，将回转飞锯替换为空气锚和钻头。（优先级如此）\n不会替换其他任何技能，所以你仍然可以看到（钻头和空气锚的）冷却时间。", MCH.JobID, MCH.Chainsaw)]
         MachinistChainsawFeature = 3113,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(MachinistChainsawFeature)]
-        [CustomComboInfo("Reassemble to Chainsaw", "Reassemble becomes Chainsaw's cycling actions while Reassemble is active.", MCH.JobID, MCH.Reassemble)]
+        [CustomComboInfo("整备 => 回转飞锯", "当处于整备状态时，将整备替换为回旋飞锯。", MCH.JobID, MCH.Reassemble)]
         MachinistReassembleFeature = 3111,
 
         #endregion
@@ -675,46 +675,46 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 2034
 
         [OrderedEnum]
-        [CustomComboInfo("Leaping Opo Combo", "Replace Leaping Opo/Bootshine with Monk's Leaping Opo/Rising Raptor/Pouncing Coeurl combo.", MNK.JobID, MNK.LeapingOpo, MNK.Bootshine)]
+        [CustomComboInfo("（猿舞）连击 连击", "将（猿舞）连击依次替换为：（猿舞）连击 - （龙颚）正拳 - （豹袭）崩拳\n武僧的第一个技能就叫连击...", MNK.JobID, MNK.LeapingOpo, MNK.Bootshine)]
         MonkOpoCombo = 2019,
 
         [OrderedEnum]
-        [CustomComboInfo("Dragon Kick Combo", "Replace Dragon Kick with Monk's Dragon Kick combo.", MNK.JobID, MNK.DragonKick)]
+        [CustomComboInfo("双龙脚连击", "将双龙脚依次替换为：双龙脚 - 双掌打 - 破碎拳", MNK.JobID, MNK.DragonKick)]
         MonkDragonKickCombo = 2020,
 
         [OrderedEnum]
         [ConflictingCombos(MonkAoEComboFormOption)]
-        [CustomComboInfo("Form Shift to Twin Snakes", "Replace Form Shift with Twin Snakes during Perfect Balance.", MNK.JobID, MNK.FormShift)]
+        [CustomComboInfo("震脚：演武 => 双掌打", "在震脚生效期间，将演武替换为双掌打。", MNK.JobID, MNK.FormShift)]
         MonkFormSnakes = 2032,
 
         [OrderedEnum]
         [ConflictingCombos(MonkPerfectBalanceFeatureLockout)]
-        [CustomComboInfo("Perfect Balance to Demolish", "Replace Perfect Balance with Demolish while in Perfect Balance, so you don't need it on your bar separately.", MNK.JobID, MNK.PerfectBalance)]
+        [CustomComboInfo("震脚 => 破碎拳", "在震脚生效期间，将震脚替换为破碎拳，这样你就不用把它放在热键栏里了。", MNK.JobID, MNK.PerfectBalance)]
         MonkPerfectBalanceDemolishFeature = 2026,
 
         [OrderedEnum]
-        [CustomComboInfo("Meditation Reminder", "Your GCDs become Meditate out of combat if you don't have the Fifth Chakra open.", MNK.JobID, MNK.TwinSnakes, MNK.TrueStrike, MNK.RisingRaptor, MNK.FormShift, MNK.SnapPunch, MNK.PouncingCoeurl, MNK.Demolish, MNK.Bootshine, MNK.LeapingOpo, MNK.DragonKick, MNK.MasterfulBlitz, MNK.Rockbreaker, MNK.ArmOfTheDestroyer, MNK.ShadowOfTheDestroyer, MNK.FourPointFury, MNK.SixSidedStar, PLD.TotalEclipse, MNK.PerfectBalance)]
+        [CustomComboInfo("斗气提醒", "如果你在战斗之外、且斗气不足五档，则将你的所有gcd技能替换为斗气。", MNK.JobID, MNK.TwinSnakes, MNK.TrueStrike, MNK.RisingRaptor, MNK.FormShift, MNK.SnapPunch, MNK.PouncingCoeurl, MNK.Demolish, MNK.Bootshine, MNK.LeapingOpo, MNK.DragonKick, MNK.MasterfulBlitz, MNK.Rockbreaker, MNK.ArmOfTheDestroyer, MNK.ShadowOfTheDestroyer, MNK.FourPointFury, MNK.SixSidedStar, PLD.TotalEclipse, MNK.PerfectBalance)]
         MonkMeditationReminder = 2013,
 
         [OrderedEnum]
-        [CustomComboInfo("AoE Combo", "Replaces Masterful Blitz (for bug reasons) with the AoE combo chain, or whatever your most damaging move is when Perfect Balance is active.\nFour-Point Fury becomes AoE combo chain in order of forms during Perfect Balance.\nMasterful Blitz replaces the AoE combo when you have 3 Beast Chakra.", MNK.JobID, MNK.MasterfulBlitz, MNK.FourPointFury, MNK.FormShift, PLD.TotalEclipse)]
+        [CustomComboInfo("武僧AOE连击", "（因为一些Bug上的原因）将必杀技替换为AOE连击链：破坏神冲/破坏神脚 - 四面脚 - 地裂劲\n如果处于震脚生效期间，必杀技自动选择为具有最高伤害的AOE技能。这时，四面脚会替代必杀技成为1-2-3连击链。（必杀技=阴豆子，四面脚=阳豆子）\n如果已经获得三个轮脉，则触发的必杀技优先级将高于AOE连击。", MNK.JobID, MNK.MasterfulBlitz, MNK.FourPointFury, MNK.FormShift, PLD.TotalEclipse)]
         MonkAoECombo = 2001,
 
         [OrderedEnum]
         [ParentCombo(MonkAoECombo)]
-        [CustomComboInfo("Experimental No-Blitz Option", "Enabling this option makes it so that Total Eclipse is the basis for your main AoE combo, and Masterful Blitz is untouched.\n" +
-            "To get Total Eclipse onto your Monk hotbar, use a shared hotbar, a macro, or a plugin like ReAction.", MNK.JobID)]
+        [CustomComboInfo("【实验性】不需要必杀技的AOE连击", "启用这个选项将会把AOE连击绑定至骑士的全蚀斩，而非必杀技。（这样就不需要改动必杀技了）\n" +
+            "如果你想不出来怎么把全蚀斩拖进武僧的热键栏的话，以下是一些提示：用共通技能栏中转、宏、或者类似ReAction的插件。（我没用过ReAction，我也不知道怎么用）", MNK.JobID)]
         MonkAoEComboBlitzOption = 2027,
 
         [OrderedEnum]
         [ParentCombo(MonkAoECombo)]
         [ConflictingCombos(MonkFormSnakes)]
-        [CustomComboInfo("Form Shift Option", "Enabling this option has Form Shift turn into 1-2-3 AoE combo in Perfect Balance.", MNK.JobID, MNK.FormShift)]
+        [CustomComboInfo("震脚：演武 => AOE连击", "启用这个会在震脚期间将演武替换为1-2-3连击链。", MNK.JobID, MNK.FormShift)]
         MonkAoEComboFormOption = 2009,
 
         [OrderedEnum]
         [ParentCombo(MonkAoECombo)]
-        [CustomComboInfo("Meditation Feature", "Replaces AoE combo with Howling Fist/Enlightment if you have the Fifth Chakra open, have a target, and you have just used an action.", MNK.JobID, MNK.MasterfulBlitz)]
+        [CustomComboInfo("AOE连击 => 万象斗气圈", "如果达到五档斗气、有选中的目标、且GCD正在旋转，则将AOE连击替换为空鸣拳/万象斗气圈。", MNK.JobID, MNK.MasterfulBlitz)]
         MonkAoEMeditationFeature = 2014,
 
         // [OrderedEnum]
@@ -723,56 +723,56 @@ namespace XIVComboExpandedestPlugin
         // MonkAoEBalanceFeature = 2006,
 
         [OrderedEnum]
-        [CustomComboInfo("Draconic Leap", "Replaces Dragon Kick with Leaping Opo/Bootshine if Opo-Opo's Fury is up, as well as vice versa for Leaping Opo in combos.", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
+        [CustomComboInfo("（猿舞）连击 <=> 双龙脚 自动切换", "根据当前的功力状态，自动选择正确的魔猿身形技能。\n如果当前拥有魔猿功力，则将双龙脚替换为（猿舞）连击。反之，则将（猿舞）连击替换为双龙脚。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
         MonkDragonKickBootshineFeature = 2002,
 
         [OrderedEnum]
-        [CustomComboInfo("Twin Raptors", "Replaces Twin Snakes with Rising Raptor/True Strike if Raptor's Fury is up, as well as vice versa for Rising Raptor in combos.", MNK.JobID, MNK.TwinSnakes)]
+        [CustomComboInfo("（龙颚）正拳 <=> 双掌打 自动切换", "根据当前的功力状态，自动选择正确的盗龙身形技能。\n如果当前拥有盗龙功力，则将双掌打替换为（龙颚）正拳。反之，则将（龙颚）正拳替换为双掌打。", MNK.JobID, MNK.TwinSnakes)]
         MonkTwinRaptorsFeature = 2030,
 
         [OrderedEnum]
-        [CustomComboInfo("Demolishing Pounce", "Replaces Demolish with Pouncing Coeurl/Snap Punch if Coeurl's Fury is up, as well as vice versa for Pouncing Coeurl in combos.", MNK.JobID, MNK.Demolish)]
+        [CustomComboInfo("（豹袭）崩拳 <=> 破碎拳 自动切换", "根据当前的功力状态，自动选择正确的猛豹身形技能。\n如果当前拥有猛豹功力，则将破碎拳替换为（豹袭）崩拳。反之，则将（豹袭）崩拳替换为破碎拳。", MNK.JobID, MNK.Demolish)]
         MonkDemolishingPounceFeature = 2031,
 
         [OrderedEnum]
-        [CustomComboInfo("Perfect Balance Fury Option", "With this enabled, the three above Fury features only apply during Perfect Balance or Form Shift.", MNK.JobID, MNK.DragonKick)]
+        [CustomComboInfo("仅在震脚/演武时自动切换", "启用这个选项后，以上三个自动切换功能将仅在震脚激活、或演武状态下才生效。", MNK.JobID, MNK.DragonKick)]
         MonkPerfectBalanceFuryOption = 2033,
 
         [OrderedEnum]
-        [CustomComboInfo("Dragon Kick/Leaping Opo Balance Feature", "Replaces Dragon Kick and Leaping Opo with Masterful Blitz if you have 3 Beast Chakra.", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
+        [CustomComboInfo("（猿舞）连击/双龙脚 => 必杀技", "如果已经获得三个轮脉，则将（猿舞）连击和双龙脚替换为必杀技。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
         MonkDragonKickBalanceFeature = 2005,
 
         [OrderedEnum]
-        [CustomComboInfo("Leaping Dragon Clap Feature", "Replaces Dragon Kick and Leaping Opo with Thunderclap if you are out of melee range, or have a player targeted.", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
+        [CustomComboInfo("（猿舞）连击/双龙脚 => 轻身步法", "当你在近战攻击的范围之外、或选中其他玩家时，将（猿舞）连击和双龙脚替换为轻身步法。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
         MonkDragonClapFeature = 2022,
 
         [OrderedEnum]
-        [CustomComboInfo("Dragon Kick to Forbidden Chakra", "Replaces Dragon Kick and Leaping Opo with Forbidden Chakra while available, during global cooldown.", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
+        [CustomComboInfo("（猿舞）连击/双龙脚 => 阴阳斗气斩", "如果达到五档斗气、且GCD正在旋转，则将（猿舞）连击和双龙脚替换为铁山靠/阴阳斗气斩。", MNK.JobID, MNK.DragonKick, MNK.Bootshine, MNK.LeapingOpo)]
         MonkChakraKickFeature = 2034,
 
         [OrderedEnum]
-        [CustomComboInfo("Forbidden Chakra to Enlightment Feature", "Replaces Forbidden Chakra with Enlightenment if your last-used GCD action was Arm/Shadow of the Destroyer, Four-Point Fury, or Rockbreaker.", MNK.JobID, MNK.Meditation, MNK.SteeledMeditation)]
+        [CustomComboInfo("阴阳斗气斩 => 万象斗气圈", "如果你最后一个使用的GCD技能为AOE连击中的一个，则将阴阳斗气斩替换为万象斗气圈。", MNK.JobID, MNK.Meditation, MNK.SteeledMeditation)]
         MonkChakraToEnlightmentFeature = 2025,
 
         [OrderedEnum]
-        [CustomComboInfo("Perfect Balance Feature", "Perfect Balance becomes Masterful Blitz while you have 3 Beast Chakra.", MNK.JobID, MNK.PerfectBalance)]
+        [CustomComboInfo("震脚 => 必杀技", "如果已经获得三个轮脉，则将震脚替换为必杀技。", MNK.JobID, MNK.PerfectBalance)]
         MonkPerfectBalanceFeature = 2004,
 
         [OrderedEnum]
         [ParentCombo(MonkPerfectBalanceFeature)]
-        [CustomComboInfo("Perfect Balance Feature: Lockout", "Perfect Balance becomes a useless action while Perfect Balance is active.", MNK.JobID, MNK.PerfectBalance)]
+        [CustomComboInfo("震脚锁定功能", "当震脚正被激活时，将其替换为一个无用的技能。", MNK.JobID, MNK.PerfectBalance)]
         MonkPerfectBalanceFeatureLockout = 2021,
 
         [OrderedEnum]
-        [CustomComboInfo("Riddle of Fire to Brotherhood", "Riddle of Fire becomes Brotherhood if Brotherhood is on cooldown.", MNK.JobID, MNK.RiddleOfFire)]
+        [CustomComboInfo("红莲极意 => 义结金兰", "如果义结金兰已经完成冷却，则将红莲极意替换为义结金兰。", MNK.JobID, MNK.RiddleOfFire)]
         MonkRiddleToBrotherFeature = 2011,
 
         [OrderedEnum]
-        [CustomComboInfo("Riddle of Fire to Riddle of Wind", "Riddle of Fire becomes Riddle of Wind if the former is on cooldown and the latter is not.\nIf Riddle of Fire to Brotherhood is enabled, Brotherhood takes priority.", MNK.JobID, MNK.RiddleOfFire)]
+        [CustomComboInfo("红莲极意 => 疾风极意", "如果红莲极意正在冷却、且疾风极意已经完成冷却，则将红莲极意替换为疾风极意。\n如果上面的红莲极意 => 义结金兰也被启用，那么义结金兰将会拥有更高的优先级。", MNK.JobID, MNK.RiddleOfFire)]
         MonkRiddleToRiddleFeature = 2012,
 
         [OrderedEnum]
-        [CustomComboInfo("Brotherhood Lockout Feature", "Brotherhood is locked out while it is available and more than 3s are left on its buff, to prevent overwriting raid buffs.", MNK.JobID, MNK.Brotherhood)]
+        [CustomComboInfo("义结金兰锁定功能", "如果身上的义结金兰效果剩余时间超过3秒，则锁定占卜，以防止Buff被覆盖。", MNK.JobID, MNK.Brotherhood)]
         MonkBrotherhoodLockoutFeature = 2028,
 
         #endregion
@@ -782,12 +782,12 @@ namespace XIVComboExpandedestPlugin
         // last used: 3024
 
         [OrderedEnum]
-        [CustomComboInfo("Aeolian Edge Combo", "Replace Aeolian Edge with its combo chain.", NIN.JobID, NIN.AeolianEdge)]
+        [CustomComboInfo("旋风刃连击", "将旋风刃替换为它的连击链：双刃旋 - 绝风 - 旋风刃", NIN.JobID, NIN.AeolianEdge)]
         NinjaAeolianEdgeCombo = 3002,
 
         [OrderedEnum]
         [ParentCombo(NinjaAeolianEdgeCombo)]
-        [CustomComboInfo("Aeolian Edge to Throwing Dagger", "Replace Aeolian Edge combo with Throwing Dagger if you are out of range.", NIN.JobID, NIN.ThrowingDagger)]
+        [CustomComboInfo("旋风刃连击 => 飞刀", "当你在近战攻击的范围之外时，将旋风刃连击替换为飞刀。", NIN.JobID, NIN.ThrowingDagger)]
         NinjaThrowingEdgeFeature = 3021,
 
 /*        [OrderedEnum]
@@ -796,75 +796,75 @@ namespace XIVComboExpandedestPlugin
         NinjaAeolianCrushFeature = 3024,*/
 
         [OrderedEnum]
-        [CustomComboInfo("Armor Crush Combo", "Replace Armor Crush with its combo chain.", NIN.JobID, NIN.ArmorCrush)]
+        [CustomComboInfo("强甲破点突连击", "将强甲破点突替换为它的连击链：双刃旋 - 绝风 - 强甲破点突", NIN.JobID, NIN.ArmorCrush)]
         NinjaArmorCrushCombo = 3001,
 
         [OrderedEnum]
-        [CustomComboInfo("Hakke Mujinsatsu Combo", "Replace Hakke Mujinsatsu with its combo chain.", NIN.JobID, NIN.HakkeMujinsatsu, NIN.DeathBlossom)]
+        [CustomComboInfo("八卦无刃杀连击", "将八卦无刃杀替换为它的连击链：血雨飞花 - 八卦无刃杀", NIN.JobID, NIN.HakkeMujinsatsu, NIN.DeathBlossom)]
         NinjaHakkeMujinsatsuCombo = 3003,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(NinjaHakkeMujinsatsuCombo)]
-        [CustomComboInfo("Evil Hakke Mujinsatsu Combo", "Replace Death Blossom with its combo chain instead.", NIN.JobID, NIN.HakkeMujinsatsu, NIN.DeathBlossom)]
+        [CustomComboInfo("八卦无刃杀连击 - 绑定至血雨飞花", "将血雨飞花替换为它的连击链，而非八卦无刃杀。", NIN.JobID, NIN.HakkeMujinsatsu, NIN.DeathBlossom)]
         NinjaEvilHakkeMujinsatsuCombo = 3014,
 
         [OrderedEnum]
-        [CustomComboInfo("Kassatsu to Kunai's Bane", "Replaces Kassatsu with Kunai's Bane/Trick Attack while Suiton is up and Kassatsu is on cooldown, or Hidden is up.", NIN.JobID, NIN.Kassatsu)]
+        [CustomComboInfo("生杀予夺 => 百雷铳", "当处于水遁状态且生杀予夺正在冷却、或处于隐遁状态时，将生杀予夺替换为背刺/百雷铳。", NIN.JobID, NIN.Kassatsu)]
         NinjaKassatsuTrickFeature = 3004,
 
         [OrderedEnum]
-        [CustomComboInfo("Kassatsu to Dream Within a Dream", "Replaces Kassatsu with Dream Within a Dream if the former is on cooldown and the latter is not.\nIf you have Kassatsu to Trick on, Trick Attack takes priority over DwaD.", NIN.JobID, NIN.Kassatsu)]
+        [CustomComboInfo("生杀予夺 => 梦幻三段", "当生杀予夺正在冷却而梦幻三段已经完成冷却时，将生杀予夺替换为断绝/梦幻三段。\n如果上面的生杀予夺 => 百雷铳被同时启用，那么背刺/百雷铳将具有更高优先级。", NIN.JobID, NIN.Kassatsu)]
         NinjaKassatsuDWaDFeature = 3015,
 
         [OrderedEnum]
-        [CustomComboInfo("Dream Within a Dream to Kunai's Bane", "Replaces Dream Within a Dream with Kunai's Bane/Trick Attack while Suiton or Hidden is active.", NIN.JobID, NIN.DreamWithinADream)]
+        [CustomComboInfo("梦幻三段 => 百雷铳", "当处于水遁、或隐遁状态时，将断绝/梦幻三段替换为背刺/百雷铳。", NIN.JobID, NIN.DreamWithinADream)]
         NinjaDWaDTrickFeature = 3019,
 
         [OrderedEnum]
-        [CustomComboInfo("Ten Chi Jin to Meisui", "Replaces Ten Chi Jin (the move) with Meisui while Suiton is up.", NIN.JobID, NIN.TenChiJin)]
+        [CustomComboInfo("天地人 => 命水", "当处于水遁状态时，将天地人替换为命水。", NIN.JobID, NIN.TenChiJin)]
         NinjaTCJMeisuiFeature = 3005,
 
         [OrderedEnum]
-        [CustomComboInfo("Kassatsu Chi/Jin Feature", "Replaces Chi with Jin while Kassatsu is up if you have Enhanced Kassatsu.", NIN.JobID, NIN.Chi)]
+        [CustomComboInfo("生杀予夺：地之印 => 人之印", "在获得生杀予夺效果提高特性后，当你使用生杀予夺时，将地之印替换为人之印。", NIN.JobID, NIN.Chi)]
         NinjaKassatsuChiJinFeature = 3006,
 
         [OrderedEnum]
-        [CustomComboInfo("Hide to Dokumori", "Replaces Hide with Dokumori/Mug while in combat.", NIN.JobID, NIN.Hide)]
+        [CustomComboInfo("隐遁 => 介毒之术", "在战斗中时，将隐遁替换为夺取/介毒之术", NIN.JobID, NIN.Hide)]
         NinjaHideMugFeature = 3007,
 
         [OrderedEnum]
-        [CustomComboInfo("Dokumori Lockout Feature", "Locks out Dokumori/Mug while it is available and more than 3s remain on its debuff, to prevent overwriting raid buffs.", NIN.JobID, NIN.Mug, NIN.Dokumori)]
+        [CustomComboInfo("介毒之术锁定功能", "如果目标身上的介毒之术效果剩余时间超过3秒，则锁定介毒之术，以防止Buff被覆盖。", NIN.JobID, NIN.Mug, NIN.Dokumori)]
         NinjaMugLockoutFeature = 3023,
 
         [OrderedEnum]
-        [CustomComboInfo("Bhavacakra to Hellfrog Medium", "Replaces Bhavacakra with Hellfrog Medium while you are in the midst of your AoE combo.", NIN.JobID, NIN.Bhavacakra)]
+        [CustomComboInfo("六道轮回 => 大虾蟆", "如果你正在使用AOE连击，则将六道轮回替换为通灵之术·大虾蟆。", NIN.JobID, NIN.Bhavacakra)]
         NinjaBhavacakraToFroggieFeature = 3022,
 
         [OrderedEnum]
         [ConflictingCombos(NinjaGCDNinjutsuFeature)]
-        [CustomComboInfo("Aeolian to Ninjutsu Feature", "Replaces Aeolian Edge (combo) with your current Ninjutsu action if any Mudra are used.", NIN.JobID, NIN.AeolianEdge)]
+        [CustomComboInfo("旋风刃 => 忍术", "如果当前正在结印，则将旋风刃及其连击替换为忍术。", NIN.JobID, NIN.AeolianEdge)]
         NinjaNinjutsuFeature = 3008,
 
         [OrderedEnum]
         [ConflictingCombos(NinjaNinjutsuFeature)]
-        [CustomComboInfo("GCDs to Ninjutsu Feature", "Every non-Mudra GCD becomes your current Ninjutsu action while Mudras are being used.", NIN.JobID, NIN.AeolianEdge, NIN.ArmorCrush, NIN.HakkeMujinsatsu, NIN.DeathBlossom, NIN.ThrowingDagger, NIN.GustSlash, NIN.SpinningEdge, NIN.ForkedRaiju, NIN.FleetingRaiju)]
+        [CustomComboInfo("GCD => 忍术", "如果当前正在结印，则将你所有结印以外的GCD技能全部变为忍术。", NIN.JobID, NIN.AeolianEdge, NIN.ArmorCrush, NIN.HakkeMujinsatsu, NIN.DeathBlossom, NIN.ThrowingDagger, NIN.GustSlash, NIN.SpinningEdge, NIN.ForkedRaiju, NIN.FleetingRaiju)]
         NinjaGCDNinjutsuFeature = 3009,
 
         [OrderedEnum]
-        [CustomComboInfo("Ninjutsu Double-Tap Feature", "Double-tapping your last-used mudra executes your current Ninjutsu action, or replaces all three if it is currently Doton/Huton/Suiton/Goka/Hyosho.", NIN.JobID, NIN.Ten, NIN.Chi, NIN.Jin)]
+        [CustomComboInfo("忍术双击释放", "双击你最后使用的印来释放忍术，如果当前的忍术是土遁、风遁、水遁、劫火灭却之术、或冰晶乱流之术，那么三个印都会变成忍术。", NIN.JobID, NIN.Ten, NIN.Chi, NIN.Jin)]
         NinjaTapNinjutsuFeature = 3020,
 
         [OrderedEnum]
-        [CustomComboInfo("Armor Crush / Forked Raiju Feature", "Replaces Armor Crush with Forked Raiju when available.", NIN.JobID, NIN.ArmorCrush)]
+        [CustomComboInfo("强甲破点突 => 月影雷兽爪", "如果月影雷兽爪可用，则将强甲破点突替换为月影雷兽爪。", NIN.JobID, NIN.ArmorCrush)]
         NinjaArmorCrushRaijuFeature = 3012,
 
         [OrderedEnum]
-        [CustomComboInfo("Aeolian Edge / Fleeting Raiju Feature", "Replaces the Aeolian Edge combo with Fleeting Raiju when available.", NIN.JobID, NIN.AeolianEdge)]
+        [CustomComboInfo("旋风刃 => 月影雷兽牙", "如果月影雷兽牙可用，则将强甲破点突替换为月影雷兽牙。", NIN.JobID, NIN.AeolianEdge)]
         NinjaAeolianEdgeRaijuFeature = 3013,
 
         [OrderedEnum]
-        [CustomComboInfo("Forked/Fleeting Raiju Switch Feature", "Forked/Fleeting Raiju change depending on distance from target (works with the Raiju features).", NIN.JobID, NIN.ForkedRaiju, NIN.FleetingRaiju)]
+        [CustomComboInfo("月影雷兽爪 <=> 月影雷兽牙 切换功能", "月影雷兽爪与月影雷兽牙会根据与目标间的距离自动切换。（与上面的两个替换功能配合使用）", NIN.JobID, NIN.ForkedRaiju, NIN.FleetingRaiju)]
         NinjaSmartRaijuFeature = 3016,
 
         #endregion
@@ -1624,7 +1624,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(WarriorStormsPathCombo)]
-        [CustomComboInfo("暴风斩 => 暴风碎", "如果身上没有战场风暴Buff，则将连击中的暴风斩替换为暴风碎。\n因为你仍然需要在战场风暴Buff结束之前手动补上它，这既不是一个按钮替换功能，也不是Buff自动保持功能。", WAR.JobID, WAR.StormsPath)]
+        [CustomComboInfo("暴风斩 => 暴风碎", "如果身上没有战场风暴效果，则将连击中的暴风斩替换为暴风碎。\n因为你仍然需要在战场风暴效果结束之前手动补上它，所以这既不是一个按钮替换功能，也不是Buff自动保持功能。", WAR.JobID, WAR.StormsPath)]
         WarriorStormsPathEyeFeature = 2116,
 
         [OrderedEnum]
@@ -1667,7 +1667,7 @@ namespace XIVComboExpandedestPlugin
         WarriorGaugeOvercapFeature = 2105,
 
         [OrderedEnum]
-        [CustomComboInfo("原初的解放 AOE连击 => 地毁人亡", "在原初的解放生效期间，将秘银暴风连击替换为地毁人亡。", WAR.JobID, WAR.MythrilTempest)]
+        [CustomComboInfo("原初的解放：AOE连击 => 地毁人亡", "在原初的解放生效期间，将秘银暴风连击替换为地毁人亡。", WAR.JobID, WAR.MythrilTempest)]
         WarriorInnerReleaseFeature = 2106,
 
         [OrderedEnum]
@@ -1728,7 +1728,7 @@ namespace XIVComboExpandedestPlugin
         WhiteMageAfflatusFeature = 2404,
 
         [OrderedEnum]
-        [CustomComboInfo("醒梦提醒（白魔）", "当你的MP小于等于以下设置值、且醒梦不在冷却时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", WHM.JobID, WHM.PresenceOfMind, WHM.Assize, WHM.Temperance, WHM.PlenaryIndulgence, WHM.Tetragrammaton, WHM.Asylum, WHM.Aquaveil, WHM.LiturgyOfTheBell, WHM.Benediction)]
+        [CustomComboInfo("醒梦提醒（白魔）", "当你的MP小于等于以下设置值、且醒梦已经完成冷却时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", WHM.JobID, WHM.PresenceOfMind, WHM.Assize, WHM.Temperance, WHM.PlenaryIndulgence, WHM.Tetragrammaton, WHM.Asylum, WHM.Aquaveil, WHM.LiturgyOfTheBell, WHM.Benediction)]
         WhiteMageLucidReminderFeature = 2406,
 
         #endregion
