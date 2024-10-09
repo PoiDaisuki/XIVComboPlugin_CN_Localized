@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <DalamudLibPath>D:\FFXIV_CN\XIVLauncherCN\Roaming\addon\Hooks\dev\</DalamudLibPath>
+    <DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
     <AssemblyName>XIVComboExpandedest</AssemblyName>
     <RootNamespace>XIVComboExpandedestPlugin</RootNamespace>
   </PropertyGroup>
