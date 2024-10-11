@@ -1,3 +1,8 @@
+没有完成全部翻译，剩余赤魔法师、贤者、武士、学者、召唤师和蝰蛇剑士。 
+这个分支似乎有奇怪的限制（诸如不会自动续buff） 
+总之已经放弃翻译了：（
+
+
 # Dawntrail Is Here, Too
 
 # XIVComboPlugin Expandedest

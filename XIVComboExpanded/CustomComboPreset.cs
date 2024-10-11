@@ -964,39 +964,39 @@ namespace XIVComboExpandedestPlugin
         // last used enum: 4210
 
         [OrderedEnum]
-        [CustomComboInfo("Subtracting Your Combos", "Replace your normal combos with subtractive combos while you have Subtractive Palette active.", PCT.JobID, PCT.FireInRed, PCT.Fire2InRed)]
+        [CustomComboInfo("减色混合 连击切换", "如果当前正处于减色混合状态，则将你的普通连击替换为减色混合连击。", PCT.JobID, PCT.FireInRed, PCT.Fire2InRed)]
         PictSubFeature = 4201,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(PictSubFeature)]
-        [CustomComboInfo("Cleansing Your Palette", "Replace your combos with Subtractive Palette if your next action will overcap gauge.", PCT.JobID, PCT.FireInRed, PCT.Fire2InRed)]
+        [CustomComboInfo("调色值防溢出", "如果你的下一个技能将会使调色值溢出，则将你的连击技能替换为减色混合。", PCT.JobID, PCT.FireInRed, PCT.Fire2InRed)]
         PictSubOvercapOption = 4207,
 
         [OrderedEnum]
         [ParentCombo(PictSubFeature)]
-        [CustomComboInfo("Hallowed Movement", "Replace your combos with Holy in White if you are moving and don't have an instant cast.", PCT.JobID, PCT.FireInRed, PCT.Fire2InRed)]
+        [CustomComboInfo("连击技能 => 移动功能", "如果在没有即刻咏唱时移动，则将你的连击技能替换为神圣之白。", PCT.JobID, PCT.FireInRed, PCT.Fire2InRed)]
         PictSubMovementOption = 4208,
 
         [OrderedEnum]
-        [CustomComboInfo("Holy Comets!", "Replace Holy in White with Comet in Black when available.", PCT.JobID, PCT.HolyInWhite)]
+        [CustomComboInfo("神圣之白 => 彗星之黑", "如果彗星之黑可用，则将神圣之白替换为彗星之黑。", PCT.JobID, PCT.HolyInWhite)]
         PictCometFeature = 4202,
 
         [OrderedEnum]
-        [CustomComboInfo("A Motif for a Muse", "Replace your motifs with muses when you already have those motifs active.", PCT.JobID, PCT.CreatureMotif, PCT.WeaponMotif, PCT.LandscapeMotif)]
+        [CustomComboInfo("彩绘 => 构想", "如果对应的彩绘已经发动，则将你对应的的彩绘技能替换为构想技能。\n如：绒球彩绘 => 绒球构想、翅膀彩绘 => 翅膀构想、重锤彩绘 => 重锤构想", PCT.JobID, PCT.CreatureMotif, PCT.WeaponMotif, PCT.LandscapeMotif)]
         PictMotifFeature = 4204,
 
         [OrderedEnum]
-        [CustomComboInfo("Steel Your Hammers", "Replace Steel Muse with Hammer Stamp when available.", PCT.JobID, PCT.SteelMuse)]
+        [CustomComboInfo("重锤构想 => 重锤敲章", "如果可以的话，将重锤构想替换为重锤敲章。（及其之后重锤连击）", PCT.JobID, PCT.SteelMuse)]
         PictHammerFeature = 4205,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Subtract Your Comets Before It's Too Late!", "Replace Subtractive Palette with Comet in Black if available to prevent overwriting.", PCT.JobID, PCT.SubtractivePalette)]
+        [CustomComboInfo("减色混合 => 彗星之黑", "如果已经处于色调反转状态，则将减色混合替换为彗星之黑。（以防止Buff覆盖导致丢失一个彗星之黑）", PCT.JobID, PCT.SubtractivePalette)]
         PictSubCometFeature = 4210,
 
         [OrderedEnum]
-        [CustomComboInfo("Prisms in your Starscape", "Replace Scenic Muse with Star Prism when available.", PCT.JobID, PCT.ScenicMuse)]
+        [CustomComboInfo("星空构想 => 天星棱光", "如果天星棱光可用，则将星空构想替换为天星棱光。", PCT.JobID, PCT.ScenicMuse)]
         PictStarFeature = 4206,
 
         #endregion
@@ -1006,116 +1006,116 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 3926
 
         [OrderedEnum]
-        [CustomComboInfo("Slice Combo", "Replace Slice with its combo chain.", RPR.JobID, RPR.Slice, RPR.InfernalSlice)]
+        [CustomComboInfo("切割连击", "将切割替换为它的连击链：切割 - 增盈切割 - 地狱切割", RPR.JobID, RPR.Slice, RPR.InfernalSlice)]
         ReaperSliceCombo = 3901,
 
         [OrderedEnum]
         [ParentCombo(ReaperSliceCombo)]
-        [CustomComboInfo("Infernal Slice Combo", "Replace Infernal Slice with its combo chain and removes Slice's combo.", RPR.JobID, RPR.InfernalSlice)]
+        [CustomComboInfo("切割连击 - 绑定至地狱切割", "将地狱切割替换为它的连击链，而非切割。", RPR.JobID, RPR.InfernalSlice)]
         ReaperInfernalSliceCombo = 3910,
 
         [OrderedEnum]
         [ParentCombo(ReaperSliceCombo)]
-        [CustomComboInfo("Slice to Harpe", "Replace Slice combo with Harpe if you are out of range.", RPR.JobID, RPR.Slice)]
+        [CustomComboInfo("切割连击 => 勾刃", "当你在近战攻击的范围之外时，将切割连击替换为勾刃。", RPR.JobID, RPR.Slice)]
         ReaperHarpeSliceFeature = 3921,
 
         [OrderedEnum]
-        [CustomComboInfo("Scythe Combo", "Replace Spinning Scythe with its combo chain.", RPR.JobID, RPR.SpinningScythe, RPR.NightmareScythe)]
+        [CustomComboInfo("旋转钐割连击", "将旋转钐割替换为它的连击链：旋转钐割 - 噩梦钐割", RPR.JobID, RPR.SpinningScythe, RPR.NightmareScythe)]
         ReaperScytheCombo = 3902,
 
         [OrderedEnum]
         [ParentCombo(ReaperScytheCombo)]
-        [CustomComboInfo("Nightmare Scythe Combo", "Replace Nightmare Scythe with its combo chain and removes Spinning Scythe's combo.", RPR.JobID, RPR.NightmareScythe)]
+        [CustomComboInfo("旋转钐割连击 - 绑定至噩梦钐割", "将噩梦钐割替换为它的连击链，而非旋转钐割。", RPR.JobID, RPR.NightmareScythe)]
         ReaperNightmareScytheCombo = 3911,
 
         [OrderedEnum]
-        [CustomComboInfo("Enshroud Communio Feature", "Replace Enshroud with Communio when Enshrouded.", RPR.JobID, RPR.Enshroud)]
+        [CustomComboInfo("夜游魂衣 => 团契", "当处于化身附体状态时，将夜游魂衣替换为团契。", RPR.JobID, RPR.Enshroud)]
         ReaperEnshroudCommunioFeature = 3903,
 
         [OrderedEnum]
-        [CustomComboInfo("Stalking and Swathing Feature", "While you have Soul Reaver, Blood Stalk becomes whichever spender is enhanced, and Grim Swathe becomes Guillotine.", RPR.JobID, RPR.BloodStalk, RPR.GrimSwathe)]
+        [CustomComboInfo("隐匿挥割&束缚挥割 => 绞决/缢杀&断首", "当拥有妖异之镰状态效果时，将隐匿挥割替换为绞决/缢杀中受到效果提高强化的那个。束缚挥割则替换为断首。", RPR.JobID, RPR.BloodStalk, RPR.GrimSwathe)]
         ReaperStalkingSwathingFeature = 3917,
 
         [OrderedEnum]
-        [CustomComboInfo("Gibbets and Gallows Feature", "Slice and Shadow of Death are replaced with Gibbet and Gallows while Soul Reaver or Shroud is active.", RPR.JobID, RPR.Slice, RPR.ShadowOfDeath, RPR.SoulSlice)]
+        [CustomComboInfo("切割/死亡之影 => 绞决/缢杀", "当拥有妖异之镰状态效果、或处于化身附体状态时，将切割和死亡之影替换为绞决和缢杀。", RPR.JobID, RPR.Slice, RPR.ShadowOfDeath, RPR.SoulSlice)]
         ReaperGibbetGallowsFeature = 3904,
 
         [OrderedEnum]
         [ParentCombo(ReaperGibbetGallowsFeature)]
-        [CustomComboInfo("Gibbets and Gallows Feature Swap", "Swaps Gibbet/Gallows for the Gibbet and Gallows Feature.", RPR.JobID, RPR.Slice, RPR.ShadowOfDeath, RPR.SoulSlice)]
+        [CustomComboInfo("交换绞决和缢杀的位置", "反过来将切割替换为缢杀、死亡之影替换为绞决。", RPR.JobID, RPR.Slice, RPR.ShadowOfDeath, RPR.SoulSlice)]
         ReaperGibbetGallowsSwap = 3918,
 
         [OrderedEnum]
         [ParentCombo(ReaperGibbetGallowsFeature)]
-        [CustomComboInfo("Gibbets and Gallows Combo", "Gibbet becomes Gallows when Gallows is enhanced and vice-versa, but only in combo. It is removed from Shadow of Death/Soul Slice as a result after one is enhanced.", RPR.JobID, RPR.Gibbet, RPR.Gallows)]
+        [CustomComboInfo("绞决 - 缢杀连击", "将绞决和缢杀替换为受到效果提高强化的那个，但仅在连击中生效。在经过增强后，它会被从死亡之影/灵魂切割中移除。\n上一句的原文为：It is removed from Shadow of Death/Soul Slice as a result after one is enhanced，我没看懂。", RPR.JobID, RPR.Gibbet, RPR.Gallows)]
         ReaperGibbetGallowsComboOption = 3925,
 
         [OrderedEnum]
         [ParentCombo(ReaperGibbetGallowsFeature)]
-        [CustomComboInfo("Gibbets and Gallows Soul Slice Option", "Have Soul Slice be replaced in the Gibbets and Gallows Feature instead of Shadow of Death.", RPR.JobID, RPR.Slice, RPR.ShadowOfDeath, RPR.SoulSlice)]
+        [CustomComboInfo("死亡之影由灵魂切割替代", "让灵魂切割取代死亡之影，成为被绞决/缢杀替换的那个。", RPR.JobID, RPR.Slice, RPR.ShadowOfDeath, RPR.SoulSlice)]
         ReaperGibbetGallowsSoulSliceOption = 3919,
 
         [OrderedEnum]
         [ParentCombo(ReaperGibbetGallowsSoulSliceOption)]
-        [CustomComboInfo("Gibbet and Gallows Shroud Decombo", "Uncombos Void/Cross Reaping and spreads them across Soul Slice/Slice Combo.", RPR.JobID, RPR.Slice)]
+        [CustomComboInfo("绞决/缢杀 解除附体连击", "将虚无收割和交错收割重新绑定至灵魂切割和切割连击。", RPR.JobID, RPR.Slice)]
         ReaperGibbetGallowsShroudOption = 3920,
 
         [OrderedEnum]
-        [CustomComboInfo("Enhanced Gallows and Gibbets Feature", "Gibbet becomes Gallows when Gallows is enhanced and vice-versa.", RPR.JobID, RPR.Gibbet, RPR.Gallows)]
+        [CustomComboInfo("绞决 <=> 缢杀 自动切换", "将绞决和缢杀自动替换为他们中受到效果提高强化的那个。", RPR.JobID, RPR.Gibbet, RPR.Gallows)]
         ReaperGibbetGallowsOption = 3905,
 
         [OrderedEnum]
         [ParentCombo(ReaperGibbetGallowsOption)]
-        [CustomComboInfo("Shroud Only Option", "Only swap Gibbet/Gallows when Enshrouded.", RPR.JobID, RPR.Gibbet, RPR.Gallows)]
+        [CustomComboInfo("仅在化身附体时切换", "仅在化身附体时自动切换绞决和缢杀。（虚无收割和交错收割）", RPR.JobID, RPR.Gibbet, RPR.Gallows)]
         ReaperGibbetGallowsShroudOnlyOption = 3924,
 
         [OrderedEnum]
-        [CustomComboInfo("Guillotine Feature", "Spinning Scythe gets replaced with Guillotine while Soul Reaver or Shroud is active.", RPR.JobID, RPR.SpinningScythe)]
+        [CustomComboInfo("旋转钐割 => 断首", "当拥有妖异之镰状态效果、或处于化身附体状态时，将旋转钐割替换为断首。", RPR.JobID, RPR.SpinningScythe)]
         ReaperGuillotineFeature = 3909,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Combo Communio Feature", "When one stack is left of Shroud, Communio replaces Gibbet/Gallows/Guillotine.", RPR.JobID, RPR.Slice, RPR.InfernalSlice, RPR.Gibbet, RPR.Gallows, RPR.Guillotine, RPR.SpinningScythe, RPR.NightmareScythe)]
+        [CustomComboInfo("团契自动切换", "当仅剩一档夜游魂时，将绞决/缢杀/断首替换为团契。", RPR.JobID, RPR.Slice, RPR.InfernalSlice, RPR.Gibbet, RPR.Gallows, RPR.Guillotine, RPR.SpinningScythe, RPR.NightmareScythe)]
         ReaperComboCommunioFeature = 3906,
 
         [OrderedEnum]
-        [CustomComboInfo("Lemure Feature", "When you have two or more stacks of Void Shroud, Lemure Slice/Scythe replaces Gibbet/Gallows and Guillotine respectively.", RPR.JobID, RPR.Slice, RPR.InfernalSlice, RPR.Gibbet, RPR.Gallows, RPR.Guillotine, RPR.SpinningScythe, RPR.NightmareScythe)]
+        [CustomComboInfo("缢杀/绞决&断首 => 夜游魂切割&夜游魂钐割", "当你拥有2档或以上虚无魂时，将缢杀/绞决和断首分别替换为夜游魂切割和夜游魂钐割。", RPR.JobID, RPR.Slice, RPR.InfernalSlice, RPR.Gibbet, RPR.Gallows, RPR.Guillotine, RPR.SpinningScythe, RPR.NightmareScythe)]
         ReaperLemureFeature = 3912,
 
         [OrderedEnum]
-        [CustomComboInfo("Sacrificium Feature", "While under Void Shroud and Sacrificium is available, replace Gibbet/Gallows/Guillotine with Sacrificium during global cooldown.", RPR.JobID, RPR.Slice, RPR.InfernalSlice, RPR.Gibbet, RPR.Gallows, RPR.Guillotine, RPR.SpinningScythe, RPR.NightmareScythe)]
+        [CustomComboInfo("缢杀/绞决/断首 => 祭牲", "当拥有虚无魂状态效果、且祭牲可用时，在GCD旋转期间将缢杀/绞决/断首替换为祭牲。", RPR.JobID, RPR.Slice, RPR.InfernalSlice, RPR.Gibbet, RPR.Gallows, RPR.Guillotine, RPR.SpinningScythe, RPR.NightmareScythe)]
         ReaperSacrificiumFeature = 3926,
 
         [OrderedEnum]
-        [CustomComboInfo("Arcane Circle Harvest Feature", "Replace Arcane Circle with Plentiful Harvest when you have stacks of Immortal Sacrifice.", RPR.JobID, RPR.ArcaneCircle)]
+        [CustomComboInfo("神秘环 => 大丰收", "当你拥有死亡祭品状态效果时，将神秘环替换为大丰收。", RPR.JobID, RPR.ArcaneCircle)]
         ReaperHarvestFeature = 3907,
 
         [OrderedEnum]
-        [CustomComboInfo("Regress Feature", "Both Hell's Ingress and Hell's Egress turn into Regress when Threshold is active, instead of just the opposite of the one you used.\nYou can set an optional delay for this below:", RPR.JobID, RPR.HellsIngress, RPR.HellsEgress)]
+        [CustomComboInfo("地狱入境/地狱出境 => 回退", "当处于回退预备状态时，同时将地狱入境和地狱出境替换为回退。（而非原版的只替换另一个）\n你可以在下面设置一个可选的延迟：", RPR.JobID, RPR.HellsIngress, RPR.HellsEgress)]
         ReaperRegressFeature = 3908,
 
         [OrderedEnum]
-        [CustomComboInfo("Blood Stalk to Gluttony Feature", "When Gluttony is off-cooldown, Blood Stalk will turn into Gluttony.", RPR.JobID, RPR.BloodStalk)]
+        [CustomComboInfo("隐匿挥割 => 暴食", "如果暴食已经完成冷却，则将隐匿挥割替换为暴食。", RPR.JobID, RPR.BloodStalk)]
         ReaperBloodStalkFeature = 3913,
 
         [OrderedEnum]
-        [CustomComboInfo("Grim Swathe to Gluttony Feature", "When Gluttony is off-cooldown, Grim Swathe will turn into Gluttony.", RPR.JobID, RPR.GrimSwathe)]
+        [CustomComboInfo("束缚挥割 => 暴食", "如果暴食已经完成冷却，则将束缚挥割替换为暴食。", RPR.JobID, RPR.GrimSwathe)]
         ReaperGrimSwatheFeature = 3914,
 
         [OrderedEnum]
-        [CustomComboInfo("Blood Stalk to Grim Swathe Feature", "Blood Stalk turns into Grim Swathe if you are in the midst of your AoE combo.", RPR.JobID, RPR.BloodStalk)]
+        [CustomComboInfo("隐匿挥割 => 束缚挥割", "如果你正在使用AOE连击，则将隐匿挥割替换为束缚挥割。", RPR.JobID, RPR.BloodStalk)]
         ReaperBloodStalkToGrimSwatheFeature = 3922,
 
         [OrderedEnum]
-        [CustomComboInfo("Soul Slice to Soul Scythe Feature", "Soul Slice turns into Soul Scythe if you are in the midst of your AoE combo.", RPR.JobID, RPR.SoulSlice)]
+        [CustomComboInfo("灵魂切割 => 灵魂钐割", "如果你正在使用AOE连击，则将灵魂切割替换为灵魂钐割。", RPR.JobID, RPR.SoulSlice)]
         ReaperSoulSliceToSoulScytheFeature = 3923,
 
         [OrderedEnum]
-        [CustomComboInfo("Soulsow Reminder Feature", "Slice Combo, Soul Slice and Shadow of Death become Soulsow out of combat if you don't have it active.", RPR.JobID, RPR.Slice, RPR.InfernalSlice, RPR.ShadowOfDeath, RPR.WaxingSlice, RPR.SoulSlice)]
+        [CustomComboInfo("播种魂提醒", "如果你在战斗之外、且不处于播种魂状态，则将你的切割连击、灵魂切割和死亡之影替换为播种魂。", RPR.JobID, RPR.Slice, RPR.InfernalSlice, RPR.ShadowOfDeath, RPR.WaxingSlice, RPR.SoulSlice)]
         ReaperSoulsowReminderFeature = 3915,
 
         [OrderedEnum]
-        [CustomComboInfo("Soulsow Feature", "Spinning Scythe becomes Harvest Moon when Soulsow is active and you have a target. Shadow of Death becomes Soulsow if you have no target and Soulsow isn't active.", RPR.JobID, RPR.SpinningScythe, RPR.NightmareScythe, RPR.ShadowOfDeath)]
+        [CustomComboInfo("Soulsow Feature", "如果你有选中的目标、且处于播种魂状态，则将旋转钐割替换为收获月。反之如果你没有选中的目标且不处于播种魂时，将死亡之影替换为播种魂。", RPR.JobID, RPR.SpinningScythe, RPR.NightmareScythe, RPR.ShadowOfDeath)]
         ReaperSoulsowFeature = 3916,
 
         #endregion
@@ -1125,22 +1125,22 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 3526
 
         [OrderedEnum]
-        [CustomComboInfo("Redoublement Combo", "Replaces Redoublement with its combo chain, following enchantment rules.", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
+        [CustomComboInfo("连攻连击", "将连攻替换为它的连击链：(魔)回刺 - (魔)交击斩 - (魔)连攻。", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
         RedMageMeleeCombo = 3502,
 
         [OrderedEnum]
         [ParentCombo(RedMageMeleeCombo)]
-        [CustomComboInfo("Redoublement Combo Lockout Feature", "Prevents you from using Redoublement combo if you have less than 50/50 gauge and have Verflare unlocked by replacing it with Verflare (which is unusable).", RDM.JobID, RDM.Redoublement)]
+        [CustomComboInfo("连攻连击锁定功能", "如果你的平衡量谱没有达到50/50，且赤核爆已经解锁，则将连攻连击替换为赤核爆。（此时的赤核爆无法使用，以防止打出咸鱼近战连击）", RDM.JobID, RDM.Redoublement)]
         RedMageComboReminderFeature = 3515,
 
         [OrderedEnum]
         [ParentCombo(RedMageComboReminderFeature)]
-        [CustomComboInfo("Redoublement Combo Lockout Option", "Replaces Redoublement with Flare instead of Verflare, to prevent queueing issues.", RDM.JobID, RDM.Redoublement)]
+        [CustomComboInfo("连攻连击锁定 - 用核爆替换", "用核爆替换赤核爆，以避免队列问题。", RDM.JobID, RDM.Redoublement)]
         RedMageComboReminderOption = 3517,
 
         [OrderedEnum]
         [ParentCombo(RedMageMeleeCombo)]
-        [CustomComboInfo("Redoublement Combo to Moulinet", "Replaces Redoublement Combo with Moulinet if you have been using Veraero/Verthunder 2.", RDM.JobID, RDM.Redoublement)]
+        [CustomComboInfo("连攻连击 => 划圆斩", "如果你正在使用赤震雷/赤烈风，则将连攻连击替换为划圆斩。", RDM.JobID, RDM.Redoublement)]
         RedMageComboToMoulinetFeature = 3521,
 
         [OrderedEnum]
