@@ -26,15 +26,15 @@ namespace XIVComboExpandedestPlugin
         AllEurekaFeature = 9002,
 
         [OrderedEnum]
-        [CustomComboInfo("防护职业插言功能", "如果目标可以被插言、且插言当前已经完成冷却，则将下踢替换为插言。", All.JobID, All.LowBlow)]
+        [CustomComboInfo("防护职业插言功能", "如果目标可以被插言、且插言当前已经冷却完毕，则将下踢替换为插言。", All.JobID, All.LowBlow)]
         AllTankInterruptFeature = 9003,
 
         [OrderedEnum]
-        [CustomComboInfo("雪仇/牵制/昏乱锁定功能", "如果你的雪仇/牵制/昏乱已经完成冷却、但目标身上的相同技能效果剩余时间超过3s的话，锁定相应技能，以防止Buff被覆盖。", All.JobID, All.Reprisal, All.Addle, All.Feint)]
+        [CustomComboInfo("雪仇/牵制/昏乱锁定功能", "如果你的雪仇/牵制/昏乱已经冷却完毕、但目标身上的相同技能效果剩余时间超过3s的话，锁定相应技能，以防止Buff被覆盖。", All.JobID, All.Reprisal, All.Addle, All.Feint)]
         AllReprisalLockoutFeature = 9010,
 
         [OrderedEnum]
-        [CustomComboInfo("远敏团减锁定功能", "在你远敏职业的团减（如行吟）已经完成冷却、但身上仍有（其他玩家提供的）剩余时间超过3s的对应Buff的情况下，锁定相应技能以防止Buff被覆盖。", All.JobID, All.Tactician, All.Troubadour, All.ShieldSamba)]
+        [CustomComboInfo("远敏团减锁定功能", "在你远敏职业的团减（如行吟）已经冷却完毕、但身上仍有（其他玩家提供的）剩余时间超过3s的对应Buff的情况下，锁定相应技能以防止Buff被覆盖。", All.JobID, All.Tactician, All.Troubadour, All.ShieldSamba)]
         AllRangedDefenseCooldownLockoutFeature = 9011,
 
         [OrderedEnum]
@@ -96,7 +96,7 @@ namespace XIVComboExpandedestPlugin
         AstrologianDivinationLockoutFeature = 3308,
 
         [OrderedEnum]
-        [CustomComboInfo("醒梦提醒（占星）", "当你的MP小于等于以下设置值、且醒梦已经完成冷却时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", AST.JobID, AST.CelestialOpposition, AST.CollectiveUnconscious, AST.Divination, AST.EarthlyStar, AST.Exaltation, AST.Macrocosmos, AST.NeutralSect, AST.Synastry, AST.Horoscope)]
+        [CustomComboInfo("醒梦提醒（占星）", "当你的MP小于等于以下设置值、且醒梦已经冷却完毕时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", AST.JobID, AST.CelestialOpposition, AST.CollectiveUnconscious, AST.Divination, AST.EarthlyStar, AST.Exaltation, AST.Macrocosmos, AST.NeutralSect, AST.Synastry, AST.Horoscope)]
         AstrologianLucidReminderFeature = 3305,
 
         #endregion
@@ -243,7 +243,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("九天连箭 => 侧风诱导箭", "将九天连箭替换为侧风诱导箭，如果前者正在冷却而后者已经完成冷却。", BRD.JobID, BRD.EmpyrealArrow)]
+        [CustomComboInfo("九天连箭 => 侧风诱导箭", "将九天连箭替换为侧风诱导箭，如果前者正在冷却而后者已经冷却完毕。", BRD.JobID, BRD.EmpyrealArrow)]
         BardSidewinderFeature = 2306,
 
         [OrderedEnum]
@@ -251,7 +251,7 @@ namespace XIVComboExpandedestPlugin
         BardPerfectSidesFeature = 2314,
 
         [OrderedEnum]
-        [CustomComboInfo("战斗的最终乐章", "如果战斗之声已经完成冷却，则将光明神的最终乐章替换为战斗之声。\n（其实原标题是 Radiant Voice，但是为了和下面对应所以反过来了）", BRD.JobID, BRD.RadiantFinale)]
+        [CustomComboInfo("战斗的最终乐章", "如果战斗之声已经冷却完毕，则将光明神的最终乐章替换为战斗之声。\n（其实原标题是 Radiant Voice，但是为了和下面对应所以反过来了）", BRD.JobID, BRD.RadiantFinale)]
         BardRadiantFeature = 2307,
 
         [OrderedEnum]
@@ -260,7 +260,7 @@ namespace XIVComboExpandedestPlugin
         BardRadiantVoiceOption = 2315,
 
         [OrderedEnum]
-        [CustomComboInfo("光明神强击", "如果猛者强击已经完成冷却而光明神的最终乐章没有，则光明神的最终乐章替换为猛者强击。\n如果上面“战斗的最终乐章”功能也被启用，则战斗之声的优先级更高。", BRD.JobID, BRD.RadiantFinale)]
+        [CustomComboInfo("光明神强击", "如果猛者强击已经冷却完毕而光明神的最终乐章没有，则光明神的最终乐章替换为猛者强击。\n如果上面“战斗的最终乐章”功能也被启用，则战斗之声的优先级更高。", BRD.JobID, BRD.RadiantFinale)]
         BardRadiantStrikesFeature = 2309,
 
         [OrderedEnum]
@@ -463,7 +463,7 @@ namespace XIVComboExpandedestPlugin
         DragoonJumpFeature = 2201,
 
         [OrderedEnum]
-        [CustomComboInfo("坠星冲 => 龙炎冲", "在龙炎冲冷却完毕、或不在红莲龙血状态时，将坠星冲替换为龙炎冲。", DRG.JobID, DRG.Stardiver)]
+        [CustomComboInfo("坠星冲 => 龙炎冲", "当龙炎冲冷却完毕、或不在红莲龙血状态时，将坠星冲替换为龙炎冲。", DRG.JobID, DRG.Stardiver)]
         DragoonStarfireDiveFeature = 2208,
 
         [OrderedEnum]
@@ -510,7 +510,7 @@ namespace XIVComboExpandedestPlugin
         DRKOvercapFeature = 3203,
 
         [OrderedEnum]
-        [CustomComboInfo("精雕怒斩 => 血乱", "将精雕怒斩替换为血乱，如果后者已完成冷却。", DRK.JobID, DRK.CarveAndSpit)]
+        [CustomComboInfo("精雕怒斩 => 血乱", "将精雕怒斩替换为血乱，如果后者已经冷却完毕。", DRK.JobID, DRK.CarveAndSpit)]
         DarkDeliriumFeature = 3206,
 
         [OrderedEnum]
@@ -602,7 +602,7 @@ namespace XIVComboExpandedestPlugin
         GunbreakerNoMercyFeature = 3708,
 
         [OrderedEnum]
-        [CustomComboInfo("无情 => 倍攻", "当无情生效、且倍攻已经完成冷却时，将无情替换为倍攻。\n如果其他无情替换功能也被启用，则倍攻的优先级高于它们。", GNB.JobID, GNB.NoMercy)]
+        [CustomComboInfo("无情 => 倍攻", "当无情正在生效中、且倍攻已经冷却完毕时，将无情替换为倍攻。\n如果其他无情替换功能也被启用，则倍攻的优先级高于它们。", GNB.JobID, GNB.NoMercy)]
         GunbreakerNoMercyDoubleDownFeature = 3712,
 
         #endregion
@@ -639,7 +639,7 @@ namespace XIVComboExpandedestPlugin
         MachinistOverdriveFeature = 3104,
 
         [OrderedEnum]
-        [CustomComboInfo("超荷 => 野火", "如果野火已经完成冷却、且你有选中的目标，则将超荷替换为野火。", MCH.JobID, MCH.Hypercharge)]
+        [CustomComboInfo("超荷 => 野火", "如果野火已经冷却完毕、且你有选中的目标，则将超荷替换为野火。", MCH.JobID, MCH.Hypercharge)]
         MachinistHyperfireFeature = 3107,
 
         [OrderedEnum]
@@ -764,11 +764,11 @@ namespace XIVComboExpandedestPlugin
         MonkPerfectBalanceFeatureLockout = 2021,
 
         [OrderedEnum]
-        [CustomComboInfo("红莲极意 => 义结金兰", "如果义结金兰已经完成冷却，则将红莲极意替换为义结金兰。", MNK.JobID, MNK.RiddleOfFire)]
+        [CustomComboInfo("红莲极意 => 义结金兰", "如果义结金兰已经冷却完毕，则将红莲极意替换为义结金兰。", MNK.JobID, MNK.RiddleOfFire)]
         MonkRiddleToBrotherFeature = 2011,
 
         [OrderedEnum]
-        [CustomComboInfo("红莲极意 => 疾风极意", "如果红莲极意正在冷却、且疾风极意已经完成冷却，则将红莲极意替换为疾风极意。\n如果上面的红莲极意 => 义结金兰也被启用，那么义结金兰将会拥有更高的优先级。", MNK.JobID, MNK.RiddleOfFire)]
+        [CustomComboInfo("红莲极意 => 疾风极意", "如果红莲极意正在冷却、且疾风极意已经冷却完毕，则将红莲极意替换为疾风极意。\n如果上面的红莲极意 => 义结金兰也被启用，那么义结金兰将会拥有更高的优先级。", MNK.JobID, MNK.RiddleOfFire)]
         MonkRiddleToRiddleFeature = 2012,
 
         [OrderedEnum]
@@ -814,7 +814,7 @@ namespace XIVComboExpandedestPlugin
         NinjaKassatsuTrickFeature = 3004,
 
         [OrderedEnum]
-        [CustomComboInfo("生杀予夺 => 梦幻三段", "当生杀予夺正在冷却而梦幻三段已经完成冷却时，将生杀予夺替换为断绝/梦幻三段。\n如果上面的生杀予夺 => 百雷铳被同时启用，那么攻其不备/百雷铳将具有更高优先级。", NIN.JobID, NIN.Kassatsu)]
+        [CustomComboInfo("生杀予夺 => 梦幻三段", "当生杀予夺正在冷却而梦幻三段已经冷却完毕时，将生杀予夺替换为断绝/梦幻三段。\n如果上面的生杀予夺 => 百雷铳被同时启用，那么攻其不备/百雷铳将具有更高优先级。", NIN.JobID, NIN.Kassatsu)]
         NinjaKassatsuDWaDFeature = 3015,
 
         [OrderedEnum]
@@ -1095,11 +1095,11 @@ namespace XIVComboExpandedestPlugin
         ReaperRegressFeature = 3908,
 
         [OrderedEnum]
-        [CustomComboInfo("隐匿挥割 => 暴食", "如果暴食已经完成冷却，则将隐匿挥割替换为暴食。", RPR.JobID, RPR.BloodStalk)]
+        [CustomComboInfo("隐匿挥割 => 暴食", "如果暴食已经冷却完毕，则将隐匿挥割替换为暴食。", RPR.JobID, RPR.BloodStalk)]
         ReaperBloodStalkFeature = 3913,
 
         [OrderedEnum]
-        [CustomComboInfo("束缚挥割 => 暴食", "如果暴食已经完成冷却，则将束缚挥割替换为暴食。", RPR.JobID, RPR.GrimSwathe)]
+        [CustomComboInfo("束缚挥割 => 暴食", "如果暴食已经冷却完毕，则将束缚挥割替换为暴食。", RPR.JobID, RPR.GrimSwathe)]
         ReaperGrimSwatheFeature = 3914,
 
         [OrderedEnum]
@@ -1125,12 +1125,12 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 3526
 
         [OrderedEnum]
-        [CustomComboInfo("连攻连击", "将连攻替换为它的连击链：(魔)回刺 - (魔)交击斩 - (魔)连攻。", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
+        [CustomComboInfo("连攻连击（魔三连）", "将连攻替换为它的连击链：(魔)回刺 - (魔)交击斩 - (魔)连攻。", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
         RedMageMeleeCombo = 3502,
 
         [OrderedEnum]
         [ParentCombo(RedMageMeleeCombo)]
-        [CustomComboInfo("连攻连击锁定功能", "如果你的平衡量谱没有达到50/50，且赤核爆已经解锁，则将连攻连击替换为赤核爆。（此时的赤核爆无法使用，以防止打出咸鱼近战连击）", RDM.JobID, RDM.Redoublement)]
+        [CustomComboInfo("连攻连击锁定功能", "如果你的平衡量谱不到50/50，且赤核爆已经解锁，则将连攻连击替换为赤核爆。（此时的赤核爆无法使用，以防止打出咸鱼近战连击）", RDM.JobID, RDM.Redoublement)]
         RedMageComboReminderFeature = 3515,
 
         [OrderedEnum]
@@ -1145,108 +1145,108 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(RedMageMeleeCombo)]
-        [CustomComboInfo("Redoublement Combo Plus", "Replaces Redoublement/Moulinet with the combo spells after you have gained 3 mana stacks.\nVerflare will always be picked, meaning you must still manually press Verholy if appropriate.", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
+        [CustomComboInfo("魔六连", "在获得三档魔元集后，将连攻/划圆斩替换为后续连击。（赤核爆/赤神圣 - 焦热 - 决断）\n如果使用这个选项，连攻和划圆斩将固定被替换为赤核爆。即如果你需要使用赤神圣，那么必须手动选择。", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
         RedMageMeleeComboPlus = 3508,
 
         [OrderedEnum]
         [ParentCombo(RedMageMeleeComboPlus)]
-        [CustomComboInfo("Redoublement Combo Plus Verholy Swap", "Swaps Verflare with Verholy in your melee combo (unless you aren't at a level you can use it).", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
+        [CustomComboInfo("魔六连 - 固定使用赤神圣", "如果你已经解锁赤神圣，则将上面选项中的连攻和划圆斩固定替换为赤神圣，而非赤核爆。（解锁赤神圣之前仍会将其替换为赤核爆）", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
         RedMageMeleeComboPlusVerholy = 3509,
 
         [OrderedEnum]
         [ParentCombo(RedMageMeleeCombo)]
-        [CustomComboInfo("Redoublement Combo to Reprise", "Replaces Redoublement combo with Enchanted Reprise if you are out of melee range.", RDM.JobID, RDM.Redoublement)]
+        [CustomComboInfo("连攻 => 魔续斩", "当你在近战攻击的范围之外时，将连攻连击替换为魔续斩。（只会替换为魔续斩）", RDM.JobID, RDM.Redoublement)]
         RedMageMeleeComboReprise = 3518,
 
         [OrderedEnum]
         [ParentCombo(RedMageMeleeComboReprise)]
-        [CustomComboInfo("Redoublement Combo to Reprise Under-50 Option", "Enchanted Reprise will also replace Redoublement combo if you are under 50 black or white Mana.", RDM.JobID, RDM.Redoublement)]
+        [CustomComboInfo("在平衡量谱不足50/50时也替换", "如果你的平衡量谱不到50/50的话，也将连攻连击替换为魔续斩。（同样只会替换为魔续斩）", RDM.JobID, RDM.Redoublement)]
         RedMageMeleeComboRepriseOption = 3519,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(RedMageMeleeCombo)]
-        [CustomComboInfo("Redoublement Combo Plus Plus", "Replaces Redoublement/Moulinet with the combo spells after you have gained 3 mana stacks.\nVerflare or Verholy will be picked, whichever is more appropriate.", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
+        [CustomComboInfo("魔六连++", "在获得三档魔元集后，将连攻/划圆斩替换为后续连击。（赤核爆/赤神圣 - 焦热 - 决断）\n如果使用这个选项，将会自动选择赤核爆/赤神圣中更合适的那个。（而非上面选项的固定替换）", RDM.JobID, RDM.Redoublement, RDM.Moulinet)]
         RedMageMeleeComboPlusPlus = 3503,
 
         [OrderedEnum]
-        [CustomComboInfo("Verproc into Jolt", "Replaces Verstone/Verfire with Jolt/Scorch when no proc is available. In the strange gap between level 84-93 where Jolt 3 is always better, Verstone/verfire will always be replaced with Jolt 3.", RDM.JobID, RDM.Verstone, RDM.Verfire, RDM.Verthunder, RDM.Verthunder3)]
+        [CustomComboInfo("赤火炎/赤飞石 => 摇荡/震荡/激荡", "如果没有对应的触发，则将赤火炎/赤飞石替换为摇荡/震荡/激荡。\n在84级-93级这个等级区间内，触发技能的威力（340威力+5魔元）反常的不如激荡（360威力+2*2魔元）高。因此在84级-93级之间时，赤火炎和赤飞石会被固定替换为激荡。", RDM.JobID, RDM.Verstone, RDM.Verfire, RDM.Verthunder, RDM.Verthunder3)]
         RedMageVerprocCombo = 3504,
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocCombo)]
         [ConflictingCombos(RedMageVerprocComboVerstoneOption)]
-        [CustomComboInfo("Verproc into Jolt Verfire Opt Out", "Verfire does NOT change into Jolt (or any Jolt-related actions).", RDM.JobID, RDM.Verstone, RDM.Verfire)]
+        [CustomComboInfo("不要替换赤火炎", "赤火炎不会被替换为激荡。（或任何与它们有关的技能）", RDM.JobID, RDM.Verstone, RDM.Verfire)]
         RedMageVerprocComboVerfireOption = 3524,
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocCombo)]
         [ConflictingCombos(RedMageVerprocComboVerfireOption)]
-        [CustomComboInfo("Verproc into Jolt Verstone Opt Out", "Verstone does NOT change into Jolt (or any Jolt-related actions).", RDM.JobID, RDM.Verstone, RDM.Verfire)]
+        [CustomComboInfo("不要替换赤飞石", "赤飞石不会被替换为激荡。（或任何与它们有关的技能）", RDM.JobID, RDM.Verstone, RDM.Verfire)]
         RedMageVerprocComboVerstoneOption = 3525,
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocCombo)]
-        [CustomComboInfo("Verproc into Jolt Plus", "Additionally replaces Verstone/Verfire with Veraero/Verthunder if Dualcast, Swiftcast, or Lost Chainspell are up.", RDM.JobID, RDM.Verstone, RDM.Verfire)]
+        [CustomComboInfo("赤火炎/赤飞石 => 赤暴雷/赤暴风", "当处于连续咏唱、即刻咏唱、或失传连锁咏唱状态时，将赤火炎和赤飞石分别替换为赤闪雷/赤暴雷和赤疾风/赤暴风。\n虽然作者没写，但是促进也会触发这个效果。", RDM.JobID, RDM.Verstone, RDM.Verfire)]
         RedMageVerprocComboPlus = 3505,
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocComboPlus)]
-        [CustomComboInfo("Verproc into Jolt Plus Opener Feature (Stone)", "Turns Verstone into Veraero when out of combat.", RDM.JobID, RDM.Verstone)]
+        [CustomComboInfo("起手：赤飞石 => 赤疾风/赤暴风", "当不处于战斗状态时，将赤飞石替换为赤疾风/赤暴风。", RDM.JobID, RDM.Verstone)]
         RedMageVerprocOpenerFeatureStone = 3506,
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocComboPlus)]
-        [CustomComboInfo("Verproc into Jolt Plus Opener Feature (Fire)", "Turns Verfire into Verthunder when out of combat.", RDM.JobID, RDM.Verfire)]
+        [CustomComboInfo("起手：赤火炎 => 赤闪雷/赤暴雷", "当不处于战斗状态时，将赤火炎替换为赤闪雷/赤暴雷。", RDM.JobID, RDM.Verfire)]
         RedMageVerprocOpenerFeatureFire = 3507,
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocComboPlus)]
-        [CustomComboInfo("Verproc into Jolt Plus Verthunder Option", "Verthunder is used as the base for the black magic side of Verproc into Jolt, not Verfire.\nThis is so you can use Verfire by itself even with acceleration up to use a slightly more optimal opener.", RDM.JobID, RDM.Verthunder)]
+        [CustomComboInfo("起手：使用赤闪雷/赤暴雷而非赤火炎", "使用赤闪雷/赤暴雷作为上述触发替换的基础技能，而非赤火炎。\n这样你就可以带着促进Buff使用赤火炎，来使用一个更优化的起手。（完全没明白这是什么意思，原文如下：）\nThis is so you can use Verfire(赤火炎) by itself even with acceleration(促进) up to use a slightly more optimal opener.", RDM.JobID, RDM.Verthunder)]
         RedMageVerprocComboVerthunderOption = 3526,
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocComboPlus)]
-        [CustomComboInfo("Verproc into Jolt Plus Option", "Verstone/Verfire never get replaced by their respective long cast (Veraero/Verthunder) if usable (unless both are usable).\nMildly incompatible with current RDM opener.", RDM.JobID, RDM.Verstone, RDM.Verfire)]
+        [CustomComboInfo("赤火炎/赤飞石 => 赤暴雷/赤暴风 - 额外选项", "如果你已经拥有赤飞石预备/赤火炎预备状态的话，对应的短读条技能将不会被替换为其相对的长读条技能（赤暴雷/赤暴风），除非此时两个触发均可使用。\n与当前的赤魔起手略微不兼容。", RDM.JobID, RDM.Verstone, RDM.Verfire)]
         RedMageVerprocComboPlusOption = 3523,
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocCombo)]
-        [CustomComboInfo("Verproc into Reprise Movement Feature", "Verstone/Verfire additionally turn into Enchanted Reprise (if available) if you are moving and don't have any instant casts available.", RDM.JobID, RDM.Verstone, RDM.Verfire)]
+        [CustomComboInfo("赤火炎/赤飞石 => 魔续斩 移动功能", "如果在没有任何瞬发技能时移动，则将赤火炎/赤飞石替换为魔续斩。（如果魔续斩可以使用的话）", RDM.JobID, RDM.Verstone, RDM.Verfire)]
         RedMageVerprocComboReprise = 3520,
 
         [OrderedEnum]
         [ConflictingCombos(RedMageVerprocComboPlus)]
-        [CustomComboInfo("Veraero/Verthunder into Scorch", "Replaces Veraero/Verthunder 1/3 with Scorch when it's available.\nThis feature is already in Verproc into Jolt Plus, this is for people who don't want to use that.", RDM.JobID, RDM.Veraero, RDM.Verthunder, RDM.Veraero3, RDM.Verthunder3)]
+        [CustomComboInfo("赤暴雷/赤暴风 => 焦热", "当焦热可用的时候，将赤暴雷和赤暴风替换为焦热。\n这个功能已经被包含在上面“赤火炎/赤飞石 => 赤暴雷/赤暴风”功能中，这个选项是为那些不想启用那个功能的人准备的。", RDM.JobID, RDM.Veraero, RDM.Verthunder, RDM.Veraero3, RDM.Verthunder3)]
         RedMageVeraeroVerThunderScorchFeature = 3510,
 
         [OrderedEnum]
-        [CustomComboInfo("Red Mage AoE Combo", "Replaces Veraero/Verthunder 2 with Impact when Dualcast or Swiftcast are active.", RDM.JobID, RDM.Veraero2, RDM.Verthunder2)]
+        [CustomComboInfo("赤魔法师AOE连击", "当处于连续咏唱或即刻咏唱状态时，将赤震雷和赤烈风替换为散碎/冲击。（其他可以瞬发的Buff应该也可以，未测试）", RDM.JobID, RDM.Veraero2, RDM.Verthunder2)]
         RedMageAoECombo = 3501,
 
         [OrderedEnum]
-        [CustomComboInfo("Moulinet Lockout Feature", "Prevents you from using Moulinet below 50/50 gauge by replacing it with Physick if you have Verflare unlocked.", RDM.JobID, RDM.Moulinet)]
+        [CustomComboInfo("划圆斩锁定功能", "如果你的平衡量谱不到50/50，且赤核爆已经解锁，则通过将划圆斩替换为医治来防止你打不够三发魔划圆斩。", RDM.JobID, RDM.Moulinet)]
         RedMageMoulinetReminderFeature = 3514,
 
         [OrderedEnum]
-        [CustomComboInfo("Embolden to Manafication", "Replaces Embolden with Manafication if the former is on cooldown and the latter is not.", RDM.JobID, RDM.Embolden)]
+        [CustomComboInfo("鼓励 => 魔元化", "如果鼓励正在冷却、而魔元化已经冷却完毕，则将鼓励替换为魔元化。", RDM.JobID, RDM.Embolden)]
         RedMageEmboldenFeature = 3511,
 
         [OrderedEnum]
-        [CustomComboInfo("Embolden Lockout Feature", "Locks out Embolden if it is available and more than 3s remain on its buff, to prevent overwriting raid buffs.", RDM.JobID, RDM.Embolden)]
+        [CustomComboInfo("鼓励锁定功能", "如果身上的鼓励效果剩余时间超过3秒，则锁定鼓励，以防止Buff被覆盖。", RDM.JobID, RDM.Embolden)]
         RedMageEmboldenLockoutFeature = 3522,
 
         [OrderedEnum]
-        [CustomComboInfo("Acceleration to Swiftcast", "Replaces Acceleration with Swiftcast if the former is on cooldown and the latter is not.", RDM.JobID, RDM.Acceleration)]
+        [CustomComboInfo("促进 => 即刻咏唱", "如果促进正在冷却、而即刻咏唱已经冷却完毕，则将促进替换为即刻咏唱。", RDM.JobID, RDM.Acceleration)]
         RedMageAccelerationFeature = 3512,
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("Fleche to Contre-Sixte", "Replaces Fleche with Contre-Sixte if the former is on cooldown and the latter is not.", RDM.JobID, RDM.Fleche)]
+        [CustomComboInfo("飞刺 => 六分反击", "如果飞刺正在冷却、而六分反击已经冷却完毕，则将飞刺替换为六分反击。", RDM.JobID, RDM.Fleche)]
         RedMageContreSixteFeature = 3513,
 
         [OrderedEnum]
-        [CustomComboInfo("Red Mage Lucid Dreaming Reminder", "All your non-role action cooldowns (that don't have charges) become Lucid Dreaming if they aren't up and Lucid Dreaming is, and you have less-than-or-equal-to a set amount of MP.", RDM.JobID, RDM.Embolden, RDM.Manafication, RDM.Fleche, RDM.ContreSixte)]
+        [CustomComboInfo("醒梦提醒（赤魔）", "当你的MP小于等于以下设置值、且醒梦已经冷却完毕时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", RDM.JobID, RDM.Embolden, RDM.Manafication, RDM.Fleche, RDM.ContreSixte)]
         RedMageLucidReminderFeature = 3516,
 
         #endregion
@@ -1728,7 +1728,7 @@ namespace XIVComboExpandedestPlugin
         WhiteMageAfflatusFeature = 2404,
 
         [OrderedEnum]
-        [CustomComboInfo("醒梦提醒（白魔）", "当你的MP小于等于以下设置值、且醒梦已经完成冷却时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", WHM.JobID, WHM.PresenceOfMind, WHM.Assize, WHM.Temperance, WHM.PlenaryIndulgence, WHM.Tetragrammaton, WHM.Asylum, WHM.Aquaveil, WHM.LiturgyOfTheBell, WHM.Benediction)]
+        [CustomComboInfo("醒梦提醒（白魔）", "当你的MP小于等于以下设置值、且醒梦已经冷却完毕时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", WHM.JobID, WHM.PresenceOfMind, WHM.Assize, WHM.Temperance, WHM.PlenaryIndulgence, WHM.Tetragrammaton, WHM.Asylum, WHM.Aquaveil, WHM.LiturgyOfTheBell, WHM.Benediction)]
         WhiteMageLucidReminderFeature = 2406,
 
         #endregion
