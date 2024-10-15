@@ -111,7 +111,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(BlackEnochianFeature)]
-        [CustomComboInfo("冰澈/炽炎 => 异言 移动功能", "如果在没有三连/即刻咏唱时移动，则将炽炎和冰澈替换为异言。", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
+        [CustomComboInfo("冰澈/炽炎 => 异言 移动功能", "如果你在没有三连/即刻咏唱时移动，则将炽炎和冰澈替换为异言。", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
         BlackEnochianXenoglossyFeature = 2520,
 
         [OrderedEnum]
@@ -150,7 +150,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(BlackFreezeFlareFeature)]
-        [CustomComboInfo("玄冰/核爆 => 秽浊 移动功能", "如果在没有三连/即刻咏唱、已获得秽浊效果提高特性（瞬发秽浊）、且秽浊可用时移动，则将玄冰和核爆替换为秽浊。", BLM.JobID, BLM.Freeze, BLM.Flare)]
+        [CustomComboInfo("玄冰/核爆 => 秽浊 移动功能", "如果你在没有三连/即刻咏唱、已获得秽浊效果提高特性（瞬发秽浊）、且秽浊可用时移动，则将玄冰和核爆替换为秽浊。", BLM.JobID, BLM.Freeze, BLM.Flare)]
         BlackFreezeFlareFoulFeature = 2521,
 
         [OrderedEnum]
@@ -420,12 +420,12 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(DragoonFullThrustCombo)]
-        [CustomComboInfo("苍穹刺连击 - 从贯通刺/前冲刺开始", "当没有进行连击的时候，将苍穹刺替换为贯通刺/前冲刺，而不是精准刺。\n从结果上来说，即是删去了苍穹刺连击的第一个技能，以便与樱花连击相区分，但是需要从其他地方找一个精准刺来开始这条连击链。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
+        [CustomComboInfo("苍穹刺连击 - 从贯通刺/前冲刺开始", "当没有进行连击的时候，将苍穹刺替换为贯通刺/前冲刺，而不是精准刺。\n从结果上来说，相当于删去了苍穹刺连击的第一个技能，以便与樱花连击相区分，因此你需要从其他地方找一个精准刺来开始这个连击链。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
         DragoonFullThrustComboOption = 2210,
 
         [OrderedEnum]
         [ParentCombo(DragoonFullThrustCombo)]
-        [CustomComboInfo("苍穹刺连击 => 贯穿尖", "当你在近战攻击的范围之外时，将苍穹刺连击替换为贯穿尖。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
+        [CustomComboInfo("苍穹刺连击 => 贯穿尖", "当你在近战技能的攻击范围之外时，将苍穹刺连击替换为贯穿尖。", DRG.JobID, DRG.FullThrust, DRG.HeavensThrust)]
         DragoonFullThrustTalonFeature = 2211,
 
         [OrderedEnum]
@@ -434,7 +434,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(DragoonChaosThrustCombo)]
-        [CustomComboInfo("樱花连击 - 从开膛枪/螺旋击开始", "当没有进行连击的时候，将樱花怒放/樱花缭乱替换为开膛枪/螺旋击，而不是精准刺。\n从结果上来说，即是删去了樱花连击的第一个技能，以便与直刺连击相区分，但是需要从其他地方找一个精准刺来开始这条连击链。", DRG.JobID, DRG.ChaosThrust, DRG.ChaoticSpring)]
+        [CustomComboInfo("樱花连击 - 从开膛枪/螺旋击开始", "当没有进行连击的时候，将樱花怒放/樱花缭乱替换为开膛枪/螺旋击，而不是精准刺。\n从结果上来说，相当于删去了樱花连击的第一个技能，以便与直刺连击相区分，因此你需要从其他地方找一个精准刺来开始这个连击链。", DRG.JobID, DRG.ChaosThrust, DRG.ChaoticSpring)]
         DragoonChaosThrustComboOption = 2209,
 
         [OrderedEnum]
@@ -442,7 +442,7 @@ namespace XIVComboExpandedestPlugin
         DragoonFullChaosFeature = 2215,
 
         [OrderedEnum]
-        [CustomComboInfo("樱花连击 => 龙翼滑翔", "当你在近战攻击的范围之外时，将樱花连击替换为龙翼滑翔。（似乎只会替换开膛枪和樱花怒放）", DRG.JobID, DRG.Disembowel, DRG.SpiralBlow, DRG.ChaosThrust, DRG.ChaoticSpring)]
+        [CustomComboInfo("樱花连击 => 龙翼滑翔", "当你在近战技能的攻击范围之外时，将樱花连击替换为龙翼滑翔。（似乎只会替换开膛枪和樱花怒放）", DRG.JobID, DRG.Disembowel, DRG.SpiralBlow, DRG.ChaosThrust, DRG.ChaoticSpring)]
         DragoonChaoticGlideFeature = 2220,
 
         [OrderedEnum]
@@ -487,7 +487,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(DarkSouleaterCombo)]
-        [CustomComboInfo("噬魂斩 => 伤残", "当你在近战攻击的范围之外时，将噬魂斩连击替换为伤残。", DRK.JobID, DRK.Souleater)]
+        [CustomComboInfo("噬魂斩 => 伤残", "当你在近战技能的攻击范围之外时，将噬魂斩连击替换为伤残。", DRK.JobID, DRK.Souleater)]
         DarkSoulmendFeature = 3208,
 
         [OrderedEnum]
@@ -541,7 +541,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(GunbreakerSolidBarrelCombo)]
-        [CustomComboInfo("迅连斩 => 闪雷弹", "当你在近战攻击的范围之外时，将迅连斩连击替换为闪雷弹。", GNB.JobID, GNB.SolidBarrel)]
+        [CustomComboInfo("迅连斩 => 闪雷弹", "当你在近战技能的攻击范围之外时，将迅连斩连击替换为闪雷弹。", GNB.JobID, GNB.SolidBarrel)]
         GunbreakerSolidShotFeature = 3714,
 
         [OrderedEnum]
@@ -787,7 +787,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(NinjaAeolianEdgeCombo)]
-        [CustomComboInfo("旋风刃连击 => 飞刀", "当你在近战攻击的范围之外时，将旋风刃连击替换为飞刀。", NIN.JobID, NIN.ThrowingDagger)]
+        [CustomComboInfo("旋风刃连击 => 飞刀", "当你在近战技能的攻击范围之外时，将旋风刃连击替换为飞刀。", NIN.JobID, NIN.ThrowingDagger)]
         NinjaThrowingEdgeFeature = 3021,
 
 /*        [OrderedEnum]
@@ -880,7 +880,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(PaladinRoyalAuthorityCombo)]
-        [CustomComboInfo("王权剑 => 投盾", "当你在近战攻击的范围之外时，将战女神之怒/王权剑替换为投盾。", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
+        [CustomComboInfo("王权剑 => 投盾", "当你在近战技能的攻击范围之外时，将战女神之怒/王权剑替换为投盾。", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
         PaladinRoyalLobFeature = 1912,
 
         [OrderedEnum]
@@ -975,7 +975,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(PictSubFeature)]
-        [CustomComboInfo("连击技能 => 移动功能", "如果在没有即刻咏唱时移动，则将你的连击技能替换为神圣之白。", PCT.JobID, PCT.FireInRed, PCT.Fire2InRed)]
+        [CustomComboInfo("连击技能 => 移动功能", "如果你在没有即刻咏唱时移动，则将你的连击技能替换为神圣之白。", PCT.JobID, PCT.FireInRed, PCT.Fire2InRed)]
         PictSubMovementOption = 4208,
 
         [OrderedEnum]
@@ -1016,7 +1016,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(ReaperSliceCombo)]
-        [CustomComboInfo("切割连击 => 勾刃", "当你在近战攻击的范围之外时，将切割连击替换为勾刃。", RPR.JobID, RPR.Slice)]
+        [CustomComboInfo("切割连击 => 勾刃", "当你在近战技能的攻击范围之外时，将切割连击替换为勾刃。", RPR.JobID, RPR.Slice)]
         ReaperHarpeSliceFeature = 3921,
 
         [OrderedEnum]
@@ -1115,7 +1115,7 @@ namespace XIVComboExpandedestPlugin
         ReaperSoulsowReminderFeature = 3915,
 
         [OrderedEnum]
-        [CustomComboInfo("Soulsow Feature", "如果你有选中的目标、且处于播种魂状态，则将旋转钐割替换为收获月。反之如果你没有选中的目标且不处于播种魂时，将死亡之影替换为播种魂。", RPR.JobID, RPR.SpinningScythe, RPR.NightmareScythe, RPR.ShadowOfDeath)]
+        [CustomComboInfo("旋转钐割/死亡之影 => 播种魂", "如果你有选中的目标、且处于播种魂状态，则将旋转钐割替换为收获月。反之如果你没有选中的目标且不处于播种魂时，将死亡之影替换为播种魂。", RPR.JobID, RPR.SpinningScythe, RPR.NightmareScythe, RPR.ShadowOfDeath)]
         ReaperSoulsowFeature = 3916,
 
         #endregion
@@ -1155,7 +1155,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(RedMageMeleeCombo)]
-        [CustomComboInfo("连攻 => 魔续斩", "当你在近战攻击的范围之外时，将连攻连击替换为魔续斩。（只会替换为魔续斩）", RDM.JobID, RDM.Redoublement)]
+        [CustomComboInfo("连攻 => 魔续斩", "当你在近战技能的攻击范围之外时，将连攻连击替换为魔续斩。（只会替换为魔续斩）", RDM.JobID, RDM.Redoublement)]
         RedMageMeleeComboReprise = 3518,
 
         [OrderedEnum]
@@ -1212,7 +1212,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(RedMageVerprocCombo)]
-        [CustomComboInfo("赤火炎/赤飞石 => 魔续斩 移动功能", "如果在没有任何瞬发技能时移动，则将赤火炎/赤飞石替换为魔续斩。（如果魔续斩可以使用的话）", RDM.JobID, RDM.Verstone, RDM.Verfire)]
+        [CustomComboInfo("赤火炎/赤飞石 => 魔续斩 移动功能", "如果你在没有任何瞬发技能时移动，则将赤火炎/赤飞石替换为魔续斩。（如果魔续斩可以使用的话）", RDM.JobID, RDM.Verstone, RDM.Verfire)]
         RedMageVerprocComboReprise = 3520,
 
         [OrderedEnum]
@@ -1254,43 +1254,43 @@ namespace XIVComboExpandedestPlugin
         #region SAGE
 
         [OrderedEnum]
-        [CustomComboInfo("Soteria into Kardia", "Soteria turns into Kardia when not active or Soteria is on-cooldown.", SGE.JobID, SGE.Soteria)]
+        [CustomComboInfo("拯救 => 心关", "如果当前没有绑定的奶伴、或拯救正在冷却，则将拯救替换为心关。", SGE.JobID, SGE.Soteria)]
         SageKardiaFeature = 4001,
 
         [OrderedEnum]
-        [CustomComboInfo("Phlegma into Dyskrasia", "Phlegma turns into Dyskrasia when you are out of charges or are currently not targeting anything.", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
+        [CustomComboInfo("发炎 => 失衡", "当你的发炎积蓄次数用尽、或当前没有选中任何目标时，将你的发炎替换为失衡。", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
         SagePhlegmaBalls = 4002,
 
         [OrderedEnum]
-        [CustomComboInfo("Phlegma into Toxikon", "Phlegma turns into Toxikon if you have addersting and are either out of range or out of charges.\nThis is prioritized over Dyskrasia if the 'Phlegma into Dyskrasia' feature is enabled.", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
+        [CustomComboInfo("发炎 => 箭毒", "如果当前箭毒可用，且你要么用尽了发炎的积蓄次数、要么不在发炎的攻击距离以内，则将发炎替换为箭毒。\n如果和上面的“发炎 => 失衡”功能也被启用，则箭毒的优先级更高。", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
         SagePhlegmaToxicBalls = 4003,
 
         [OrderedEnum]
-        [CustomComboInfo("Phlegma into Psyche", "Phlegma turns into Psyche while the GCD is rolling and it is off cooldown.", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
+        [CustomComboInfo("发炎 => 心神风息", "当你的GCD正在旋转、且心神风息已经冷却完毕时，将你的发炎替换为Psyche。", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
         SagePhlegmaPsychicBalls = 4010,
 
         [OrderedEnum]
-        [CustomComboInfo("Taurochole into Druochole", "Replaces Taurochole with Druochole if the former is on cooldown.\nYou should probably still keep the latter on your bar for certain scenarios.", SGE.JobID, SGE.Taurochole)]
+        [CustomComboInfo("白牛清汁 => 灵橡清汁", "如果白牛清汁正在冷却的话，则将白牛清汁替换为灵橡清汁。\n你可能仍然需要在技能栏里留一个独立的灵橡清汁以备不时之需。", SGE.JobID, SGE.Taurochole)]
         SageTauroDruoFeature = 4004,
 
         [OrderedEnum]
-        [CustomComboInfo("Eukrasia into Eukrasian Dosis", "Eukrasia turns into Eukrasian Dosis while you have it active.\nThis doesn't save a button or really much else, I just like how it feels.", SGE.JobID, SGE.Eukrasia)]
+        [CustomComboInfo("均衡 => 均衡注药", "当你正在使用均衡时，将均衡替换为均衡注药。\n这不会帮你节省键位，但是作者觉得这么做很顺滑。", SGE.JobID, SGE.Eukrasia)]
         SageEukrasiaDosisFeature = 4006,
 
         [OrderedEnum]
-        [CustomComboInfo("Toxikon Movement Feature", "Dosis turns into Toxikon while you are moving and don't have Eukrasia.", SGE.JobID, SGE.Dosis, SGE.Dosis2, SGE.Dosis3)]
+        [CustomComboInfo("注药 => 箭毒 移动功能", "如果你在没有均衡时移动，则将注药替换为箭毒。（即刻咏唱应该也行吧...）", SGE.JobID, SGE.Dosis, SGE.Dosis2, SGE.Dosis3)]
         SageToxikonMovementFeature = 4008,
 
         [OrderedEnum]
-        [CustomComboInfo("Phlegma Movement Feature", "Dosis turns into Phlegma while you are moving, don't have Eukrasia, and are in range to use it.", SGE.JobID, SGE.Dosis, SGE.Dosis2, SGE.Dosis3)]
+        [CustomComboInfo("注药 => 发炎 移动功能", "如果你在没有均衡时移动、且处于发炎的攻击距离以内，则将注药替换为发炎。", SGE.JobID, SGE.Dosis, SGE.Dosis2, SGE.Dosis3)]
         SagePhlegmaMovementFeature = 4009,
 
         [OrderedEnum]
-        [CustomComboInfo("Extreme Button Saver", "This changes your targeted healing actions into AoE heals if you have no target.\nRecommended only if you have disabilities, or REALLY like having a smaller hotbar, at the expense of having to untarget a lot.", SGE.JobID, SGE.Haima, SGE.Druochole, SGE.Taurochole, SGE.Krasis, SGE.Diagnosis, SGE.Pneuma)]
+        [CustomComboInfo("极端节省键位", "这个选项会将你的所有单奶替换为群奶，如果你没有选中任何目标。\n仅推荐在你有某些残疾（大概少了几根手指的那种？）、或希望保持一个非常小的热键栏时使用。这个设置以频繁的选中/取消选中为代价帮你省去了群奶技能的键位。", SGE.JobID, SGE.Haima, SGE.Druochole, SGE.Taurochole, SGE.Krasis, SGE.Diagnosis, SGE.Pneuma)]
         SageExtremeButtonSaverFeature = 4007,
 
         [OrderedEnum]
-        [CustomComboInfo("Sage Lucid Dreaming Reminder", "All your non-role action cooldowns (that don't have charges) become Lucid Dreaming if they aren't up and Lucid Dreaming is, and you have less-than-or-equal-to a set amount of MP.", SGE.JobID, SGE.Kardia, SGE.Soteria, SGE.Zoe, SGE.Pepsis, SGE.Physis, SGE.Physis2, SGE.Ixochole, SGE.Holos, SGE.Rhizomata, SGE.Krasis, SGE.Kerachole, SGE.Taurochole, SGE.Haima, SGE.Panhaima, SGE.Pneuma)]
+        [CustomComboInfo("醒梦提醒（贤者）", "当你的MP小于等于以下设置值、且醒梦已经冷却完毕时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", SGE.JobID, SGE.Kardia, SGE.Soteria, SGE.Zoe, SGE.Pepsis, SGE.Physis, SGE.Physis2, SGE.Ixochole, SGE.Holos, SGE.Rhizomata, SGE.Krasis, SGE.Kerachole, SGE.Taurochole, SGE.Haima, SGE.Panhaima, SGE.Pneuma)]
         SageLucidReminderFeature = 4005,
 
         #endregion
@@ -1298,104 +1298,104 @@ namespace XIVComboExpandedestPlugin
         #region SAMURAI
 
         [OrderedEnum]
-        [CustomComboInfo("Gekko Combo", "Replace Gekko with its combo chain.", SAM.JobID, SAM.Gekko)]
+        [CustomComboInfo("月光连击", "将月光替换为它的连击链：刃风/晓风 - 阵风 - 月光", SAM.JobID, SAM.Gekko)]
         SamuraiGekkoCombo = 3402,
 
         [OrderedEnum]
         [ParentCombo(SamuraiGekkoCombo)]
-        [CustomComboInfo("Gekko Combo Option", "Start the Gekko combo chain with Jinpu instead of Gyofu/Hakaze.", SAM.JobID, SAM.Gekko)]
+        [CustomComboInfo("月光连击 - 从阵风开始", "从阵风开始月光连击，而不是刃风/晓风u。\n从结果上来说，相当于使月光连击变为阵风 - 月光，因此你需要从其他地方找一个刃风/晓风来开始这个连击链。", SAM.JobID, SAM.Gekko)]
         SamuraiGekkoOption = 3415,
 
         [OrderedEnum]
         [ParentCombo(SamuraiGekkoCombo)]
-        [CustomComboInfo("Gekko to Enpi", "Replace Gekko Combo with Enpi if you are out of melee range.", SAM.JobID, SAM.Gekko)]
+        [CustomComboInfo("月光 => 燕飞", "当你在近战技能的攻击范围之外时，将月光连击替换为燕飞。", SAM.JobID, SAM.Gekko)]
         SamuraiGekkoEnpiFeature = 3425,
 
         [OrderedEnum]
-        [CustomComboInfo("Kasha Combo", "Replace Kasha with its combo chain.", SAM.JobID, SAM.Kasha)]
+        [CustomComboInfo("花车连击", "将花车替换为它的连击链：刃风/晓风 - 士风 - 花车", SAM.JobID, SAM.Kasha)]
         SamuraiKashaCombo = 3403,
 
         [OrderedEnum]
         [ParentCombo(SamuraiKashaCombo)]
-        [CustomComboInfo("Kasha Combo Option", "Start the Kasha combo chain with Shifu instead of Gyofu/Hakaze.", SAM.JobID, SAM.Kasha)]
+        [CustomComboInfo("花车连击 - 从士风开始", "从士风开始花车连击，而不是刃风/晓风。\n从结果上来说，相当于使花车连击变为士风 - 花车，因此你需要从其他地方找一个刃风/晓风来开始这个连击链。", SAM.JobID, SAM.Kasha)]
         SamuraiKashaOption = 3416,
 
         [OrderedEnum]
-        [CustomComboInfo("Yukikaze Combo", "Replace Yukikaze with its combo chain.", SAM.JobID, SAM.Yukikaze)]
+        [CustomComboInfo("雪风连击", "将雪风替换为它的连击链：刃风/晓风 - 雪风", SAM.JobID, SAM.Yukikaze)]
         SamuraiYukikazeCombo = 3401,
 
         [OrderedEnum]
-        [CustomComboInfo("Mangetsu Combo", "Replace Mangetsu with its combo chain.", SAM.JobID, SAM.Mangetsu, SAM.Fuga, SAM.Fuko)]
+        [CustomComboInfo("满月连击", "将满月替换为它的连击链：风雅/风光 - 满月", SAM.JobID, SAM.Mangetsu, SAM.Fuga, SAM.Fuko)]
         SamuraiMangetsuCombo = 3404,
 
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(SamuraiMangetsuCombo)]
-        [CustomComboInfo("Evil Mangetsu Combo", "Replace Fuga/Fuko with its combo chain, instead.", SAM.JobID, SAM.Mangetsu, SAM.Fuga, SAM.Fuko)]
+        [CustomComboInfo("满月连击 - 绑定至风雅/风光", "将风雅/风光替换为它的连击链，而非满月。", SAM.JobID, SAM.Mangetsu, SAM.Fuga, SAM.Fuko)]
         SamuraiEvilMangetsuCombo = 3417,
 
         [OrderedEnum]
-        [CustomComboInfo("Oka Combo", "Replace Oka with its combo chain.", SAM.JobID, SAM.Oka)]
+        [CustomComboInfo("樱花连击", "将樱花替换为它的连击链：风雅/风光 - 樱花", SAM.JobID, SAM.Oka)]
         SamuraiOkaCombo = 3405,
 
         [OrderedEnum]
         [ConflictingCombos(SamuraiIaijutsuTsubameGaeshiFeature)]
-        [CustomComboInfo("Tsubame-gaeshi to Iaijutsu", "Replace Tsubame-gaeshi with Iaijutsu when Sen is not empty.", SAM.JobID, SAM.TsubameGaeshi)]
+        [CustomComboInfo("燕回返 => 居合术", "当你有闪（可以发动居合术）的时候，将燕回返替换为居合术。", SAM.JobID, SAM.TsubameGaeshi)]
         SamuraiTsubameGaeshiIaijutsuFeature = 3406,
 
         [OrderedEnum]
         [ConflictingCombos(SamuraiIaijutsuShohaFeature)]
-        [CustomComboInfo("Tsubame-gaeshi to Shoha", "Replace Tsubame-gaeshi with Shoha when meditation is 3 and either you have used Tsubame or it wouldn't clip the GCD.", SAM.JobID, SAM.TsubameGaeshi)]
+        [CustomComboInfo("燕回返 => 照破", "当你有三档剑压，且要么刚刚使用过燕回返、要么不会卡GCD时，将燕回返替换为照破。", SAM.JobID, SAM.TsubameGaeshi)]
         SamuraiTsubameGaeshiShohaFeature = 3407,
 
         [OrderedEnum]
         [ConflictingCombos(SamuraiTsubameGaeshiIaijutsuFeature)]
-        [CustomComboInfo("Iaijutsu to Tsubame-gaeshi", "Replace Iaijutsu with Tsubame-gaeshi when Sen is empty.", SAM.JobID, SAM.Iaijutsu)]
+        [CustomComboInfo("居合术 => 燕回返", "当你没有闪（不能发动居合术）的时候，将居合术替换为燕回返。", SAM.JobID, SAM.Iaijutsu)]
         SamuraiIaijutsuTsubameGaeshiFeature = 3408,
 
         [OrderedEnum]
         [ConflictingCombos(SamuraiTsubameGaeshiShohaFeature)]
-        [CustomComboInfo("Iaijutsu to Shoha", "Replace Iaijutsu with Shoha when meditation is 3 and either you have used Tsubame or for a short period of time after Iaijutsu.", SAM.JobID, SAM.Iaijutsu)]
+        [CustomComboInfo("居合术 => 照破", "当你有三档剑压，且要么刚刚使用过燕回返、要么在居合术发动后的一小段时间内时，将居合术替换为照破。", SAM.JobID, SAM.Iaijutsu)]
         SamuraiIaijutsuShohaFeature = 3409,
 
         [OrderedEnum]
-        [CustomComboInfo("Ogi-Namikiri to Shoha", "Replace Ogi-Namikiri with Shoha when meditation is 3 and either you have used Tsubame or it wouldn't clip the GCD.", SAM.JobID, SAM.Ikishoten, SAM.OgiNamikiri)]
+        [CustomComboInfo("奥义斩浪 => 照破", "当你有三档剑压，且要么刚刚使用过燕回返、要么不会卡GCD时，将奥义斩浪替换为照破。", SAM.JobID, SAM.Ikishoten, SAM.OgiNamikiri)]
         SamuraiNamikiriShohaFeature = 3423,
 
         [OrderedEnum]
-        [CustomComboInfo("Iaijutsu/Tsubame to Shoha Persistence Option", "Makes it so Shoha doesn't disappear after a short amount of time after Iaijutsu.", SAM.JobID, SAM.Iaijutsu, SAM.TsubameGaeshi)]
+        [CustomComboInfo("居合术/燕回返 => 照破 持久显示", "让照破持续替换居合术/燕回返，而不是在使用居合术一小段时间后即消失。", SAM.JobID, SAM.Iaijutsu, SAM.TsubameGaeshi)]
         SamuraiShohaGCDOption = 3421,
 
         [OrderedEnum]
-        [CustomComboInfo("Iaijutsu/Tsubame to Shoha Inbetween Option", "Makes it so Shoha doesn't appear inbetween Iaijutsu and Tsubame.", SAM.JobID, SAM.Iaijutsu, SAM.TsubameGaeshi)]
+        [CustomComboInfo("不要在居合术和燕回返之间插入照破", "启用这个选项将会阻止将照破插入居合术和燕回返之间。", SAM.JobID, SAM.Iaijutsu, SAM.TsubameGaeshi)]
         SamuraiShohaBetweenOption = 3422,
 
         [OrderedEnum]
-        [CustomComboInfo("Ikishoten Namikiri Feature", "Replace Ikishoten with Ogi Namikiri and then Kaeshi Namikiri when available.", SAM.JobID, SAM.Ikishoten)]
+        [CustomComboInfo("意气冲天 => 奥义斩浪 => 回返斩浪", "当奥义斩浪（和回返斩浪）可用的时候，将意气冲天替换为奥义斩浪和回返斩浪。", SAM.JobID, SAM.Ikishoten)]
         SamuraiIkishotenNamikiriFeature = 3411,
 
         [OrderedEnum]
-        [CustomComboInfo("Shinten to Senei", "Replace Hissatsu: Shinten with Senei when its cooldown is up.", SAM.JobID, SAM.Shinten)]
+        [CustomComboInfo("必杀剑·震天 => 必杀剑·闪影", "当必杀剑·闪影冷却完毕时，将必杀剑·震天替换为必杀剑·闪影。", SAM.JobID, SAM.Shinten)]
         SamuraiSeneiFeature = 3413,
 
         [OrderedEnum]
-        [CustomComboInfo("Senei to Guren Level Sync", "Replace Hissatsu: Senei with Guren if you are at a level where you can't use Senei.", SAM.JobID, SAM.Shinten, SAM.Senei)]
+        [CustomComboInfo("必杀剑·闪影 -> 必杀剑·红莲 等级同步", "如果你的等级还不能使用必杀剑·闪影（但是可以使用必杀剑·红莲），则将必杀剑·闪影替换为必杀剑·红莲。", SAM.JobID, SAM.Shinten, SAM.Senei)]
         SamuraiSeneiGurenFeature = 3419,
 
         [OrderedEnum]
-        [CustomComboInfo("Shinten to Shoha", "Replace Hissatsu: Shinten with Shoha when Meditation is full.", SAM.JobID, SAM.Shinten)]
+        [CustomComboInfo("必杀剑·震天 => 照破", "当你的剑压量谱已满时，将必杀剑·震天替换为照破。", SAM.JobID, SAM.Shinten)]
         SamuraiShohaFeature = 3412,
 
         [OrderedEnum]
-        [CustomComboInfo("Shinten to Kyuten", "Replace Hissatsu: Shinten with Kyuten if your last combo action was Fuga/Fuko/Mangetsu/Oka.", SAM.JobID, SAM.Shinten)]
+        [CustomComboInfo("必杀剑·震天 => 必杀剑·九天", "如果你正在使用AOE连击，则将必杀剑·震天替换为必杀剑·九天。", SAM.JobID, SAM.Shinten)]
         SamuraiShintenToKyutenFeature = 3427,
 
         [OrderedEnum]
-        [CustomComboInfo("Kyuten to Guren", "Replace Hissatsu: Kyuten with Guren when its cooldown is up.", SAM.JobID, SAM.Kyuten)]
+        [CustomComboInfo("必杀剑·九天 => 必杀剑·红莲", "当必杀剑·红莲冷却完毕时，将必杀剑·九天替换为必杀剑·红莲。", SAM.JobID, SAM.Kyuten)]
         SamuraiGurenFeature = 3414,
 
         [OrderedEnum]
-        [CustomComboInfo("Yukikaze to Meditate", "Replace Yukikaze with Meditate while you have no target.", SAM.JobID, SAM.Yukikaze)]
+        [CustomComboInfo("雪风 => 默想", "如果你当前没有选中的目标，则将雪风替换为默想。", SAM.JobID, SAM.Yukikaze)]
         SamuraiYukikazeMeditateFeature = 3426,
 
         #endregion
@@ -1405,44 +1405,44 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 2811
 
         [OrderedEnum]
-        [CustomComboInfo("Adloquium to Physick Level Sync", "Change Adloquium to Physick when level-synced.", SCH.JobID, SCH.Adloquium)]
+        [CustomComboInfo("鼓舞激励之策 -> 医术 等级同步", "在等级同步至30级以下时，将鼓舞激励之策替换为医术。", SCH.JobID, SCH.Adloquium)]
         ScholarAdloPhysickSyncFeature = 2810,
 
         [OrderedEnum]
-        [CustomComboInfo("Seraph Fey Blessing/Consolation", "Change Fey Blessing into Consolation when Seraph is out.\nNot needed anymore, but some people still have the old XIVCombo muscle memory.", SCH.JobID, SCH.FeyBless)]
+        [CustomComboInfo("异想的祥光 => 慰藉", "当炽天使处于同行状态时，将异想的祥光替换为慰藉。\n原版游戏已经添加了将炽天召唤替换为慰藉的技能变换功能，这个功能是为已经习惯了这个combo的用户保留的。", SCH.JobID, SCH.FeyBless)]
         ScholarSeraphConsolationFeature = 2801,
 
         [OrderedEnum]
-        [CustomComboInfo("ED Aetherflow", "Change Energy Drain into Aetherflow when you have no more Aetherflow stacks.", SCH.JobID, SCH.EnergyDrain, SCH.Excogitation, SCH.Lustrate, SCH.SacredSoil, SCH.Indomitability)]
+        [CustomComboInfo("能量吸收 => 以太超流", "如果你已经耗尽了以太超流档数，则将能量吸收替换为以太超流。", SCH.JobID, SCH.EnergyDrain, SCH.Excogitation, SCH.Lustrate, SCH.SacredSoil, SCH.Indomitability)]
         ScholarEnergyDrainFeature = 2802,
 
         [OrderedEnum]
         [ParentCombo(ScholarEnergyDrainFeature)]
-        [CustomComboInfo("Everything Aetherflow", "Change every Aetherflow action into Aetherflow when you have no more Aetherflow stacks.\nIndomitability and Excogitation also become available with Recitation.", SCH.JobID, SCH.EnergyDrain, SCH.Excogitation, SCH.Lustrate, SCH.SacredSoil, SCH.Indomitability)]
+        [CustomComboInfo("替换所有需要以太超流的技能", "如果你已经耗尽了以太超流档数，则将所有需要以太超流档数才能发动的技能替换为以太超流。\n如果使用了秘策，那么不屈不挠之策和深谋远虑之策将保持可用状态。", SCH.JobID, SCH.EnergyDrain, SCH.Excogitation, SCH.Lustrate, SCH.SacredSoil, SCH.Indomitability)]
         ScholarEverythingFeature = 2803,
 
         [OrderedEnum]
-        [CustomComboInfo("Excogitation to Recitation", "Change Excogitation into Recitation when the latter is off-cooldown.", SCH.JobID, SCH.Excogitation)]
+        [CustomComboInfo("深谋远虑之策 => 秘策", "如果秘策已经冷却完毕，则将深谋远虑之策替换为秘策。", SCH.JobID, SCH.Excogitation)]
         ScholarExcogRecitationFeature = 2808,
 
         [OrderedEnum]
-        [CustomComboInfo("Fairy Feature", "Change every action that requires a fairy into Summon Eos if you do not have a fairy summoned.", SCH.JobID, SCH.WhisperingDawn, SCH.FeyIllumination, SCH.FeyBless, SCH.Aetherpact, SCH.Dissipation, SCH.SummonSeraph, SCH.Consolation)]
+        [CustomComboInfo("小仙女召唤", "如果你当前尚未召唤出小仙女，则将你所有需要小仙女处于同行状态的技能替换为朝日召唤。", SCH.JobID, SCH.WhisperingDawn, SCH.FeyIllumination, SCH.FeyBless, SCH.Aetherpact, SCH.Dissipation, SCH.SummonSeraph, SCH.Consolation)]
         ScholarFairyFeature = 2804,
 
         [OrderedEnum]
-        [CustomComboInfo("Ruin 2 to Chain Stratagem", "Ruin 2 becomes Chain Stratagem for a short while after you have used any action (and if it's off cooldown).", SCH.JobID, SCH.Ruin2)]
+        [CustomComboInfo("毁坏 => 连环计", "当连环计已经冷却完毕、且你刚刚使用了任意GCD技能时，在短时间内将毁坏替换为连环计。（不会卡GCD）", SCH.JobID, SCH.Ruin2)]
         ScholarRuinChainFeature = 2807,
 
         [OrderedEnum]
-        [CustomComboInfo("Chain Stratagem Lockout Feature", "Locks out Chain Stratagem while it is available and more than 3s remain on its debuff, to prevent overwriting raid buffs.", SCH.JobID, SCH.ChainStratagem)]
+        [CustomComboInfo("连环计锁定功能", "如果目标身上的连环计效果剩余时间超过3秒，则锁定连环计，以防止Buff被覆盖。", SCH.JobID, SCH.ChainStratagem)]
         ScholarChainLockoutFeature = 2811,
 
         [OrderedEnum]
-        [CustomComboInfo("Ruin 2 Movement Feature", "Ruin/Broil becomes Ruin 2 while you are moving.", SCH.JobID, SCH.Ruin, SCH.Broil, SCH.Broil2, SCH.Broil3, SCH.Broil4)]
+        [CustomComboInfo("毁灭/炎法 =>毁坏 移动功能", "当你在移动时，将毁灭和气(魔/死/极)炎法替换为毁坏。", SCH.JobID, SCH.Ruin, SCH.Broil, SCH.Broil2, SCH.Broil3, SCH.Broil4)]
         ScholarRuin2MovementFeature = 2809,
 
         [OrderedEnum]
-        [CustomComboInfo("Scholar Lucid Dreaming Reminder", "All your non-role action cooldowns (that don't have charges) become Lucid Dreaming if they aren't up and Lucid Dreaming is, and you have less-than-or-equal-to a set amount of MP.", SCH.JobID, SCH.Aetherflow, SCH.EmergencyTactics, SCH.WhisperingDawn, SCH.FeyIllumination, SCH.FeyBless, SCH.Dissipation, SCH.ChainStratagem, SCH.Indomitability, SCH.Excogitation, SCH.SacredSoil, SCH.Recitation, SCH.DeploymentTactics, SCH.SummonSeraph)]
+        [CustomComboInfo("醒梦提醒（学者）", "当你的MP小于等于以下设置值、且醒梦已经冷却完毕时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", SCH.JobID, SCH.Aetherflow, SCH.EmergencyTactics, SCH.WhisperingDawn, SCH.FeyIllumination, SCH.FeyBless, SCH.Dissipation, SCH.ChainStratagem, SCH.Indomitability, SCH.Excogitation, SCH.SacredSoil, SCH.Recitation, SCH.DeploymentTactics, SCH.SummonSeraph)]
         ScholarLucidReminderFeature = 2806,
 
         #endregion
@@ -1452,88 +1452,101 @@ namespace XIVComboExpandedestPlugin
         // latest enum: 2721
 
         [OrderedEnum]
-        [CustomComboInfo("Enkindle/Summon Switch", "When (Solar) Bahamut/Phoenix are summoned, Enkindle (Solar) Bahamut/Phoenix will replace Summon (Solar) Bahamut/Phoenix.", SMN.JobID, SMN.SummonBahamut, SMN.SummonPhoenix, SMN.DreadwyrmTrance, SMN.Aethercharge)]
+        [CustomComboInfo("召唤 => 迸发", "当处于龙神附体/不死鸟附体/烈日龙神附体状态时，将召唤技能替换为对应的迸发技能。", SMN.JobID, SMN.SummonBahamut, SMN.SummonPhoenix, SMN.DreadwyrmTrance, SMN.Aethercharge)]
         SummonerDemiCombo = 2701,
 
         [OrderedEnum]
-        [CustomComboInfo("Demi Flow Feature", "When you can use Astral Flow, it will replace Summon (Solar) Bahamut/Summon Phoenix/Dreadwyrm Trance.", SMN.JobID, SMN.SummonBahamut, SMN.SummonPhoenix, SMN.DreadwyrmTrance, SMN.Aethercharge)]
+        [CustomComboInfo("附体/召唤 => 星极超流", "当你可以使用星极超流时，将龙神附体/龙神召唤/不死鸟召唤/烈日龙神召唤替换为对应的星极超流技能。", SMN.JobID, SMN.SummonBahamut, SMN.SummonPhoenix, SMN.DreadwyrmTrance, SMN.Aethercharge)]
         SummonerDemiFlowFeature = 2716,
 
         [OrderedEnum]
         [ConflictingCombos(SummonerOutburstOfBrillianceFeature, SummonerRuiningShineFeature)]
-        [CustomComboInfo("Shiny Enkindle Feature", "When (Solar) Bahamut/Phoenix are summoned, changes Gemshine and Precious Brilliance with Enkindle.", SMN.JobID, SMN.Gemshine, SMN.PreciousBrilliance)]
+        [CustomComboInfo("宝石耀/宝石辉 => 迸发", "当处于龙神附体/不死鸟附体/烈日龙神附体状态时，将宝石耀和宝石辉替换为对应的迸发技能。", SMN.JobID, SMN.Gemshine, SMN.PreciousBrilliance)]
         SummonerShinyDemiCombo = 2708,
 
         [OrderedEnum]
         [ConflictingCombos(SummonerOutburstOfBrillianceFeature, SummonerRuiningShineFeature)]
-        [CustomComboInfo("Shiny Flow Feature", "When Bahamut/Phoenix/Solar Bahamut are summoned, changes Gemshine and Precious Brilliance with Astral Flow.", SMN.JobID, SMN.Gemshine, SMN.PreciousBrilliance)]
+        [CustomComboInfo("宝石耀/宝石辉 => 星极超流", "当处于龙神附体/不死鸟附体/烈日龙神附体状态时，将宝石耀和宝石辉替换为对应的星极超流技能。", SMN.JobID, SMN.Gemshine, SMN.PreciousBrilliance)]
         SummonerShinyFlowCombo = 2711,
 
         [OrderedEnum]
-        [CustomComboInfo("ED Necrotize", "Change Necrotize/Fester into Energy Drain when out of Aetherflow stacks", SMN.JobID, SMN.Fester, SMN.Necrotize)]
+        [CustomComboInfo("溃烂爆发/坏死爆发 => 能量吸收", "如果你已经耗尽了以太超流档数，则将溃烂爆发/坏死爆发替换为能量吸收。", SMN.JobID, SMN.Fester, SMN.Necrotize)]
         SummonerEDFesterCombo = 2702,
 
         [OrderedEnum]
-        [CustomComboInfo("ES Painflare", "Change Painflare into Energy Syphon when out of Aetherflow stacks", SMN.JobID, SMN.Painflare)]
+        [CustomComboInfo("痛苦核爆 => 能量抽取", "如果你已经耗尽了以太超流档数，则将痛苦核爆替换为能量抽取。", SMN.JobID, SMN.Painflare)]
         SummonerESPainflareCombo = 2703,
 
         [OrderedEnum]
-        [CustomComboInfo("ES Level Sync", "Change Energy Siphon into Energy Drain when level synced below its acquisition.", SMN.JobID, SMN.Painflare, SMN.EnergySyphon)]
+        [CustomComboInfo("能量抽取 -> 能量吸收 等级同步", "如果你被同步至还未解锁能量抽取的等级，则将能量抽取替换为能量吸收。", SMN.JobID, SMN.Painflare, SMN.EnergySyphon)]
         SummonerEStoED = 2721,
 
         [OrderedEnum]
-        [CustomComboInfo("Mountain Buster Feature", "Gemshine and Precious Brilliance become Mountain Buster while you have Titan's Favor.", SMN.JobID, SMN.Ruin1, SMN.Ruin2, SMN.Ruin3, SMN.Gemshine, SMN.Outburst, SMN.TriDisaster, SMN.PreciousBrilliance)]
+        [CustomComboInfo("宝石耀/宝石辉 => 山崩", "当你处于山崩预备状态时，将宝石耀和宝石辉（此时分别为黄宝石之仪、黄宝石灾变）替换为山崩。", SMN.JobID, SMN.Ruin1, SMN.Ruin2, SMN.Ruin3, SMN.Gemshine, SMN.Outburst, SMN.TriDisaster, SMN.PreciousBrilliance)]
         SummonerMountainBusterFeature = 2710,
 
         [OrderedEnum]
-        [CustomComboInfo("Summoning Flow Feature", "When you have Favor, or (Solar) Bahamut/Phoenix are summoned, your summoning actions become Astral Flow.", SMN.JobID, SMN.SummonRuby, SMN.SummonIfrit, SMN.SummonIfrit2, SMN.SummonTopaz, SMN.SummonTitan, SMN.SummonTitan2, SMN.SummonEmerald, SMN.SummonGaruda, SMN.SummonGaruda2)]
+        [CustomComboInfo("(烈日)龙神/不死鸟召唤 => 星极超流", "当你处于深红旋风预备/山崩预备/螺旋气流预备、或处于龙神附体/不死鸟附体/烈日龙神附体状态时，将将召唤技能替换为对应的星极超流技能。", SMN.JobID, SMN.SummonRuby, SMN.SummonIfrit, SMN.SummonIfrit2, SMN.SummonTopaz, SMN.SummonTitan, SMN.SummonTitan2, SMN.SummonEmerald, SMN.SummonGaruda, SMN.SummonGaruda2)]
         SummonerSummoningFlowFeature = 2712,
 
         [OrderedEnum]
-        [CustomComboInfo("Flowing Ruin Feature", "Change Ruin into Astral Flow when you have Favor, or have Deathflare/Rekindle/Sunflare available and unused.", SMN.JobID, SMN.Ruin1, SMN.Ruin2, SMN.Ruin3, SMN.Gemshine)]
+        [CustomComboInfo("毁灭/毁坏/毁荡 => 星极超流", "当你处于深红旋风预备/山崩预备/螺旋气流预备、或死星核爆/苏生之炎/烈日核爆可用且尚未使用时，将毁灭/毁坏/毁荡替换为对应的星极超流技能。", SMN.JobID, SMN.Ruin1, SMN.Ruin2, SMN.Ruin3, SMN.Gemshine)]
         SummonerFlowingRuinFeature = 2715,
 
         [OrderedEnum]
-        [CustomComboInfo("Shiny Ruin Feature", "Change Ruin into Gemburst when attuned.", SMN.JobID, SMN.Ruin1, SMN.Ruin2, SMN.Ruin3)]
+        [CustomComboInfo("毁灭/毁坏/毁荡 => 宝石耀", "当你附加有火/土/风属性以太时，将毁灭/毁坏/毁荡替换为对应的宝石耀技能。\n以防有人没看过技能说明，“火/土/风属性以太”来自火/土/风神召唤。", SMN.JobID, SMN.Ruin1, SMN.Ruin2, SMN.Ruin3)]
         SummonerShinyRuinFeature = 2709,
 
         [OrderedEnum]
-        [CustomComboInfo("Further Ruin Feature", "Change Ruin into Ruin 4 when available and appropriate.", SMN.JobID, SMN.Ruin1, SMN.Ruin2, SMN.Ruin3, SMN.Gemshine)]
+        [CustomComboInfo("毁灭/毁坏/毁荡 => 毁绝", "当毁绝可用、且时机合适的时候，将毁灭/毁坏/毁荡替换为毁绝。", SMN.JobID, SMN.Ruin1, SMN.Ruin2, SMN.Ruin3, SMN.Gemshine)]
         SummonerFurtherRuinFeature = 2705,
 
         [OrderedEnum]
         [ConflictingCombos(SummonerShinyDemiCombo, SummonerShinyFlowCombo)]
-        [CustomComboInfo("Ruining Shine Feature", "Change Gemshine into Ruin while not attuned.\nThis lets you keep Ruin on your bar, so you can always use it for movement.\nAll the above Ruin features apply to Gemshine while this feature is enabled, and will be disabled on Ruin.", SMN.JobID, SMN.Gemshine)]
+        [CustomComboInfo(
+            "宝石耀 => 毁坏/毁坏/毁荡",
+            "当你没有火/土/风属性以太时，将宝石耀替换为毁坏/毁坏/毁荡。\n" +
+            "这个选项将会保持你的技能栏里有一个毁坏/毁坏/毁荡，以便于移动。\n" +
+            "如果这个功能启用，上面的三个毁灭/毁坏/毁荡替换功能中，被替换的技能将从毁灭/毁坏/毁荡更改为宝石耀。\n" +
+            "以防有人没看过技能说明，“火/土/风属性以太”来自火/土/风神召唤。",
+            SMN.JobID, SMN.Gemshine)]
         SummonerRuiningShineFeature = 2717,
 
         [OrderedEnum]
-        [CustomComboInfo("Flowing Outburst Feature", "Change Outburst/Tri-disaster into Astral Flow when you have Favor, or have Deathflare/Rekindle/Sunflare available and unused.", SMN.JobID, SMN.Outburst, SMN.TriDisaster, SMN.PreciousBrilliance)]
+        [CustomComboInfo("迸裂/三重灾祸 => 星极超流", "当你处于深红旋风预备/山崩预备/螺旋气流预备、或死星核爆/苏生之炎/烈日核爆可用且尚未使用时，将迸裂/三重灾祸替换为对应的星极超流技能。", SMN.JobID, SMN.Outburst, SMN.TriDisaster, SMN.PreciousBrilliance)]
         SummonerFlowingOutburstFeature = 2714,
 
         [OrderedEnum]
-        [CustomComboInfo("Shiny Outburst Feature", "Change Outburst/Tri-disaster into Precious Brilliance when attuned.", SMN.JobID, SMN.Outburst, SMN.TriDisaster)]
+        [CustomComboInfo("迸裂/三重灾祸 => 宝石辉", "当你附加有火/土/风属性以太时，将迸裂/三重灾祸替换为对应的宝石辉技能。\n以防有人没看过技能说明，“火/土/风属性以太”来自火/土/风神召唤。", SMN.JobID, SMN.Outburst, SMN.TriDisaster)]
         SummonerShinyOutburstFeature = 2706,
 
         [OrderedEnum]
-        [CustomComboInfo("Further Outburst Feature", "Change Outburst/Tri-disaster into Ruin 4 when available and appropriate.", SMN.JobID, SMN.Outburst, SMN.TriDisaster, SMN.PreciousBrilliance)]
+        [CustomComboInfo("迸裂/三重灾祸 => 毁绝", "当毁绝可用、且时机合适的时候，将迸裂/三重灾祸替换为毁绝。", SMN.JobID, SMN.Outburst, SMN.TriDisaster, SMN.PreciousBrilliance)]
         SummonerFurtherOutburstFeature = 2707,
 
         [OrderedEnum]
         [ConflictingCombos(SummonerShinyDemiCombo, SummonerShinyFlowCombo)]
-        [CustomComboInfo("Outburst of Brilliance Feature", "Change Precious Brilliance into Outburst while not attuned.\nThis lets you keep Outburst on your bar, so you can always use it for movement.\nAll the above Outburst features apply to Gemshine while this feature is enabled, and will be disabled on Outburst.", SMN.JobID, SMN.PreciousBrilliance)]
+        [CustomComboInfo(
+            "宝石辉 => 迸裂/三重灾祸",
+            "当你没有火/土/风属性以太时，将宝石辉替换为迸裂/三重灾祸。\n" +
+            "这个选项将会保持你的技能栏里有一个迸裂/三重灾祸，以便于移动。\n" +
+            "如果这个功能启用，上面的三个迸裂/三重灾祸替换功能中，被替换的技能将从迸裂/三重灾祸更改为宝石辉。\n" +
+            "以防有人没看过技能说明，“火/土/风属性以太”来自火/土/风神召唤。\n" +
+            "为什么作者写的是Gemshine啊？作者也复制错了？",
+            SMN.JobID, SMN.PreciousBrilliance)]
         SummonerOutburstOfBrillianceFeature = 2718,
 
         [OrderedEnum]
-        [CustomComboInfo("Carby Feature", "Every action that cannot be used without summoning carbuncle becomes Summon Carbuncle while a pet is not summoned.", SMN.JobID, SMN.RadiantAegis, SMN.Aethercharge, SMN.DreadwyrmTrance, SMN.SummonBahamut, SMN.SummonEmerald,
+        [CustomComboInfo("宝石兽召唤", "如果你当前尚未召唤出宝石兽，则将你所有需要宝石兽处于同行状态的技能替换为宝石兽召唤。", SMN.JobID, SMN.RadiantAegis, SMN.Aethercharge, SMN.DreadwyrmTrance, SMN.SummonBahamut, SMN.SummonEmerald,
             SMN.SummonGaruda, SMN.SummonGaruda2, SMN.SummonRuby, SMN.SummonIfrit, SMN.SummonIfrit2, SMN.SummonTopaz, SMN.SummonTitan, SMN.SummonTitan2, SMN.Gemshine, SMN.PreciousBrilliance, SMN.AstralFlow)]
         SummonerCarbyFeature = 2704,
 
         [OrderedEnum]
-        [CustomComboInfo("Searing Light Lockout Feature", "Locks out Searing Light if it is available and more than 3s remain on its buff, to prevent overwriting raid buffs.", SMN.JobID, SMN.SearingLight)]
+        [CustomComboInfo("灼热之光锁定功能", "如果身上的灼热之光效果剩余时间超过3秒，则锁定灼热之光，以防止Buff被覆盖。", SMN.JobID, SMN.SearingLight)]
         SummonerSearingLockoutFeature = 2720,
 
         [OrderedEnum]
-        [CustomComboInfo("Summoner Lucid Dreaming Reminder", "All your non-role action cooldowns (that don't have charges) become Lucid Dreaming if they aren't up and Lucid Dreaming is, and you have less-than-or-equal-to a set amount of MP.", SMN.JobID, SMN.EnergyDrain, SMN.EnergySyphon, SMN.RadiantAegis, SMN.SearingLight, SMN.SummonBahamut, SMN.DreadwyrmTrance, SMN.EnkindleBahamut, SMN.Aethercharge)]
+        [CustomComboInfo("醒梦提醒（召唤）", "当你的MP小于等于以下设置值、且醒梦已经冷却完毕时，将你所有正在冷却、非职能、且没有积蓄次数的能力技替换为醒梦。", SMN.JobID, SMN.EnergyDrain, SMN.EnergySyphon, SMN.RadiantAegis, SMN.SearingLight, SMN.SummonBahamut, SMN.DreadwyrmTrance, SMN.EnkindleBahamut, SMN.Aethercharge)]
         SummonerLucidReminderFeature = 2713,
 
         #endregion
@@ -1629,7 +1642,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [ParentCombo(WarriorStormsPathCombo)]
-        [CustomComboInfo("暴风斩连击 => 飞斧", "当你在近战攻击的范围之外时，将暴风斩连击替换为飞斧。", WAR.JobID, WAR.StormsPath)]
+        [CustomComboInfo("暴风斩连击 => 飞斧", "当你在近战技能的攻击范围之外时，将暴风斩连击替换为飞斧。", WAR.JobID, WAR.StormsPath)]
         WarriorStormsPathahawkFeature = 2110,
 
         [OrderedEnum]
@@ -1639,7 +1652,7 @@ namespace XIVComboExpandedestPlugin
         [OrderedEnum]
         [ParentCombo(WarriorStormsEyeCombo)]
         [ConflictingCombos(WarriorStormsEyeslaughtFeature)]
-        [CustomComboInfo("暴风碎连击 => 飞斧", "当你在近战攻击的范围之外时，将暴风碎连击替换为飞斧。", WAR.JobID, WAR.StormsEye)]
+        [CustomComboInfo("暴风碎连击 => 飞斧", "当你在近战技能的攻击范围之外时，将暴风碎连击替换为飞斧。", WAR.JobID, WAR.StormsEye)]
         WarriorStormsEyeahawkFeature = 2112,
 
         [OrderedEnum]
