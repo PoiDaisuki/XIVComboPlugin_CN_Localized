@@ -11,14 +11,18 @@ namespace XIVComboExpandedestPlugin
         // ====================================================================================
         #region MULTIPLE CLASSES/DOL
 
-        // Latest enum: 9014
+        // Latest enum: 9015
 
         [OrderedEnum]
         [CustomComboInfo("复活 => 即刻咏唱 功能", "当即刻咏唱不在冷却时，将有复活技能的职业各自的复活技能替换为即刻咏唱。（有连续咏唱效果的时候也不会替换）\n以防万一以下是有复活技能的职业：四个治疗职业、召唤师、赤魔法师、和青魔法师。", All.JobID, All.Raise, All.Resurrection, All.Ascend, All.Verraise, All.Egeiro, All.AngelWhisper)]
         AllSwiftcastFeature = 9001,
 
         [OrderedEnum]
-        [CustomComboInfo("海岛冲刺", "在无人岛时，将冲刺替换为海岛冲刺。\n这本来是一个SimpleTweaks提供的功能。（但是似乎坏了没修所以作者做了这么一个替换）", All.JobID, All.Sprint)]
+        [CustomComboInfo("复活防覆盖功能", "当目标身上已经存在复活Buff时，将赤魔/召唤/学者/白魔/占星/贤者/青魔各自的复活技能替换为无用的技能。", All.JobID, All.Raise, All.Resurrection, All.Ascend, All.Verraise, All.Egeiro, All.AngelWhisper)]
+        AllRaiseHardLockoutFeature = 9015,
+
+        [OrderedEnum]
+        [CustomComboInfo("海岛冲刺", "在无人岛时，将冲刺替换为海岛冲刺。\n这本来是一个SimpleTweaks提供的功能。（7.0的时候这个攻能曾经坏了一阵子，不过现在似乎已经修好了）", All.JobID, All.Sprint)]
         AllIsleSprintFeature = 9014,
 
         [OrderedEnum]
@@ -218,7 +222,7 @@ namespace XIVComboExpandedestPlugin
         // ====================================================================================
         #region BARD
 
-        // latest enum: 2315
+        // latest enum: 2316
 
         [OrderedEnum]
         [CustomComboInfo("爆发射击 => 辉煌箭", "当被触发时，将强力/爆发射击替换为直线射击/辉煌箭。", BRD.JobID, BRD.HeavyShot, BRD.BurstShot)]
@@ -249,6 +253,11 @@ namespace XIVComboExpandedestPlugin
         [OrderedEnum]
         [CustomComboInfo("侧风诱导箭 => 完美音调", "在放浪神的小步舞曲时，将侧风诱导箭替换为完美音调，如果诗心已满、或侧风诱导箭正在冷却中。", BRD.JobID, BRD.Sidewinder)]
         BardPerfectSidesFeature = 2314,
+
+        [OrderedEnum]
+        [ParentCombo(BardPerfectSidesFeature)]
+        [CustomComboInfo("仅当诗心已满时进行替换", "仅在诗心已满的时候，才将侧风诱导箭替换为完美音调，无论情况如何。\n如果诗心不满，你仍然需要手动释放它，这个选项只是为了方便。\nTODO:需要测试\nReplaces Sidewinder with Pitch Perfect only when you are full on Repertoire, no matter what.\nRemember that you will still need to use Pitch Perfect when Repertoire isn't full, this is only for convenience.", BRD.JobID, BRD.Sidewinder)]
+        BardPerfectSidesOnlyFullOption = 2316,
 
         [OrderedEnum]
         [CustomComboInfo("战斗的最终乐章", "如果战斗之声已经冷却完毕，则将光明神的最终乐章替换为战斗之声。\n（其实原标题是 Radiant Voice，但是为了和下面对应所以反过来了）", BRD.JobID, BRD.RadiantFinale)]
@@ -376,10 +385,6 @@ namespace XIVComboExpandedestPlugin
         DancerFlourishFanDance3Feature = 3810,
 
         [OrderedEnum]
-        [CustomComboInfo("进攻之探戈 => 流星舞", "在使用进攻之探戈之后，将其替换为流星舞。", DNC.JobID, DNC.Devilment)]
-        DancerDevilmentFeature = 3806,
-
-        [OrderedEnum]
         [CustomComboInfo("标准舞步 => 落幕舞", "当落幕舞可用时，将标准舞步替换为落幕舞。", DNC.JobID, DNC.StandardStep)]
         DancerLastDanceFeature = 3821,
 
@@ -457,10 +462,6 @@ namespace XIVComboExpandedestPlugin
         [ParentCombo(DragoonCoerthanTormentCombo)]
         [CustomComboInfo("山境酷刑连击 => 天龙点睛", "将山境酷刑连击替换为天龙点睛，如果后者可用。", DRG.JobID, DRG.CoerthanTorment)]
         DragoonWyrmwindFeature = 2207,
-
-        [OrderedEnum]
-        [CustomComboInfo("跳跃 => 幻象冲", "将跳跃替换为幻象冲，如果后者可用。\n！！！译注：原版游戏有这个技能变换功能，不需要用这里的！！！", DRG.JobID, DRG.Jump, DRG.HighJump)]
-        DragoonJumpFeature = 2201,
 
         [OrderedEnum]
         [CustomComboInfo("坠星冲 => 龙炎冲", "当龙炎冲冷却完毕、或不在红莲龙血状态时，将坠星冲替换为龙炎冲。", DRG.JobID, DRG.Stardiver)]
@@ -779,7 +780,7 @@ namespace XIVComboExpandedestPlugin
         // ====================================================================================
         #region NINJA
 
-        // last used: 3024
+        // last used: 3025
 
         [OrderedEnum]
         [CustomComboInfo("旋风刃连击", "将旋风刃替换为它的连击链：双刃旋 - 绝风 - 旋风刃", NIN.JobID, NIN.AeolianEdge)]
@@ -818,8 +819,14 @@ namespace XIVComboExpandedestPlugin
         NinjaKassatsuDWaDFeature = 3015,
 
         [OrderedEnum]
+        [ConflictingCombos(NinjaDWaDMeisuiFeature)]
         [CustomComboInfo("梦幻三段 => 百雷铳", "当处于水遁、或隐遁状态时，将断绝/梦幻三段替换为攻其不备/百雷铳。", NIN.JobID, NIN.DreamWithinADream)]
         NinjaDWaDTrickFeature = 3019,
+
+        [OrderedEnum]
+        [ConflictingCombos(NinjaDWaDTrickFeature)]
+        [CustomComboInfo("梦幻三段 => 命水", "当处于水遁状态时，将断绝/梦幻三段替换为命水。", NIN.JobID, NIN.DreamWithinADream)]
+        NinjaDWaDMeisuiFeature = 3025,
 
         [OrderedEnum]
         [CustomComboInfo("天地人 => 命水", "当处于水遁状态时，将天地人替换为命水。", NIN.JobID, NIN.TenChiJin)]
@@ -872,7 +879,7 @@ namespace XIVComboExpandedestPlugin
         #region PALADIN
 
         // used enums: 1913, 1901, 1909, 1910, 1906
-        // latest enum: 1922
+        // latest enum: 1923
 
         [OrderedEnum]
         [CustomComboInfo("王权剑连击", "将战女神之怒/王权剑替换为它的连击链：先锋剑 - 暴乱剑 - 战女神之怒/王权剑", PLD.JobID, PLD.RoyalAuthority, PLD.RageOfHalone)]
@@ -888,8 +895,12 @@ namespace XIVComboExpandedestPlugin
         PaladinRoyalAuthorityNotBurstStrikeFeature = 1919,
 
         [OrderedEnum]
-        [CustomComboInfo("王权剑 => 赎罪剑", "当处于忠义之剑状态时，将王权剑替换为赎罪剑。（现在没有忠义之剑，变成赎罪剑三个触发连击了）", PLD.JobID, PLD.RageOfHalone, PLD.RoyalAuthority)]
+        [CustomComboInfo("王权剑 => 赎罪剑", "当处于忠义之剑（赎罪剑预备）状态时，将王权剑替换为赎罪剑。（当然还有后续连击）", PLD.JobID, PLD.RageOfHalone, PLD.RoyalAuthority)]
         PaladinRoyalAuthorityAtonementFeature = 1903,
+
+        [ParentCombo(CustomComboPreset.PaladinRoyalAuthorityAtonementFeature)]
+        [CustomComboInfo("仅当即将被覆盖时才进行替换", "仅在下一步连击即将覆盖忠义之剑（赎罪剑预备）状态时才将王权剑替换为赎罪剑。\n如果上面的圣灵替换攻能也被启用，本选项将有更高优先级。", PLD.JobID, PLD.RageOfHalone, PLD.RoyalAuthority)]
+        PaladinRoyalAuthorityAtonementOption = 1923,
 
         [OrderedEnum]
         [CustomComboInfo("投盾 => 圣灵", "当处于神圣魔法效果提高效果时，将投盾替换为圣灵。", PLD.JobID, PLD.ShieldLob)]
