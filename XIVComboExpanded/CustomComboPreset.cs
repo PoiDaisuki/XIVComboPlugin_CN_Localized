@@ -1569,7 +1569,7 @@ namespace XIVComboExpandedestPlugin
             "第三位：对应量谱（和技能栏）的左右位置。根据第二位的不同，包括：\n" +
             "1L:咬噬xx - 1R:穿裂xx    2L:猛袭xx - 2R:急速xx    3L:x击xx - 3R:x裂xx\n" +
             "第三个连击技能背身位即背xxx、侧身位即侧xxx，无身位的AOE技能为乱xxx\n" +
-            "后续连击缩写与此相同，不再赘述。（然而后面用不到了）",
+            "后续连击缩写与此相同，不再赘述。",
             VPR.JobID, VPR.SteelFangs, VPR.ReavingFangs, VPR.SteelMaw, VPR.ReavingMaw)]
         ViperReavingSteelFeature = 4115,
 
@@ -1579,17 +1579,17 @@ namespace XIVComboExpandedestPlugin
         ViperStrikingFangsFeature = 4116,
 
         [OrderedEnum]
-        [CustomComboInfo("猛袭/急速灵蛇/灵蝰 替换左右连击链", "当猛袭灵蛇/急速灵蛇/猛袭灵蝰/急速灵蝰可用时，将左右连击分别替换为对应的灵蛇/灵蝰技能。（L猛袭R急速、S灵蛇A灵蝰）", VPR.JobID, VPR.SteelFangs, VPR.ReavingFangs, VPR.SteelMaw, VPR.ReavingMaw)]
+        [CustomComboInfo("猛袭/急速盘蛇/盘蝰 替换左右连击链", "当猛袭盘蛇/急速盘蛇/猛袭盘蝰/急速盘蝰可用时，将左右连击分别替换为对应的盘蛇/盘蝰技能。（L猛袭R急速、S盘蛇A盘蝰）", VPR.JobID, VPR.SteelFangs, VPR.ReavingFangs, VPR.SteelMaw, VPR.ReavingMaw)]
         ViperCoilFeature = 4102,
 
         [OrderedEnum]
         [ParentCombo(ViperCoilFeature)]
-        [CustomComboInfo("灵蛇左右交换", "将替换的技能左右交换，即现在L替换为急速、R替换为猛袭。", VPR.JobID, VPR.SteelMaw, VPR.ReavingMaw)]
+        [CustomComboInfo("盘蛇左右交换", "将替换的技能左右交换，即现在L替换为急速、R替换为猛袭。", VPR.JobID, VPR.SteelMaw, VPR.ReavingMaw)]
         ViperCoilFeatureSwapOption = 4110,
 
         [OrderedEnum]
         [ParentCombo(ViperCoilFeature)]
-        [CustomComboInfo("灵蝰左右交换", "将替换的技能左右交换，即现在L替换为急速、R替换为猛袭。", VPR.JobID, VPR.SteelMaw, VPR.ReavingMaw)]
+        [CustomComboInfo("盘蝰左右交换", "将替换的技能左右交换，即现在L替换为急速、R替换为猛袭。", VPR.JobID, VPR.SteelMaw, VPR.ReavingMaw)]
         ViperCoilFeatureDenSwapOption = 4114,
 
         [OrderedEnum]
@@ -1598,7 +1598,7 @@ namespace XIVComboExpandedestPlugin
         ViperCoilAwakenedOption = 4103,
 
         [OrderedEnum]
-        [CustomComboInfo("左右连击/灵蛇灵蝰 => 双牙连/乱术", "当两个续剑技能（双牙连术/双牙乱术）可用时，将左右连击和灵蛇灵蝰替换为双牙连术/双牙乱术。", VPR.JobID, VPR.SteelFangs, VPR.ReavingFangs, VPR.SteelMaw, VPR.ReavingMaw, VPR.HuntersCoil, VPR.SwiftskinsCoil, VPR.HuntersDen, VPR.SwiftskinsDen)]
+        [CustomComboInfo("左右连击/盘蛇盘蝰 => 双牙连/乱术", "当两个续剑技能（双牙连术/双牙乱术）可用时，将左右连击和盘蛇盘蝰替换为双牙连术/双牙乱术。", VPR.JobID, VPR.SteelFangs, VPR.ReavingFangs, VPR.SteelMaw, VPR.ReavingMaw, VPR.HuntersCoil, VPR.SwiftskinsCoil, VPR.HuntersDen, VPR.SwiftskinsDen)]
         ViperBloodFangFeature = 4104,
 
         [OrderedEnum]
@@ -1619,7 +1619,7 @@ namespace XIVComboExpandedestPlugin
         ViperSteelFangRangedFeature = 4106,
 
         [OrderedEnum]
-        [CustomComboInfo("穿裂尖齿(S1R) => 蛇行", "当你在近战技能的攻击范围之外、或选中目标为其他玩家时，将你的穿裂尖齿(S1R)替换为蛇行。", VPR.JobID, VPR.ReavingFangs)]
+        [CustomComboInfo("穿裂尖齿(S1R) => 蛇行", "当你在近战技能的攻击范围之外、或选中目标为其他玩家时，将你的穿裂尖齿连击链(SR)替换为蛇行。", VPR.JobID, VPR.ReavingFangs)]
         ViperDreadFangDashFeature = 4107,
 
         [OrderedEnum]
@@ -1632,7 +1632,7 @@ namespace XIVComboExpandedestPlugin
 
         [OrderedEnum]
         [SecretCustomCombo]
-        [CustomComboInfo("咬噬尖齿(S1L) => 祖灵觉醒连击", "当处于祖灵降临状态时，将咬噬尖齿(S1L)替换为整个祖灵觉醒连击链。", VPR.JobID, VPR.SteelFangs)]
+        [CustomComboInfo("咬噬尖齿(S1L) => 祖灵觉醒连击", "当处于祖灵降临状态时，将咬噬尖齿连击链(SL)替换为整个祖灵觉醒连击链。", VPR.JobID, VPR.SteelFangs)]
         ViperReawakenedFangsFeature = 4113,
 
         #endregion
