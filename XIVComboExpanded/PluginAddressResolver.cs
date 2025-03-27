@@ -40,7 +40,7 @@ namespace XIVComboExpandedestPlugin
         {
             this.ComboTimer = new IntPtr(&ActionManager.Instance()->Combo.Timer);
 
-            this.IsActionIdReplaceable = scanner.ScanText("40 53 48 83 EC 20 8B D9 48 8B 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 85 C0 74 1B");
+            this.IsActionIdReplaceable = scanner.ScanText("40 53 48 83 EC 20 8B D9 48 8B 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 85 C0 74 1F");
 
             Service.PluginLog.Verbose("===== X I V C O M B O =====");
             Service.PluginLog.Verbose($"IsActionIdReplaceable 0x{this.IsActionIdReplaceable:X}");

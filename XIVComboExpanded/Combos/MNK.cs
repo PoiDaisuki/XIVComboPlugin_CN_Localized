@@ -159,7 +159,7 @@ namespace XIVComboExpandedestPlugin.Combos
             if ((!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Player) && CanUseAction(MNK.Thunderclap) && IsEnabled(CustomComboPreset.MonkDragonClapFeature))
                 return MNK.Thunderclap;
 
-            if (IsEnabled(CustomComboPreset.MonkDragonKickBalanceFeature) && !gauge.BeastChakra.Contains(BeastChakra.NONE) && CanUseAction(OriginalHook(MNK.MasterfulBlitz)))
+            if (IsEnabled(CustomComboPreset.MonkDragonKickBalanceFeature) && !gauge.BeastChakra.Contains(BeastChakra.None) && CanUseAction(OriginalHook(MNK.MasterfulBlitz)))
                 return OriginalHook(MNK.MasterfulBlitz);
 
             if (HasEffect(MNK.Buffs.RaptorForm))
@@ -213,7 +213,7 @@ namespace XIVComboExpandedestPlugin.Combos
 
                 if (IsEnabled(CustomComboPreset.MonkDragonKickBalanceFeature))
                 {
-                    if (!gauge.BeastChakra.Contains(BeastChakra.NONE) && CanUseAction(OriginalHook(MNK.MasterfulBlitz)))
+                    if (!gauge.BeastChakra.Contains(BeastChakra.None) && CanUseAction(OriginalHook(MNK.MasterfulBlitz)))
                         return OriginalHook(MNK.MasterfulBlitz);
                 }
 
@@ -294,18 +294,18 @@ namespace XIVComboExpandedestPlugin.Combos
 
                 if (HasEffect(MNK.Buffs.PerfectBalance))
                 {
-                    switch (pb?.StackCount)
+                    switch (pb?.Param)
                     {
                         case 3:
                             return MNK.FourPointFury;
                         case 2:
-                            if (!gauge.BeastChakra.Contains(BeastChakra.RAPTOR))
+                            if (!gauge.BeastChakra.Contains(BeastChakra.Raptor))
                                 return MNK.FourPointFury;
                             return MNK.Rockbreaker;
                         case 1:
-                            if (gauge.BeastChakra.Contains(BeastChakra.OPOOPO) && !gauge.BeastChakra.Contains(BeastChakra.RAPTOR))
+                            if (gauge.BeastChakra.Contains(BeastChakra.OpoOpo) && !gauge.BeastChakra.Contains(BeastChakra.Raptor))
                                 return MNK.FourPointFury;
-                            if (!gauge.BeastChakra.Contains(BeastChakra.COEURL))
+                            if (!gauge.BeastChakra.Contains(BeastChakra.Coeurl))
                                 return MNK.Rockbreaker;
                             return OriginalHook(MNK.ArmOfTheDestroyer);
                     }
