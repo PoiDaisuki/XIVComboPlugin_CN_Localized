@@ -203,9 +203,9 @@ namespace XIVComboExpandedestPlugin.Combos
                         return BLM.Despair;
                 }
 
-                if (gauge.ElementTimeRemaining <= 0) return actionID;
+                if (!gauge.IsEnochianActive) return actionID;
 
-                return gauge.InUmbralIce ? (level < BLM.Levels.Blizzard4 ? BLM.Blizzard : BLM.Blizzard4) : (level < BLM.Levels.Fire4 ? BLM.Fire : BLM.Fire4);
+                return !gauge.InAstralFire ? (level < BLM.Levels.Blizzard4 ? BLM.Blizzard : BLM.Blizzard4) : (level < BLM.Levels.Fire4 ? BLM.Fire : BLM.Fire4);
             }
 
             return actionID;
@@ -222,7 +222,7 @@ namespace XIVComboExpandedestPlugin.Combos
             {
                 var gauge = GetJobGauge<BLMGauge>();
 
-                if (gauge.ElementTimeRemaining <= 0) return actionID;
+                if (!gauge.IsEnochianActive) return actionID;
 
                 if (gauge.InUmbralIce)
                 {
@@ -322,7 +322,7 @@ namespace XIVComboExpandedestPlugin.Combos
                 if (!aoeSpells.Contains(this.FilteredLastComboMove) && IsEnabled(CustomComboPreset.BlackFlareDespairFeature) && level >= BLM.Levels.Despair)
                     return BLM.Despair;
 
-                if (gauge.ElementTimeRemaining <= 0) return actionID;
+                if (!gauge.IsEnochianActive) return actionID;
 
                 return gauge.InUmbralIce ? BLM.Freeze : BLM.Flare;
             }
