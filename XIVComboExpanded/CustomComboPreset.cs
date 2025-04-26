@@ -121,7 +121,7 @@ namespace XIVComboExpandedestPlugin
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(BlackEnochianFeature)]
-        [CustomComboInfo("Enochian Despair Feature", "Change Fire 4 or Blizzard 4 to Despair when in Astral Fire with less than 2400 mana.", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
+        [CustomComboInfo("Enochian Despair Feature", "Change Fire 4 or Blizzard 4 to Despair when in Astral Fire with less than 1600 mana.", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
         BlackEnochianDespairFeature = 2510,
 
         [OrderedEnum]
@@ -137,7 +137,7 @@ namespace XIVComboExpandedestPlugin
         BlackFlareStarFeature = 2527,
 
         [OrderedEnum]
-        [CustomComboInfo("Despair to Flare Star", "Change Despair to Flare Star when at 0 MP or >= 2400 MP.", BLM.JobID, BLM.Despair)]
+        [CustomComboInfo("Despair to Flare Star", "Change Despair to Flare Star when at 0 MP or >= 1600 MP.", BLM.JobID, BLM.Despair)]
         BlackDespairStarFeature = 2530,
 
         [OrderedEnum]
