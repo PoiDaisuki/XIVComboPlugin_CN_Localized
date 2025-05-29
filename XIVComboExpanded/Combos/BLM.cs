@@ -405,7 +405,11 @@ namespace XIVComboExpandedestPlugin.Combos
             if (actionID == BLM.Blizzard)
             {
                 var gauge = GetJobGauge<BLMGauge>();
+                if ((HasEffect(BLM.Buffs.Triplecast) || HasEffect(All.Buffs.Swiftcast) || HasEffect(All.Buffs.OccultQuick)) && level >= BLM.Levels.Blizzard3 && gauge.InUmbralIce && gauge.UmbralIceStacks < 3)
+                    return BLM.Blizzard3;
                 if (OriginalHook(BLM.Blizzard) != BLM.Blizzard && gauge.InUmbralIce)
+                    return OriginalHook(BLM.Blizzard);
+                if (gauge.IsParadoxActive && LocalPlayer?.CurrentMp >= 1600)
                     return OriginalHook(BLM.Blizzard);
                 if (level >= BLM.Levels.Blizzard3 && (gauge.UmbralIceStacks < 2 || (gauge.UmbralIceStacks < 3 && (HasEffect(All.Buffs.Swiftcast) || HasEffect(BLM.Buffs.Triplecast) || HasEffect(All.Buffs.OccultQuick))) || !gauge.InUmbralIce))
                     return BLM.Blizzard3;
@@ -427,7 +431,7 @@ namespace XIVComboExpandedestPlugin.Combos
                 var gauge = GetJobGauge<BLMGauge>();
                 if (gauge.IsParadoxActive && gauge.InUmbralIce)
                     return OriginalHook(BLM.Fire);
-                if (IsEnabled(CustomComboPreset.BlackFireOption) && gauge.AstralFireStacks < 3 && level >= BLM.Levels.Fire3)
+                if (IsEnabled(CustomComboPreset.BlackFireOption) && gauge.AstralFireStacks < 3 && level >= BLM.Levels.Fire3 && !gauge.IsParadoxActive)
                     return BLM.Fire3;
                 if (level >= BLM.Levels.Fire3 && (!gauge.InAstralFire || HasEffect(BLM.Buffs.Firestarter)))
                     return BLM.Fire3;
