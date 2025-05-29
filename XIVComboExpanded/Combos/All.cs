@@ -55,6 +55,7 @@ namespace XIVComboExpandedestPlugin.Combos
             public const ushort
                 Raise = 148,
                 Swiftcast = 167,
+                OccultQuick = 4260,
                 EurekaMoment = 2765,
                 Troubadour = 1934,
                 Tactician = 1951,

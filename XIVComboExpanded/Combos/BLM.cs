@@ -192,7 +192,7 @@ namespace XIVComboExpandedestPlugin.Combos
                 if (IsEnabled(CustomComboPreset.BlackXenoFoulFeature) && IsEnabled(CustomComboPreset.BlackEnochianXenoglossyFeature))
                     isAoE = aoeSpells.Contains(this.FilteredLastComboMove);
 
-                if (IsEnabled(CustomComboPreset.BlackEnochianXenoglossyFeature) && gauge.PolyglotStacks > 0 && level >= BLM.Levels.Xenoglossy && IsMoving() && !HasEffect(BLM.Buffs.Triplecast) && !HasEffect(All.Buffs.Swiftcast))
+                if (IsEnabled(CustomComboPreset.BlackEnochianXenoglossyFeature) && gauge.PolyglotStacks > 0 && level >= BLM.Levels.Xenoglossy && IsMoving() && !HasEffect(BLM.Buffs.Triplecast) && !HasEffect(All.Buffs.Swiftcast) && !HasEffect(All.Buffs.OccultQuick))
                     return isAoE ? BLM.Foul : BLM.Xenoglossy;
 
                 if (IsEnabled(CustomComboPreset.BlackEnochianDespairFeature) && gauge.InAstralFire)
@@ -312,7 +312,7 @@ namespace XIVComboExpandedestPlugin.Combos
                 if (gauge.AstralSoulStacks == 6 && IsEnabled(CustomComboPreset.BlackFlareStarFeature))
                     return BLM.FlareStar;
 
-                if (IsEnabled(CustomComboPreset.BlackFreezeFlareFoulFeature) && gauge.PolyglotStacks > 0 && level >= BLM.Levels.Xenoglossy && IsMoving() && !HasEffect(BLM.Buffs.Triplecast) && !HasEffect(All.Buffs.Swiftcast))
+                if (IsEnabled(CustomComboPreset.BlackFreezeFlareFoulFeature) && gauge.PolyglotStacks > 0 && level >= BLM.Levels.Xenoglossy && IsMoving() && !HasEffect(BLM.Buffs.Triplecast) && !HasEffect(All.Buffs.Swiftcast) && !HasEffect(All.Buffs.OccultQuick))
                     return BLM.Foul;
 
                 if (!gauge.InAstralFire && !gauge.InUmbralIce)
@@ -407,7 +407,7 @@ namespace XIVComboExpandedestPlugin.Combos
                 var gauge = GetJobGauge<BLMGauge>();
                 if (OriginalHook(BLM.Blizzard) != BLM.Blizzard && gauge.InUmbralIce)
                     return OriginalHook(BLM.Blizzard);
-                if (level >= BLM.Levels.Blizzard3 && (gauge.UmbralIceStacks < 2 || (gauge.UmbralIceStacks < 3 && (HasEffect(All.Buffs.Swiftcast) || HasEffect(BLM.Buffs.Triplecast))) || !gauge.InUmbralIce))
+                if (level >= BLM.Levels.Blizzard3 && (gauge.UmbralIceStacks < 2 || (gauge.UmbralIceStacks < 3 && (HasEffect(All.Buffs.Swiftcast) || HasEffect(BLM.Buffs.Triplecast) || HasEffect(All.Buffs.OccultQuick))) || !gauge.InUmbralIce))
                     return BLM.Blizzard3;
                 return OriginalHook(BLM.Blizzard);
             }
