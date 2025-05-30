@@ -1273,6 +1273,10 @@ namespace XIVComboExpandedestPlugin
         SagePhlegmaBalls = 4002,
 
         [OrderedEnum]
+        [CustomComboInfo("Phlegma into Eukrasian Dyskrasia", "Phlegma turns into Eukrasian Dyskrasia when you have Eukrasia active.", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
+        SagePhlegmaDysBalls = 4011,
+
+        [OrderedEnum]
         [CustomComboInfo("Phlegma into Toxikon", "Phlegma turns into Toxikon if you have addersting and are either out of range or out of charges.\nThis is prioritized over Dyskrasia if the 'Phlegma into Dyskrasia' feature is enabled.", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
         SagePhlegmaToxicBalls = 4003,
 

@@ -164,6 +164,19 @@ namespace XIVComboExpandedestPlugin.Combos
         }
     }
 
+    internal class SagePhlegmaDysBalls : CustomCombo
+    {
+        protected override CustomComboPreset Preset => CustomComboPreset.SagePhlegmaDysBalls;
+
+        protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
+        {
+            if (GetJobGauge<SGEGauge>().Eukrasia)
+                return OriginalHook(SGE.Dyskrasia);
+
+            return actionID;
+        }
+    }
+
     internal class SagePhlegmaPsychicBalls : CustomCombo
     {
         protected override CustomComboPreset Preset => CustomComboPreset.SagePhlegmaPsychicBalls;

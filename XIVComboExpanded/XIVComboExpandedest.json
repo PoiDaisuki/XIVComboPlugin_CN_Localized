@@ -7,7 +7,10 @@
   "IconUrl": "https://raw.githubusercontent.com/grammernatzi/XIVComboPluginExpandedest/master/res/icon.png",
   "ImageUrls": [],
   "DalamudApiLevel": 12,
-  "Changelog": "1.5.0.73:
+  "Changelog": "1.5.0.79:
+    * Phlegma into Eukrasian Dyskrasia added.
+    
+    1.5.0.73:
     * Meisui/Tenri priority fixed and DWaD to Meisui added.
     * Monk's Draconic Leap feature now properly syncs below level 50 when you don't have a form.
     * Raise Hard Target Lockout Feature added.
