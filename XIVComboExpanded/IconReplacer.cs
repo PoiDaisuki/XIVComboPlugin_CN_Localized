@@ -37,8 +37,6 @@ namespace XIVComboExpandedestPlugin
 
         private float playerSpeed;
 
-        private uint movingCounter;
-
         private bool isPlayerMoving;
 
         /// <summary>

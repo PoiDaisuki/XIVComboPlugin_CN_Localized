@@ -121,7 +121,7 @@ namespace XIVComboExpandedestPlugin
         [OrderedEnum]
         [SecretCustomCombo]
         [ParentCombo(BlackEnochianFeature)]
-        [CustomComboInfo("绝望（防呆）功能", "如果处在星极火且MP小于2400时，将炽炎和冰澈替换为绝望。（防止绝望的发现打不出去绝望）", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
+        [CustomComboInfo("绝望（防呆）功能", "如果处在星极火且MP小于1600时，将炽炎和冰澈替换为绝望。（防止绝望的发现打不出去绝望）", BLM.JobID, BLM.Blizzard4, BLM.Fire4)]
         BlackEnochianDespairFeature = 2510,
 
         [OrderedEnum]
@@ -137,7 +137,7 @@ namespace XIVComboExpandedestPlugin
         BlackFlareStarFeature = 2527,
 
         [OrderedEnum]
-        [CustomComboInfo("绝望 => 耀星", "在耀星可用、且MP=0或>=2400时，将绝望替换为耀星。", BLM.JobID, BLM.Despair)]
+        [CustomComboInfo("绝望 => 耀星", "在耀星可用、且MP=0或>=1600时，将绝望替换为耀星。", BLM.JobID, BLM.Despair)]
         BlackDespairStarFeature = 2530,
 
         [OrderedEnum]
@@ -1273,7 +1273,11 @@ namespace XIVComboExpandedestPlugin
         SagePhlegmaBalls = 4002,
 
         [OrderedEnum]
-        [CustomComboInfo("发炎 => 箭毒", "如果当前箭毒可用，且你要么用尽了发炎的积蓄次数、要么不在发炎的攻击距离以内，则将发炎替换为箭毒。\n如果和上面的“发炎 => 失衡”功能也被启用，则箭毒的优先级更高。", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
+        [CustomComboInfo("发炎 => 均衡失衡", "当你正在使用均衡时，将发炎替换为均衡失衡。", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
+        SagePhlegmaDysBalls = 4011,
+
+        [OrderedEnum]
+        [CustomComboInfo("发炎 => 箭毒", "如果当前箭毒可用，且你要么用尽了发炎的积蓄次数、要么不在发炎的攻击距离以内，则将发炎替换为箭毒。\n如果上面的“发炎 => 失衡”功能也被启用，则箭毒的优先级更高。", SGE.JobID, SGE.Phlegma, SGE.Phlegmara, SGE.Phlegmaga)]
         SagePhlegmaToxicBalls = 4003,
 
         [OrderedEnum]

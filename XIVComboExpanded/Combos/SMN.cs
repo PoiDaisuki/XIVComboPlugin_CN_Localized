@@ -365,7 +365,7 @@ namespace XIVComboExpandedestPlugin.Combos
             if (actionID == SMN.Gemshine)
             {
                 var gauge = GetJobGauge<SMNGauge>();
-                if (gauge.AttunmentTimerRemaining == 0)
+                if (gauge.AttunementTimerRemaining == 0)
                     return OriginalHook(SMN.Ruin3);
             }
 
@@ -441,7 +441,7 @@ namespace XIVComboExpandedestPlugin.Combos
             if (actionID == SMN.PreciousBrilliance)
             {
                 var gauge = GetJobGauge<SMNGauge>();
-                if (gauge.AttunmentTimerRemaining == 0)
+                if (gauge.AttunementTimerRemaining == 0)
                     return OriginalHook(SMN.Outburst);
             }
 

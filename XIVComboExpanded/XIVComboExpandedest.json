@@ -4,7 +4,11 @@
   "Punchline": "Condenses combos and mutually exclusive abilities onto a single button. Plus extras.",
   "Description": "This is an enhanced version of XIVCombo with a variety of new added features.\nThis is mutually exclusive with other XIVCombo versions, so make sure they do not conflict!",
   "ImageUrls": [],
-  "Changelog": "1.5.0.73:
+  "DalamudApiLevel": 12,
+  "Changelog": "1.5.0.79:
+    * Phlegma into Eukrasian Dyskrasia added.
+    
+    1.5.0.73:
     * Meisui/Tenri priority fixed and DWaD to Meisui added.
     * Monk's Draconic Leap feature now properly syncs below level 50 when you don't have a form.
     * Raise Hard Target Lockout Feature added.

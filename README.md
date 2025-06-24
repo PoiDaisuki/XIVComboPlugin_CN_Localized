@@ -1,4 +1,4 @@
-已更新至7.1，对应大喇叭API11
+已更新至7.2，对应大喇叭API12
 
 
 # Dawntrail Is Here, Too

@@ -192,20 +192,20 @@ namespace XIVComboExpandedestPlugin.Combos
                 if (IsEnabled(CustomComboPreset.BlackXenoFoulFeature) && IsEnabled(CustomComboPreset.BlackEnochianXenoglossyFeature))
                     isAoE = aoeSpells.Contains(this.FilteredLastComboMove);
 
-                if (IsEnabled(CustomComboPreset.BlackEnochianXenoglossyFeature) && gauge.PolyglotStacks > 0 && level >= BLM.Levels.Xenoglossy && IsMoving() && !HasEffect(BLM.Buffs.Triplecast) && !HasEffect(All.Buffs.Swiftcast))
+                if (IsEnabled(CustomComboPreset.BlackEnochianXenoglossyFeature) && gauge.PolyglotStacks > 0 && level >= BLM.Levels.Xenoglossy && IsMoving() && !HasEffect(BLM.Buffs.Triplecast) && !HasEffect(All.Buffs.Swiftcast) && !HasEffect(All.Buffs.OccultQuick))
                     return isAoE ? BLM.Foul : BLM.Xenoglossy;
 
                 if (IsEnabled(CustomComboPreset.BlackEnochianDespairFeature) && gauge.InAstralFire)
                 {
-                    if (IsEnabled(CustomComboPreset.BlackDespairStarFeature) && gauge.AstralSoulStacks >= 6 && (LocalPlayer?.CurrentMp == 0 || LocalPlayer?.CurrentMp >= 2400))
+                    if (IsEnabled(CustomComboPreset.BlackDespairStarFeature) && gauge.AstralSoulStacks >= 6 && (LocalPlayer?.CurrentMp == 0 || LocalPlayer?.CurrentMp >= 1600))
                         return BLM.FlareStar;
-                    if (level >= BLM.Levels.Despair && LocalPlayer?.CurrentMp < 2400)
+                    if (level >= BLM.Levels.Despair && LocalPlayer?.CurrentMp < 1600)
                         return BLM.Despair;
                 }
 
-                if (gauge.ElementTimeRemaining <= 0) return actionID;
+                if (!gauge.IsEnochianActive) return actionID;
 
-                return gauge.InUmbralIce ? (level < BLM.Levels.Blizzard4 ? BLM.Blizzard : BLM.Blizzard4) : (level < BLM.Levels.Fire4 ? BLM.Fire : BLM.Fire4);
+                return !gauge.InAstralFire ? (level < BLM.Levels.Blizzard4 ? BLM.Blizzard : BLM.Blizzard4) : (level < BLM.Levels.Fire4 ? BLM.Fire : BLM.Fire4);
             }
 
             return actionID;
@@ -222,7 +222,7 @@ namespace XIVComboExpandedestPlugin.Combos
             {
                 var gauge = GetJobGauge<BLMGauge>();
 
-                if (gauge.ElementTimeRemaining <= 0) return actionID;
+                if (!gauge.IsEnochianActive) return actionID;
 
                 if (gauge.InUmbralIce)
                 {
@@ -264,7 +264,7 @@ namespace XIVComboExpandedestPlugin.Combos
         protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
         {
             var gauge = GetJobGauge<BLMGauge>();
-            return gauge.AstralSoulStacks >= 6 && (LocalPlayer?.CurrentMp == 0 || LocalPlayer?.CurrentMp >= 2400) ? BLM.FlareStar : actionID;
+            return gauge.AstralSoulStacks >= 6 && (LocalPlayer?.CurrentMp == 0 || LocalPlayer?.CurrentMp >= 1600) ? BLM.FlareStar : actionID;
         }
     }
 
@@ -312,7 +312,7 @@ namespace XIVComboExpandedestPlugin.Combos
                 if (gauge.AstralSoulStacks == 6 && IsEnabled(CustomComboPreset.BlackFlareStarFeature))
                     return BLM.FlareStar;
 
-                if (IsEnabled(CustomComboPreset.BlackFreezeFlareFoulFeature) && gauge.PolyglotStacks > 0 && level >= BLM.Levels.Xenoglossy && IsMoving() && !HasEffect(BLM.Buffs.Triplecast) && !HasEffect(All.Buffs.Swiftcast))
+                if (IsEnabled(CustomComboPreset.BlackFreezeFlareFoulFeature) && gauge.PolyglotStacks > 0 && level >= BLM.Levels.Xenoglossy && IsMoving() && !HasEffect(BLM.Buffs.Triplecast) && !HasEffect(All.Buffs.Swiftcast) && !HasEffect(All.Buffs.OccultQuick))
                     return BLM.Foul;
 
                 if (!gauge.InAstralFire && !gauge.InUmbralIce)
@@ -322,7 +322,7 @@ namespace XIVComboExpandedestPlugin.Combos
                 if (!aoeSpells.Contains(this.FilteredLastComboMove) && IsEnabled(CustomComboPreset.BlackFlareDespairFeature) && level >= BLM.Levels.Despair)
                     return BLM.Despair;
 
-                if (gauge.ElementTimeRemaining <= 0) return actionID;
+                if (!gauge.IsEnochianActive) return actionID;
 
                 return gauge.InUmbralIce ? BLM.Freeze : BLM.Flare;
             }
@@ -405,9 +405,13 @@ namespace XIVComboExpandedestPlugin.Combos
             if (actionID == BLM.Blizzard)
             {
                 var gauge = GetJobGauge<BLMGauge>();
+                if ((HasEffect(BLM.Buffs.Triplecast) || HasEffect(All.Buffs.Swiftcast) || HasEffect(All.Buffs.OccultQuick)) && level >= BLM.Levels.Blizzard3 && gauge.InUmbralIce && gauge.UmbralIceStacks < 3)
+                    return BLM.Blizzard3;
                 if (OriginalHook(BLM.Blizzard) != BLM.Blizzard && gauge.InUmbralIce)
                     return OriginalHook(BLM.Blizzard);
-                if (level >= BLM.Levels.Blizzard3 && (gauge.UmbralIceStacks < 2 || (gauge.UmbralIceStacks < 3 && (HasEffect(All.Buffs.Swiftcast) || HasEffect(BLM.Buffs.Triplecast))) || !gauge.InUmbralIce))
+                if (gauge.IsParadoxActive && LocalPlayer?.CurrentMp >= 1600)
+                    return OriginalHook(BLM.Blizzard);
+                if (level >= BLM.Levels.Blizzard3 && (gauge.UmbralIceStacks < 2 || (gauge.UmbralIceStacks < 3 && (HasEffect(All.Buffs.Swiftcast) || HasEffect(BLM.Buffs.Triplecast) || HasEffect(All.Buffs.OccultQuick))) || !gauge.InUmbralIce))
                     return BLM.Blizzard3;
                 return OriginalHook(BLM.Blizzard);
             }
@@ -427,7 +431,7 @@ namespace XIVComboExpandedestPlugin.Combos
                 var gauge = GetJobGauge<BLMGauge>();
                 if (gauge.IsParadoxActive && gauge.InUmbralIce)
                     return OriginalHook(BLM.Fire);
-                if (IsEnabled(CustomComboPreset.BlackFireOption) && gauge.AstralFireStacks < 3 && level >= BLM.Levels.Fire3)
+                if (IsEnabled(CustomComboPreset.BlackFireOption) && gauge.AstralFireStacks < 3 && level >= BLM.Levels.Fire3 && !gauge.IsParadoxActive)
                     return BLM.Fire3;
                 if (level >= BLM.Levels.Fire3 && (!gauge.InAstralFire || HasEffect(BLM.Buffs.Firestarter)))
                     return BLM.Fire3;
